@@ -13,7 +13,7 @@ interface Props {
 }
 const { slug, title, description, category, readingTime, image, imageAlt } = Astro.props;
 ---
-<a href={`/blog/${slug}`} class="card">
+<a href={`/${slug}`} class="card">
   {image && (
     <div class="thumb">
       <Image src={image} alt={imageAlt ?? title} width={480} height={320} />
