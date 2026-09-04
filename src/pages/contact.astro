@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Contact" description="Get in touch with the inteligenciaartificialdev.com team.">
+  <section class="container contact">
+    <h1>Contact</h1>
+    <p class="sub">Questions about the blog, partnerships, or PromptVault.</p>
+
+    <!-- No backend of its own: point at an external form endpoint
+         (e.g. Formspree, Basin) or swap for a direct mailto. -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit" class="button button-primary">Send</button>
+    </form>
+
+    <div class="legal">
+      <p>Questions about PromptVault billing or refunds? See the terms at vault.inteligenciaartificialdev.com.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact {
+    padding-block: 56px 80px;
+    max-width: 52ch;
+  }
+
+  .sub {
+    color: var(--ink-soft);
+    margin: 12px 0 32px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: var(--ink-strong);
+  }
+
+  input, textarea {
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    background: var(--surface);
+    color: var(--ink);
+    resize: vertical;
+  }
+
+  input:focus, textarea:focus {
+    border-color: var(--violet);
+  }
+
+  button {
+    align-self: flex-start;
+    margin-top: 6px;
+  }
+
+  .legal {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+</style>

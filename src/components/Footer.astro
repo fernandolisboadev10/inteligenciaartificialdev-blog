@@ -1,0 +1,219 @@
+---
+import NewsletterForm from './NewsletterForm.astro';
+
+const categories = [
+  { label: 'Home', href: '/' },
+  { label: 'Chatbots', href: '/blog?category=Chatbots' },
+  { label: 'Prompts', href: '/blog?category=Prompt+Engineering' },
+  { label: 'AI Tools', href: '/blog?category=AI+Coding+Tools' },
+  { label: 'Tutorials', href: '/blog?category=Tutorials' },
+  { label: 'Case Studies', href: '/blog?category=Case+Studies' },
+];
+
+const quickLinks = [
+  { label: 'About Us', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Advertise', href: '/advertise' },
+];
+---
+<footer class="site-footer">
+  <div class="container grid">
+    <div class="about-col">
+      <a href="/" class="brand">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="footerRobotGradient" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#7c3aed" />
+              <stop offset="1" stop-color="#e11d48" />
+            </linearGradient>
+          </defs>
+          <line x1="16" y1="6" x2="16" y2="10" stroke="url(#footerRobotGradient)" stroke-width="2" stroke-linecap="round" />
+          <circle cx="16" cy="4.5" r="2" fill="url(#footerRobotGradient)" />
+          <rect x="6" y="10" width="20" height="17" rx="6" fill="url(#footerRobotGradient)" />
+          <circle cx="12.5" cy="18.5" r="2.2" fill="var(--bg)" />
+          <circle cx="19.5" cy="18.5" r="2.2" fill="var(--bg)" />
+          <rect x="12" y="22.5" width="8" height="2" rx="1" fill="var(--bg)" opacity="0.85" />
+        </svg>
+        <span class="brand-text"><span class="brand-gradient">AI</span> DEV</span>
+      </a>
+      <p class="tagline">
+        AI DEV is your practical guide to prompt engineering and AI tools for
+        developers. We deliver tested prompts and honest comparisons to help
+        you build software faster with AI.
+      </p>
+    </div>
+
+    <div>
+      <p class="col-title">Quick Links</p>
+      <ul>
+        {quickLinks.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <p class="col-title">Category</p>
+      <ul>
+        {categories.map((c) => (
+          <li><a href={c.href}>{c.label}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <p class="col-title">Newsletter</p>
+      <p class="newsletter-copy">Sign up for our newsletter to get updates, news, and free prompts.</p>
+      <NewsletterForm compact />
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="container bottom-inner">
+      <p>© {new Date().getFullYear()} AI DEV. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-use">Terms of Use</a>
+        <a href="/cookie-policy">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: 80px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    padding-block: 56px 40px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin: 0 0 16px;
+  }
+
+  .brand-text {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    color: var(--ink-strong);
+  }
+
+  .brand-gradient {
+    background: linear-gradient(135deg, var(--violet), var(--rose));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .tagline {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    max-width: 38ch;
+    margin: 0 0 20px;
+  }
+
+  .col-title {
+    position: relative;
+    font-size: 0.95rem;
+    color: var(--ink-strong);
+    font-weight: 700;
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+  }
+
+  .col-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 32px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(135deg, var(--violet), var(--rose));
+  }
+
+  .newsletter-copy {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    margin: 0 0 16px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  ul a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  ul a:hover {
+    color: var(--teal);
+  }
+
+  .bottom {
+    background: var(--ink-strong);
+  }
+
+  .bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-block: 20px;
+  }
+
+  .bottom-inner p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .legal-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .legal-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .legal-links a:hover {
+    color: #ffffff;
+  }
+
+  @media (max-width: 860px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    .bottom-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

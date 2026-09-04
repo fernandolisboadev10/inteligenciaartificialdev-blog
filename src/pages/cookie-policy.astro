@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lastUpdated = 'September 3, 2026';
+---
+<BaseLayout title="Cookie Policy" description="How AI DEV (inteligenciaartificialdev.com) uses cookies.">
+  <section class="container legal-page">
+    <h1>Cookie Policy</h1>
+    <p class="updated">Last updated: {lastUpdated}</p>
+
+    <div class="prose">
+      <p>
+        This Cookie Policy explains what cookies are, how AI DEV
+        (inteligenciaartificialdev.com) uses them, and how you can control
+        them.
+      </p>
+
+      <h2>What are cookies</h2>
+      <p>
+        Cookies are small text files stored on your device when you visit a
+        website. They help the site remember information about your visit,
+        like preferences or usage patterns.
+      </p>
+
+      <h2>How we use cookies</h2>
+      <p>
+        We use a small number of essential cookies to keep the site
+        functioning, and may use analytics cookies to understand how
+        visitors use the site so we can improve it. If we introduce
+        third-party advertising in the future — such as Google AdSense —
+        those partners may set their own cookies to serve relevant ads.
+      </p>
+
+      <h2>Types of cookies we use</h2>
+      <ul>
+        <li><strong>Essential:</strong> required for the site to work correctly (e.g. remembering your cookie preference).</li>
+        <li><strong>Analytics:</strong> help us understand aggregate traffic and usage patterns.</li>
+        <li><strong>Advertising (future):</strong> if we run ads, third-party ad networks may use cookies to serve and measure them.</li>
+      </ul>
+
+      <h2>Managing cookies</h2>
+      <p>
+        Most browsers let you block or delete cookies through their
+        settings. If you use Google services, you can also manage ad
+        personalization through
+        {' '}<a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google's Ad Settings</a>.
+        Blocking essential cookies may affect how parts of the site work.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        We may update this policy as the site evolves. We'll update the
+        "Last updated" date above when we do.
+      </p>
+
+      <h2>Contact us</h2>
+      <p>
+        Questions about our use of cookies? Reach out through our
+        {' '}<a href="/contact">contact page</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding-block: 56px 80px;
+    max-width: 68ch;
+  }
+
+  .updated {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    margin: 12px 0 32px;
+  }
+</style>

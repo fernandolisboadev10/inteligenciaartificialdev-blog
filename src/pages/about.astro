@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="About" description="About the creator of inteligenciaartificialdev.com and PromptVault.">
+  <section class="container about">
+    <h1>About</h1>
+    <div class="prose">
+      <p>
+        This site started from a practical problem: writing the same kind of
+        prompt over and over while building software, and losing time
+        reformulating something that should have already been ready to go.
+      </p>
+      <p>
+        I'm a computer science instructor and systems analyst, and I build
+        educational tools and AI products — from question generators for
+        public exams to AI-assisted essay grading platforms. PromptVault
+        came from that same instinct: turn a manual, repetitive process into
+        something tested, documented, and reusable.
+      </p>
+      <p>
+        On this blog I write about what I actually use: applied prompt
+        engineering, honest comparisons between AI tools for development,
+        and workflows that save real time — no hype, just what works.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about {
+    padding-block: 56px 80px;
+    max-width: 68ch;
+  }
+
+  .about h1 {
+    margin-bottom: 32px;
+  }
+</style>
