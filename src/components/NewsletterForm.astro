@@ -18,11 +18,13 @@ const { compact = false } = Astro.props;
   .newsletter {
     display: flex;
     gap: 10px;
+    width: 100%;
     max-width: 420px;
   }
 
   input {
     flex: 1;
+    min-width: 0;
     padding: 12px 16px;
     border: 1px solid var(--line);
     border-radius: 6px;

@@ -49,6 +49,7 @@ const categories = [
             title={post.data.title}
             description={post.data.description}
             category={post.data.category}
+            date={post.data.date}
             readingTime={post.data.readingTime}
             image={post.data.image}
             imageAlt={post.data.imageAlt}
@@ -115,7 +116,22 @@ const categories = [
   }
 
   .posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
     padding-bottom: 16px;
+  }
+
+  @media (max-width: 860px) {
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .posts {
+      grid-template-columns: 1fr;
+    }
   }
 
   .no-results {

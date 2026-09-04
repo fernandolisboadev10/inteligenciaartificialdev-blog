@@ -40,7 +40,10 @@ $ <span class="cursor">_</span></code></pre>
 
   <section class="container recent">
     <div class="recent-header">
-      <h2>Recent articles</h2>
+      <div>
+        <h2>Recent articles</h2>
+        <span class="underline"></span>
+      </div>
       <a href="/blog">See all →</a>
     </div>
     <div class="grid">
@@ -50,6 +53,7 @@ $ <span class="cursor">_</span></code></pre>
           title={post.data.title}
           description={post.data.description}
           category={post.data.category}
+          date={post.data.date}
           readingTime={post.data.readingTime}
           image={post.data.image}
           imageAlt={post.data.imageAlt}
@@ -190,14 +194,42 @@ $ <span class="cursor">_</span></code></pre>
   .recent-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 8px;
+    align-items: flex-end;
+    margin-bottom: 28px;
+  }
+
+  .underline {
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: linear-gradient(135deg, var(--violet), var(--rose));
   }
 
   .recent-header a {
     text-decoration: none;
     color: var(--teal);
     font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 860px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   .vault-block {
