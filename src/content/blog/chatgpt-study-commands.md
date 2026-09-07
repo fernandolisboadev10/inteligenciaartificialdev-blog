@@ -4,6 +4,8 @@ description: "Set up 12 slash-style commands once, and ChatGPT stops giving gene
 category: "Prompt Engineering"
 date: 2026-09-07
 readingTime: "5 min"
+image: "./images/chatgpt-study-commands.webp"
+imageAlt: "Confident man using a laptop at night, surrounded by glowing neon labels for ChatGPT study commands like /mindmap, /flashcards, and /quizboard"
 ---
 
 Typing a fresh, detailed prompt every time you want ChatGPT to quiz you or summarize a chapter gets old fast. There's a simpler pattern that's been circulating among students on social media: teach the model a handful of short commands once, then trigger them with a single line for the rest of your study session.
