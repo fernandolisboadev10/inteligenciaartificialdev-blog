@@ -16,9 +16,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         Articles, tutorials, and practical comparisons on prompt engineering
         and AI tools — for developers, by developers.
       </p>
-      <div class="hero-actions">
-        <a href="/free-prompts" class="button button-primary">See free prompts</a>
-      </div>
     </div>
     <div class="hero-terminal" aria-hidden="true">
       <div class="terminal-bar">
@@ -87,13 +84,6 @@ $ <span class="cursor">_</span></code></pre>
     font-size: 1.05rem;
     max-width: 44ch;
     margin-top: 20px;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 12px;
-    margin-top: 28px;
-    flex-wrap: wrap;
   }
 
   .hero-terminal {
