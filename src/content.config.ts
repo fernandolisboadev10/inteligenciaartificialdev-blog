@@ -13,6 +13,7 @@ const blog = defineCollection({
         'Tutorials',
         'Case Studies',
         'Chatbots',
+        'Reviews',
       ]),
       date: z.date(),
       readingTime: z.string().optional(),
