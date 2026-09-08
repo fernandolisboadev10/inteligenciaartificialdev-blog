@@ -5,12 +5,12 @@ import PostCard from '../components/PostCard.astro';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 4);
+  .slice(0, 6);
 ---
 <BaseLayout title="AI Prompts for Developers">
   <section class="hero container">
     <div class="hero-text">
-      <p class="eyebrow">inteligenciaartificialdev.com</p>
+      <p class="eyebrow">inteligenciaartificialdev.com<span class="eyebrow-cursor">_</span></p>
       <h1>Tested AI prompts<br />for people who write code.</h1>
       <p class="sub">
         Articles, tutorials, and practical comparisons on prompt engineering
@@ -22,7 +22,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         <span></span><span></span><span></span>
         <p class="terminal-filename">prompt.sh</p>
       </div>
-      <pre><code>$ prompt --task "review function" \
+      <pre><code id="hero-code"># Welcome to the world of AI-assisted programming.
+
+$ prompt --task "review function" \
     --language python \
     --style "safe, no regressions"
 
@@ -70,8 +72,20 @@ $ <span class="cursor">_</span></code></pre>
   .eyebrow {
     font-family: var(--font-mono);
     font-size: 0.8rem;
-    color: var(--ink-soft);
+    font-weight: 600;
+    letter-spacing: 0.02em;
     margin: 0 0 16px;
+    background: linear-gradient(135deg, var(--violet), var(--rose));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .eyebrow-cursor {
+    display: inline-block;
+    margin-left: 2px;
+    color: var(--rose);
+    animation: blink 1.1s steps(1) infinite;
   }
 
   h1 {
@@ -201,3 +215,45 @@ $ <span class="cursor">_</span></code></pre>
     }
   }
 </style>
+
+<script>
+  const codeEl = document.getElementById('hero-code');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const alreadyPlayed = sessionStorage.getItem('heroIntroPlayed');
+
+  if (codeEl && !reducedMotion && !alreadyPlayed) {
+    const lines = [
+      '# Welcome to the world of AI-assisted programming.',
+      '',
+      '$ prompt --task "review function" \\',
+      '    --language python \\',
+      '    --style "safe, no regressions"',
+      '',
+      '> Analyzing the function... ok',
+      '> 3 suggestions found',
+      '> No breaking changes',
+      '$ ',
+    ];
+    const fullText = lines.join('\n');
+
+    codeEl.textContent = '';
+    let i = 0;
+
+    function typeNext() {
+      if (i >= fullText.length) {
+        const cursor = document.createElement('span');
+        cursor.className = 'cursor';
+        cursor.textContent = '_';
+        codeEl.appendChild(cursor);
+        sessionStorage.setItem('heroIntroPlayed', '1');
+        return;
+      }
+      codeEl.textContent += fullText[i];
+      const delay = fullText[i] === '\n' ? 120 : 16;
+      i++;
+      setTimeout(typeNext, delay);
+    }
+
+    typeNext();
+  }
+</script>
