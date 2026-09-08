@@ -31,3 +31,13 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit sitemap URLs to IndexNow
+        run: |
+          urls=$(curl -s https://inteligenciaartificialdev.com/sitemap-0.xml | grep -oP '(?<=<loc>)[^<]+' | jq -R . | jq -s .)
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"inteligenciaartificialdev.com\",\"key\":\"822df1b763c5d22979cd8c29ce42f599\",\"keyLocation\":\"https://inteligenciaartificialdev.com/822df1b763c5d22979cd8c29ce42f599.txt\",\"urlList\":$urls}"
