@@ -21,20 +21,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
 <header class="site-header">
   <div class="container bar">
     <a href="/" class="brand">
-      <svg class="brand-icon" width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="robotGradient" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#7c3aed" />
-            <stop offset="1" stop-color="#e11d48" />
-          </linearGradient>
-        </defs>
-        <line x1="16" y1="6" x2="16" y2="10" stroke="url(#robotGradient)" stroke-width="2" stroke-linecap="round" />
-        <circle cx="16" cy="4.5" r="2" fill="url(#robotGradient)" />
-        <rect x="6" y="10" width="20" height="17" rx="6" fill="url(#robotGradient)" />
-        <circle cx="12.5" cy="18.5" r="2.2" fill="var(--bg)" />
-        <circle cx="19.5" cy="18.5" r="2.2" fill="var(--bg)" />
-        <rect x="12" y="22.5" width="8" height="2" rx="1" fill="var(--bg)" opacity="0.85" />
-      </svg>
+      <img class="brand-icon" src="/images/robot-logo.png" alt="" width="30" height="30" />
       <span class="brand-text">
         <span class="brand-gradient">AI</span> DEV
       </span>
