@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --bg: #faf8ff;
   --surface: #ffffff;
   --ink-strong: #241e3d;
@@ -24,6 +25,46 @@
   --font-mono: 'IBM Plex Mono', monospace;
 
   --measure: 68ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bg: #14101f;
+    --surface: #1e1830;
+    --ink-strong: #f5f3ff;
+    --ink: #ded9f0;
+    --ink-soft: #9d94bd;
+    --line: #34294f;
+
+    --violet: #a78bfa;
+    --violet-soft: #c4b5fd;
+    --violet-deep: #8b5cf6;
+
+    --rose: #fb7185;
+    --rose-soft: #fda4af;
+
+    --teal: #2dd4bf;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #14101f;
+  --surface: #1e1830;
+  --ink-strong: #f5f3ff;
+  --ink: #ded9f0;
+  --ink-soft: #9d94bd;
+  --line: #34294f;
+
+  --violet: #a78bfa;
+  --violet-soft: #c4b5fd;
+  --violet-deep: #8b5cf6;
+
+  --rose: #fb7185;
+  --rose-soft: #fda4af;
+
+  --teal: #2dd4bf;
 }
 
 * {

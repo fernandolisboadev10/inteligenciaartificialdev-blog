@@ -49,7 +49,7 @@ The bigger change is cache pricing. Cached input tokens now cost $0.25 per milli
 <div style="max-width:900px;margin:24px auto;overflow-x:auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
   <table style="width:100%;border-collapse:collapse;background:#ffffff;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:8px;overflow:hidden;">
     <thead>
-      <tr style="background:var(--ink-strong);color:#ffffff;">
+      <tr style="background:var(--ink-deep);color:#ffffff;">
         <th style="padding:14px 16px;text-align:left;font-size:14px;">Metric</th>
         <th style="padding:14px 16px;text-align:left;font-size:14px;">Fable 5</th>
         <th style="padding:14px 16px;text-align:left;font-size:14px;">Fable 5.1</th>

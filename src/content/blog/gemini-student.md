@@ -19,7 +19,7 @@ The offer splits into two tiers depending on where you live, and the gap between
 <div style="max-width:900px;margin:24px auto;overflow-x:auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
   <table style="width:100%;border-collapse:collapse;background:#ffffff;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:8px;overflow:hidden;">
     <thead>
-      <tr style="background:var(--ink-strong);color:#ffffff;">
+      <tr style="background:var(--ink-deep);color:#ffffff;">
         <th style="padding:14px 16px;text-align:left;font-size:14px;">Included</th>
         <th style="padding:14px 16px;text-align:left;font-size:14px;">🇺🇸 US Students: Google AI Pro</th>
         <th style="padding:14px 16px;text-align:left;font-size:14px;">🌍 International: Google AI Plus</th>
