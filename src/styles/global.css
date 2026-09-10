@@ -30,12 +30,12 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     color-scheme: dark;
-    --bg: #14101f;
-    --surface: #1e1830;
+    --bg: #0d1117;
+    --surface: #161b22;
     --ink-strong: #f5f3ff;
     --ink: #ded9f0;
     --ink-soft: #9d94bd;
-    --line: #34294f;
+    --line: #30363d;
 
     --violet: #a78bfa;
     --violet-soft: #c4b5fd;
@@ -50,12 +50,12 @@
 
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --bg: #14101f;
-  --surface: #1e1830;
+  --bg: #0d1117;
+  --surface: #161b22;
   --ink-strong: #f5f3ff;
   --ink: #ded9f0;
   --ink-soft: #9d94bd;
-  --line: #34294f;
+  --line: #30363d;
 
   --violet: #a78bfa;
   --violet-soft: #c4b5fd;
