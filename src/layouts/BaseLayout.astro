@@ -6,9 +6,28 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  type?: 'website' | 'article';
 }
 
-const { title, description = 'Tested AI prompts and workflows for developers.' } = Astro.props;
+const {
+  title,
+  description = 'Tested AI prompts and workflows for developers.',
+  image = '/images/robot-logo.png',
+  type = 'website',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(image, Astro.site);
+const siteName = 'AI DEV';
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteName,
+  url: Astro.site,
+  logo: new URL('/images/robot-logo.png', Astro.site).toString(),
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -24,8 +43,23 @@ const { title, description = 'Tested AI prompts and workflows for developers.' }
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="description" content={description} />
     <meta name="msvalidate.01" content="7F1E88061119512AF9AED1A7622C0E92" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" type="application/rss+xml" title={siteName} href={new URL('/rss.xml', Astro.site)} />
     <title>{title} · inteligenciaartificialdev.com</title>
+
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:url" content={canonicalURL} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
