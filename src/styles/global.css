@@ -126,6 +126,12 @@ img {
   color: var(--ink-strong);
 }
 
+.prose img {
+  height: auto;
+  border-radius: 10px;
+  margin: 32px 0;
+}
+
 .prose pre {
   background: var(--ink-deep);
   color: #ece7fb;
