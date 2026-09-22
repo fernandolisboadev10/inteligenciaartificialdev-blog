@@ -5,7 +5,7 @@ category: "AI Coding Tools"
 date: 2026-09-07
 readingTime: "7 min"
 image: "./images/google-antigravity.webp"
-imageAlt: "Holographic code editor with glowing AI agent orbs orbiting a monitor, illustrating Google Antigravity's multi-agent coding platform"
+imageAlt: "Wide shot of a curved ultrawide monitor at a dark modern developer desk at night, showing a code editor with several colorful AI agent chat panels open side by side, suggesting multiple agents working in parallel, with a blurred silhouette of hands typing on a mechanical keyboard in the foreground"
 ---
 
 If you've searched "Gemini coding tool" recently and landed on a name you didn't expect, that's not a mistake. Google Antigravity is now the center of its developer AI lineup, and it quietly absorbed a tool a lot of people were still using: Gemini CLI.

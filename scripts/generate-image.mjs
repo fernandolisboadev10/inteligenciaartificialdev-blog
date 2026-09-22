@@ -17,9 +17,11 @@ Object.assign(process.env, parseEnv(await readFile('.env', 'utf8').catch(() => '
 
 // House style, see the hero image art direction: US tech-journalism editorial photography.
 const STYLE =
-  'Realistic editorial photograph in the style of TechCrunch or The Verge: natural or soft studio lighting, ' +
-  'shallow depth of field, modern office or desk setting. Any on-screen text must be blurred or illegible. ' +
-  'No real company logos or wordmarks, no watermarks, no glowing sci-fi holograms. Subject: ';
+  'Photorealistic editorial tech-journalism photograph in the style of TechCrunch or The Verge: cinematic lighting ' +
+  '(natural window light, warm soft studio light, or moody ambient/neon rim light depending on the scene), shallow ' +
+  'depth of field with soft bokeh, sharp focus on the main subject, high level of detail, 35mm lens look. Modern ' +
+  'office, home desk, or developer workspace setting. Any on-screen text must be blurred or illegible. No real ' +
+  'company logos or wordmarks, no watermarks, no glowing sci-fi holograms, no fantasy digital art. Subject: ';
 
 const { values: opt } = parseArgs({
   options: {

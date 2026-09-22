@@ -5,7 +5,7 @@ category: "Chatbots"
 date: 2026-09-03
 readingTime: "7 min"
 image: "./images/chatgpt-sol-terra-luna-models-explained.webp"
-imageAlt: "ChatGPT Sol Terra Luna models comparison illustration"
+imageAlt: "Close-up editorial photo of a laptop screen showing three blurred chat conversation windows open side by side for comparison, with a small notebook on the desk showing handwritten model names, warm indoor office lighting"
 ---
 
 Open ChatGPT's model picker today and something feels off. The names don't match what you remember. That's because ChatGPT's Sol Terra Luna models replaced the old single-flagship setup, and most users have no idea which one answers their questions every day.

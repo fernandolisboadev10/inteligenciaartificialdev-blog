@@ -5,7 +5,7 @@ category: "Prompt Engineering"
 date: 2026-09-07
 readingTime: "5 min"
 image: "./images/chatgpt-study-commands.webp"
-imageAlt: "Confident man using a laptop at night, surrounded by glowing neon labels for ChatGPT study commands like /mindmap, /flashcards, and /quizboard"
+imageAlt: "Close-up editorial photo of a student's desk at night, laptop screen showing a blurred chat interface, colorful sticky notes on the desk labeled with study command names, stacked textbooks and a highlighter nearby, warm desk lamp light"
 ---
 
 Typing a fresh, detailed prompt every time you want ChatGPT to quiz you or summarize a chapter gets old fast. There's a simpler pattern that's been circulating among students on social media: teach the model a handful of short commands once, then trigger them with a single line for the rest of your study session.

@@ -5,7 +5,7 @@ category: "Chatbots"
 date: 2026-09-07
 readingTime: "7 min"
 image: "./images/claude-fable-5-1.webp"
-imageAlt: "Glowing ornate book radiating warm light and neural-network patterns, illustrating Claude Fable 5.1"
+imageAlt: "Close-up editorial photo of a developer's laptop screen showing a blurred AI chatbot benchmark comparison chart, with an open notebook full of handwritten pricing notes and a warm mug of coffee on a wooden desk, soft daylight"
 ---
 
 Anthropic released Claude Fable 5.1 on September 1, 2026, and the headline number is hard to ignore: 95.0% on SWE-bench Verified, one of the highest scores any model has posted on that benchmark. It's generally available now across the Claude API, AWS, Google Cloud, and Microsoft Azure, callable as `claude-fable-5-1`.
