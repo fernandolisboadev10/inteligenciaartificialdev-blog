@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "image": "node --env-file-if-exists=.env scripts/generate-image.mjs"
+    "image": "NODE_USE_ENV_PROXY=1 node --env-file-if-exists=.env scripts/generate-image.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.1",
