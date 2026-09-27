@@ -132,6 +132,10 @@ img {
   margin: 32px 0;
 }
 
+.prose table {
+  color: #1a1a1a;
+}
+
 .prose pre {
   background: var(--ink-deep);
   color: #ece7fb;
