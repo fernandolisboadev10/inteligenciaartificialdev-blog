@@ -38,11 +38,11 @@ const networks = [
         aria-label={`${shareOn} ${n.name}`}
         title={n.name}
       >
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d={n.path} /></svg>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d={n.path} /></svg>
       </a>
     ))}
     <button type="button" class="share-btn copy-link" aria-label={copyLabel} title={copyLabel} data-url={url}>
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg>
     </button>
   </div>
 </div>
@@ -89,8 +89,8 @@ const networks = [
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 55px;
-    height: 55px;
+    width: 46px;
+    height: 46px;
     border: 0;
     border-radius: 50%;
     color: #ffffff;
@@ -112,9 +112,27 @@ const networks = [
   .copy-link.copied { background: var(--teal); }
 
   @media (max-width: 560px) {
+    .share {
+      gap: 8px;
+    }
+
+    .share-label {
+      width: 100%;
+    }
+
+    .share-list {
+      flex-wrap: nowrap;
+      gap: 8px;
+    }
+
     .share-btn {
-      width: 46px;
-      height: 46px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .share-btn svg {
+      width: 18px;
+      height: 18px;
     }
   }
 </style>
