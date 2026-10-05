@@ -3,6 +3,8 @@ title: "Google Will Give You Gemini Pro Free for a Year If You're a Student. Her
 description: "Google's student offer gives US college students a free year of Google AI Pro. Here's what's actually included, who really qualifies, and the catches buried in the terms."
 category: "Tutorials"
 date: 2026-09-08
+updated: 2026-10-05
+related: ["google-antigravity", "chatgpt-study-commands", "chatgpt-detector-false-positives"]
 readingTime: "8 min"
 image: "./images/gemini-student.webp"
 imageAlt: "Close-up editorial photo of a college student's desk with a blurred laptop showing an AI chat interface, a student ID and credit card softly out of focus in the foreground"
@@ -129,6 +131,10 @@ Your card is automatically charged the standard subscription price ($19.99/month
 ### Is Google AI Pro worth it for programming students specifically?
 
 It's a real bonus if you're already using or curious about Google's coding tools — the same subscription raises usage limits on Google Antigravity, not just the Gemini chat app. It's not a replacement for a dedicated coding assistant like Claude Code, but as a free year with genuine coding-adjacent upside, it's worth claiming even if it's not your primary tool.
+
+## Related Reading and Official Resources
+
+A free year of Gemini Pro pairs well with good study prompts: the commands in [12 custom ChatGPT commands that turn it into a study tool](/chatgpt-study-commands/) can be adapted for Gemini. Before you lean on any chatbot for written work, read [why AI detectors flag real students](/chatgpt-detector-false-positives/). And if you code, see how [Google Antigravity](/google-antigravity/) works.
 
 ## The Bottom Line
 

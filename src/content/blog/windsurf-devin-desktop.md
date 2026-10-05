@@ -3,6 +3,8 @@ title: "Windsurf Is Now Devin Desktop: What Actually Changed"
 description: "Windsurf renamed itself to Devin Desktop on June 2, 2026. Here's what changed, what didn't, and what to do if you still have the old app open."
 category: "AI Coding Tools"
 date: 2026-09-18
+updated: 2026-10-05
+related: ["google-antigravity", "claude-code-hidden-features", "ai-coding-tools-case-studies"]
 readingTime: "5 min"
 image: "./images/windsurf-devin-desktop.webp"
 imageAlt: "Close-up editorial photo of a developer's hands typing on a laptop keyboard at a desk, with a blurred code editor and a Kanban-style agent board visible on the screen behind, soft natural window light"
@@ -66,6 +68,10 @@ Devin Local is the local coding agent that replaced Cascade as the default when 
 ### Can I still use other AI models inside Devin Desktop?
 
 Yes. ACP (Agent Client Protocol) support lets you run Claude Agent, Codex, or OpenCode in the same shell, so you're not locked into Cognition's own agents only.
+
+## Related Reading and Official Resources
+
+Windsurf's rename is part of a wider shake-up in agent IDEs. Compare it with [Google Antigravity](/google-antigravity/) and [Claude Code](/claude-code-hidden-features/), and see what vendors can and cannot prove in [our case-study check](/ai-coding-tools-case-studies/).
 
 ## The Bottom Line
 

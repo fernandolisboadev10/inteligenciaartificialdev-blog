@@ -3,6 +3,8 @@ title: "GPT-6 Astra Explained: OpenAI's New Flagship, Benchmarks, and Price"
 description: "OpenAI's GPT-6 Astra launched September 2026 with computer-use skills and an AGI claim from Greg Brockman. Here's what it does, what it costs, and the safety trade-off."
 category: "Chatbots"
 date: 2026-09-07
+updated: 2026-10-05
+related: ["chatgpt-sol-terra-luna-models", "claude-fable-5-1", "grok-api-pricing"]
 readingTime: "8 min"
 image: "./images/gpt-6-astra.webp"
 imageAlt: "Close-up editorial photo of a laptop screen showing a blurred browser window mid-automated-action with a visible cursor, a developer's hand resting near the trackpad, modern minimalist desk, soft daylight through a window"
@@ -117,6 +119,10 @@ No independent consensus says so. OpenAI's Greg Brockman raised the possibility 
 ### Why is GPT-6 Astra's cybersecurity capability a concern?
 
 It's the first OpenAI model to hit the Critical tier under OpenAI's Preparedness Framework, meaning it can find and exploit unknown security flaws with minimal human guidance. That's why the public release is restricted and the full capability is gated behind a trusted-access program.
+
+## Related Reading and Official Resources
+
+For the model lineup Astra sits on top of, read [ChatGPT's Sol, Terra, and Luna models](/chatgpt-sol-terra-luna-models/). To compare against rivals, see [Claude Fable 5.1](/claude-fable-5-1/) and [Grok's API pricing](/grok-api-pricing/). Current rates are on [OpenAI's API pricing page](https://openai.com/api/pricing/), and model details are in the [OpenAI models docs](https://platform.openai.com/docs/models).
 
 ## The Bottom Line
 

@@ -1,0 +1,72 @@
+---
+import { getEntry } from 'astro:content';
+
+interface Props {
+  slugs?: string[];
+}
+const { slugs = [] } = Astro.props;
+const entries = (await Promise.all(slugs.map((slug) => getEntry('blog', slug)))).filter(
+  (entry) => entry && !entry.data.draft,
+);
+---
+{entries.length > 0 && (
+  <nav class="related" aria-labelledby="related-heading">
+    <h2 id="related-heading">Keep reading</h2>
+    <ul>
+      {entries.map((entry) => (
+        <li>
+          <span class="cat">{entry!.data.category}</span>
+          <a href={`/${entry!.id}/`}>{entry!.data.title}</a>
+          <p>{entry!.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .related {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+
+  .related h2 {
+    font-size: 1.35rem;
+    margin: 0 0 16px;
+  }
+
+  .related ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 18px;
+  }
+
+  .cat {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--violet);
+  }
+
+  .related a {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink-strong);
+    text-decoration: none;
+  }
+
+  .related a:hover {
+    color: var(--violet);
+    text-decoration: underline;
+  }
+
+  .related p {
+    margin: 4px 0 0;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+</style>

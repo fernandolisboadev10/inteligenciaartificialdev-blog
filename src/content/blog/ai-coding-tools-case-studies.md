@@ -3,6 +3,8 @@ title: "We Checked the Case Studies Behind Claude Code, Codex, Copilot, and Anti
 description: "Anthropic, OpenAI, Microsoft, and Google all publish glowing case studies for their AI coding tools. We looked at what's actually being measured, who published it, and whether independent research backs it up."
 category: "Case Studies"
 date: 2026-09-27
+updated: 2026-10-05
+related: ["claude-code-hidden-features", "google-antigravity", "ai-code-review-tools-pricing"]
 readingTime: "9 min"
 image: "./images/ai-coding-tools-case-studies.webp"
 imageAlt: "Editorial photo of a developer's desk with a laptop showing a blurred code editor next to a stack of printed reports covered in highlighter marks and sticky notes, soft window light, shallow depth of field"
@@ -130,10 +132,14 @@ It's earlier than the other three on public evidence: fewer documented deploymen
 
 No. They're a starting filter for which tools are worth a real trial, not a substitute for testing on your own codebase with your own definition of success.
 
+## Related Reading and Official Resources
+
+Case studies are one input. The others are cost and day-to-day workflow. For cost, see [what AI code review tools really cost](/ai-code-review-tools-pricing/). To see what these tools do beyond the marketing, read [5 Claude Code features most developers never turn on](/claude-code-hidden-features/) and [Google Antigravity explained](/google-antigravity/). When you want the vendors' own material, start from the [Claude Code docs](https://code.claude.com/docs/en/overview), the [GitHub Copilot docs](https://docs.github.com/en/copilot), and [OpenAI Codex](https://openai.com/codex/).
+
 ## The Bottom Line
 
 Line up the four biggest AI coding tools' case studies and the gap isn't really about which one has the biggest number — it's about which ones have any evidence beyond their own marketing page. Claude Code and Codex have specific, named customers and no outside verification. Antigravity has the thinnest record of the four and an open security flag. Copilot is the odd one out: the only tool with independent academic scrutiny, and that scrutiny didn't simply confirm the vendor's story. That's not a reason to default to Copilot — it's a reason to go looking for the same kind of scrutiny, or the lack of it, before trusting any tool's own case study about itself.
 
 ---
 
-*Sources: [Anthropic — Classmethod case study](https://claude.com/customers/classmethod), [Anthropic — HubSpot case study](https://claude.com/customers/hubspot), [Anthropic — How AI is transforming work at Anthropic](https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic), [OpenAI — From assistance to execution: how enterprises put AI to work](https://openai.com/index/how-enterprises-put-ai-to-work/), [RuntimeWire — Basis, Clay, and Exa on Codex agent workflows](https://runtimewire.com/article/basis-clay-exa-agent-workflows-openai-codex), [GitHub Blog — Quantifying Copilot's impact with Accenture](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-in-the-enterprise/), [arXiv — Developer Productivity With and Without GitHub Copilot](https://arxiv.org/abs/2509.20353), [Google Cloud Blog — Expanding Antigravity for enterprise](https://cloud.google.com/blog/products/ai-machine-learning/expanding-google-antigravity-for-enterprise-customers/), [Augment Code — Antigravity vs. Gemini Code Assist](https://www.augmentcode.com/tools/google-antigravity-vs-gemini-code-assist).*
+*Sources: [Anthropic — Classmethod case study](https://claude.com/customers/classmethod), [Anthropic — HubSpot case study](https://claude.com/customers/hubspot), [Anthropic — How AI is transforming work at Anthropic](https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic), [OpenAI — From assistance to execution: how enterprises put AI to work](https://openai.com/index/how-enterprises-put-ai-to-work/), [RuntimeWire — Basis, Clay, and Exa on Codex agent workflows](https://runtimewire.com/article/basis-clay-exa-agent-workflows-openai-codex), [GitHub Blog — Quantifying Copilot's impact with Accenture](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-in-the-enterprise-with-accenture/), [arXiv — Developer Productivity With and Without GitHub Copilot](https://arxiv.org/abs/2509.20353), [Google Cloud Blog — Expanding Antigravity for enterprise](https://cloud.google.com/blog/products/ai-machine-learning/expanding-google-antigravity-for-enterprise-customers/), [Augment Code — Antigravity vs. Gemini Code Assist](https://www.augmentcode.com/tools/google-antigravity-vs-gemini-code-assist).*

@@ -3,6 +3,8 @@ title: "Google Antigravity Explained: Gemini's Agent-First Coding Tool"
 description: "Google Antigravity replaced Gemini CLI in 2026. Here's what it actually does, what it costs, and how it compares to Gemini Code Assist and Jules."
 category: "AI Coding Tools"
 date: 2026-09-07
+updated: 2026-10-05
+related: ["windsurf-devin-desktop", "gemini-student", "ai-coding-tools-case-studies"]
 readingTime: "7 min"
 image: "./images/google-antigravity.webp"
 imageAlt: "Wide shot of a curved ultrawide monitor at a dark modern developer desk at night, showing a code editor with several colorful AI agent chat panels open side by side, suggesting multiple agents working in parallel, with a blurred silhouette of hands typing on a mechanical keyboard in the foreground"
@@ -121,6 +123,10 @@ No. Alongside Gemini 3 Pro, Deep Think, and Flash, it also supports Claude Sonne
 ### Is Antigravity the same as Gemini Code Assist?
 
 No. Gemini Code Assist is an AI extension that plugs into an IDE you already use. Antigravity is a separate, standalone agent-first platform with its own editor, CLI, and SDK.
+
+## Related Reading and Official Resources
+
+Antigravity is not the only agent IDE that changed shape this year: see [Windsurf is now Devin Desktop](/windsurf-devin-desktop/). Students can get higher limits through [Google's free Gemini Pro offer](/gemini-student/). For how Google's claims compare with the other vendors', read [our case-study check](/ai-coding-tools-case-studies/). The product itself lives at [antigravity.google](https://antigravity.google/).
 
 ## The Bottom Line
 

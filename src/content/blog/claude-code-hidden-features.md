@@ -3,6 +3,8 @@ title: "5 Claude Code Features Most Developers Never Turn On"
 description: "Plan mode, auto memory, subagents, skills, and hooks turn Claude Code from a chat window into a real dev workflow. Here's how each one actually works, with real config."
 category: "Reviews"
 date: 2026-09-12
+updated: 2026-10-05
+related: ["context-engineering-habits-developers", "vibe-coding-habits", "claude-fable-5-1"]
 readingTime: "8 min"
 image: "./images/claude-code-hidden-features.webp"
 imageAlt: "Close-up editorial photo of a developer's laptop at night showing an AI coding agent session in a dark terminal, with a second monitor softly blurred in the background showing a code editor"
@@ -195,6 +197,10 @@ A skill loads instructions into your current conversation; a subagent runs in a 
 ### Where do I see what's actually loaded in a given session?
 
 Run `/context` inside a session. It lists every CLAUDE.md, rule, and memory file that actually loaded, which is the fastest way to debug an instruction that doesn't seem to be taking effect.
+
+## Related Reading and Official Resources
+
+These features only pay off when the context is right. [7 context engineering habits](/context-engineering-habits-developers/) shows how to keep CLAUDE.md short and when to reset a session, and [6 vibe coding habits](/vibe-coding-habits/) covers the commit-and-check routine that pairs well with plan mode. For the model behind the tool, see [Claude Fable 5.1 explained](/claude-fable-5-1/). For how Anthropic's claims compare with the evidence, read [our case-study check](/ai-coding-tools-case-studies/).
 
 ## The Bottom Line
 

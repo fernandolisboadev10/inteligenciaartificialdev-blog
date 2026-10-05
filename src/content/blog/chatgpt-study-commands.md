@@ -3,6 +3,8 @@ title: "12 Custom ChatGPT Commands That Turn It Into a Study Tool"
 description: "Set up 12 slash-style commands once, and ChatGPT stops giving generic answers and starts building mind maps, flashcards, and memory palaces on demand. Copy-paste ready."
 category: "Prompt Engineering"
 date: 2026-09-07
+updated: 2026-10-05
+related: ["chatgpt-detector-false-positives", "gemini-student", "chatgpt-sol-terra-luna-models"]
 readingTime: "5 min"
 image: "./images/chatgpt-study-commands.webp"
 imageAlt: "Close-up editorial photo of a student's desk at night, laptop screen showing a blurred chat interface, colorful sticky notes on the desk labeled with study command names, stacked textbooks and a highlighter nearby, warm desk lamp light"
@@ -199,6 +201,10 @@ Run this after everything else to check what actually stuck. Mixed question form
   </div>
   <pre id="prompt-quizboard"><code>/quizboard The Periodic Table</code></pre>
 </div>
+
+## Related Reading and Official Resources
+
+These commands work best when ChatGPT already knows your preferences, so read OpenAI's guides to [Custom Instructions](https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt) and [Memory](https://help.openai.com/en/articles/8590148-memory-faq). Studying with AI has risks too: [AI detectors can flag real student writing](/chatgpt-detector-false-positives/), so keep your own notes and drafts. For a free alternative, see [Google's free Gemini Pro year for students](/gemini-student/). To know which model you get on each plan, read [ChatGPT's Sol, Terra, and Luna models](/chatgpt-sol-terra-luna-models/).
 
 ## Making it stick
 

@@ -3,6 +3,8 @@ title: "xAI's Grok API Is Cheaper Than GPT-6 Astra and Claude Opus 5. We Ran the
 description: "Grok's flagship model costs a fraction of GPT-6 Astra and undercuts Claude Opus 5. Here's the real per-token math, a working code example, and where the cheap price stops being a deal."
 category: "AI Coding Tools"
 date: 2026-09-08
+updated: 2026-10-05
+related: ["gpt-6-astra", "claude-fable-5-1", "google-antigravity"]
 readingTime: "7 min"
 image: "./images/grok-api-pricing.webp"
 imageAlt: "Close-up editorial photo of a laptop screen showing a blurred code editor and a token cost comparison chart, with US dollar bills and coins softly out of focus on the desk in the foreground"
@@ -235,6 +237,10 @@ Yes. Point the OpenAI Python or Node SDK at `https://api.x.ai/v1` with your xAI 
 ### Which Grok model should I use for coding?
 
 Grok Build 0.1 is xAI's coding-specific model at $1/$2 per million tokens, cheaper than the general-purpose Grok 4.6 for that use case. For the highest raw coding benchmark scores, Grok 4.6 itself is the stronger (and pricier) option.
+
+## Related Reading and Official Resources
+
+For the models Grok is compared against, read [GPT-6 Astra explained](/gpt-6-astra/) and [Claude Fable 5.1 explained](/claude-fable-5-1/). If you are picking tooling rather than a raw API, [Google Antigravity](/google-antigravity/) is another option. Verify rates before you commit: [OpenAI API pricing](https://openai.com/api/pricing/) and [Anthropic pricing](https://www.anthropic.com/pricing).
 
 ## The Bottom Line
 

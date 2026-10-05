@@ -3,6 +3,8 @@ title: "Open Source Maintainers Are Closing the Door on AI-Generated Pull Reques
 description: "cURL ended its bug bounty, Ghostty restricted AI code, and tldraw auto-closes outside PRs. What 'AI slop' means for maintainers, and a 7-step checklist for using AI on open source the right way."
 category: "AI Coding Tools"
 date: 2026-10-02
+updated: 2026-10-05
+related: ["ai-code-review-tools-pricing", "vibe-coding-habits", "context-engineering-habits-developers"]
 readingTime: "7 min"
 image: "./images/ai-slop-pull-requests-open-source.webp"
 imageAlt: "Over-the-shoulder editorial photo of a tired open source maintainer at a desk late in the evening, reviewing a long list of pull requests on a laptop with warm lamp light and a coffee mug"
@@ -110,6 +112,10 @@ If you run a project and you're drowning, closing contributions isn't the only o
 - **Ask for the reasoning.** One question, like "why did you choose this approach over the existing helper?", filters out most unreviewed output quickly.
 
 The tldraw story is a useful warning here too. If you automate issue creation or triage with AI, review what it produces, because bad generated issues invite bad generated PRs.
+
+## Related Reading and Official Resources
+
+Using AI well on someone else's repository comes down to context and verification, the same habits covered in [7 context engineering habits for developers](/context-engineering-habits-developers/) and [6 vibe coding habits](/vibe-coding-habits/). Teams facing the same review pressure internally can compare [AI code review tools and what they cost](/ai-code-review-tools-pricing/). GitHub's own guides are useful on both sides of the pull request: [setting guidelines for repository contributors](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors), [limiting interactions in your repository](https://docs.github.com/en/communities/moderating-comments-and-conversations/limiting-interactions-in-your-repository), and the [Open Source Guides](https://opensource.guide/how-to-contribute/).
 
 ## The Takeaway
 

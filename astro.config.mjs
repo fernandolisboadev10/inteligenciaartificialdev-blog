@@ -11,7 +11,7 @@ const dateBySlug = new Map();
 for (const file of readdirSync(blogDir)) {
   if (!file.endsWith('.md')) continue;
   const content = readFileSync(new URL(file, blogDir), 'utf-8');
-  const match = content.match(/^date:\s*(\S+)/m);
+  const match = content.match(/^updated:\s*(\S+)/m) ?? content.match(/^date:\s*(\S+)/m);
   if (match) {
     dateBySlug.set(file.replace(/\.md$/, ''), new Date(match[1]));
   }

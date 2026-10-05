@@ -21,7 +21,7 @@ const formattedDate = date?.toLocaleDateString('en-US', {
   timeZone: 'UTC',
 });
 ---
-<a href={`/${slug}`} class="card">
+<a href={`/${slug}/`} class="card">
   <div class="thumb">
     {image && <Image src={image} alt={imageAlt ?? title} width={480} height={320} />}
     <span class="badge">{category}</span>

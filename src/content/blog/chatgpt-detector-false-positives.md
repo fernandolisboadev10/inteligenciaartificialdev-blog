@@ -3,6 +3,8 @@ title: "We Fed AI Detectors Human-Written Essays. They Flagged Real Students as 
 description: "AI detectors flagged an 1841 essay and a 2012 Wikipedia article as 'fake' in our own test. Here's the real data on false positives, and how to protect yourself."
 category: "Tutorials"
 date: 2026-09-08
+updated: 2026-10-05
+related: ["chatgpt-study-commands", "gemini-student", "deepseek-vs-chatgpt-pomodoro-timer"]
 readingTime: "9 min"
 image: "./images/chatgpt-detector-false-positives.webp"
 imageAlt: "Close-up editorial photo of a printed essay with sentences highlighted in red and a red pen on top, next to a laptop showing a blurred AI detection score"
@@ -106,6 +108,10 @@ Not reliably, at least against the detector we tested. Our lightly rewritten AI 
 ### What should I do if I'm falsely accused of using AI?
 
 Gather independent evidence: document version history, research notes, browser history, and drafts. Point out, calmly, that detector scores alone aren't considered reliable proof by many universities' own current policies, and ask what additional evidence is being used against you before accepting any outcome.
+
+## Related Reading and Official Resources
+
+If you use AI for school, treat it as a tutor rather than a ghostwriter. [12 custom ChatGPT commands that turn it into a study tool](/chatgpt-study-commands/) shows how. For free options, see [Google's free Gemini Pro year for students](/gemini-student/) and [how DeepSeek and free ChatGPT compare on the same prompt](/deepseek-vs-chatgpt-pomodoro-timer/). For background on why detection is hard, read OpenAI's own note on its discontinued [AI text classifier](https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/).
 
 ## The Bottom Line
 

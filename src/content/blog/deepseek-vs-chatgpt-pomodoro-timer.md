@@ -3,6 +3,8 @@ title: "We Gave DeepSeek and ChatGPT (Free) the Same Pomodoro Prompt. Here's Wha
 description: "Same exact prompt, both free tiers, zero follow-up edits. We tested both Pomodoro timers by hand — pause, resume, tab-switch — and found real differences in time drift handling, accessibility, and scope."
 category: "Case Studies"
 date: 2026-09-14
+updated: 2026-10-05
+related: ["chatgpt-sol-terra-luna-models", "chatgpt-study-commands", "vibe-coding-habits"]
 readingTime: "6 min"
 image: "./images/deepseek-vs-chatgpt-pomodoro-timer.webp"
 imageAlt: "Close-up editorial photo of two laptops side by side on a wooden desk, each screen showing a blurred countdown timer interface, with a small red tomato-shaped kitchen timer softly out of focus in the foreground"
@@ -96,6 +98,10 @@ DeepSeek answered the same six bullet points, then kept going. The countdown isn
 ## What We Couldn't Fully Verify
 
 DeepSeek's UI showed a visible "thought for 17 seconds" indicator before returning code; ChatGPT's free tier doesn't expose that step at all, so there's no equivalent number to compare it to. Subjectively, ChatGPT's response felt faster start to finish, but we didn't use a stopwatch on it, so treat that as an impression, not a measurement. We're flagging it rather than papering over it: one model shows its work, the other doesn't, and that's worth knowing even without a clean number on both sides.
+
+## Related Reading and Official Resources
+
+You can repeat this test yourself: both tools are free at [chatgpt.com](https://chatgpt.com/) and [chat.deepseek.com](https://chat.deepseek.com/). To know which model ChatGPT's free tier actually uses, read [ChatGPT's Sol, Terra, and Luna models](/chatgpt-sol-terra-luna-models/). Prompts shape the result as much as the model does, so see [12 custom ChatGPT commands for studying](/chatgpt-study-commands/) and [6 vibe coding habits](/vibe-coding-habits/) for building small apps with AI.
 
 ## The Bottom Line
 

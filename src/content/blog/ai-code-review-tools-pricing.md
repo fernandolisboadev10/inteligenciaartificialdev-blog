@@ -3,6 +3,8 @@ title: "CodeRabbit vs GitHub Copilot vs Greptile: What AI Code Review Really Cos
 description: "Three AI code reviewers, three very different billing models. Here's how CodeRabbit, GitHub Copilot, and Greptile price their reviews, and which one fits a solo dev, a startup, or a team."
 category: "Reviews"
 date: 2026-10-03
+updated: 2026-10-05
+related: ["ai-slop-pull-requests-open-source", "ai-coding-tools-case-studies", "claude-code-hidden-features"]
 readingTime: "7 min"
 image: "./images/ai-code-review-tools-pricing.webp"
 imageAlt: "Editorial photo of two developers at a shared desk reviewing a pull request on a laptop, with a second monitor showing a blurred code diff and sticky notes on the desk"
@@ -129,6 +131,10 @@ Marketing pages can't tell you which tool is right for your codebase. A one-afte
 5. Compare the cost for your real PR volume, not the sticker price.
 
 Noise is the metric that gets underrated. A tool that flags 30 things per PR and gets muted by week two is worse than one that flags three things you care about.
+
+## Related Reading and Official Resources
+
+Price is only half of the decision. To judge whether vendor claims hold up, read [our check of the case studies behind Claude Code, Codex, Copilot, and Antigravity](/ai-coding-tools-case-studies/). If you maintain an open source project, [the guide to AI-generated pull requests](/ai-slop-pull-requests-open-source/) covers the same review-queue problem from the maintainer side. And [Claude Code's hooks and subagents](/claude-code-hidden-features/) can run some checks before a human or a bot ever sees the diff. For setup details, see the [CodeRabbit documentation](https://docs.coderabbit.ai/).
 
 ## The Bottom Line
 

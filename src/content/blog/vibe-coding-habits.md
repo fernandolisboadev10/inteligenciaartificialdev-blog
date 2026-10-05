@@ -3,6 +3,8 @@ title: "Vibe Coding Without the Mess: 6 Habits That Keep AI-Generated Projects F
 description: "Vibe coding gets you 80% of the way fast, then something breaks and nobody knows why. Six habits, with copy-paste prompts, that keep an AI-built project fixable."
 category: "Tutorials"
 date: 2026-09-21
+updated: 2026-10-05
+related: ["context-engineering-habits-developers", "claude-code-hidden-features", "ai-slop-pull-requests-open-source"]
 readingTime: "6 min"
 image: "./images/vibe-coding-habits.webp"
 imageAlt: "Over-the-shoulder editorial photo of a young developer at a wooden desk working on a laptop with a blurred code editor on screen and a small checklist sticky note beside the monitor, warm morning window light"
@@ -144,6 +146,10 @@ it and how you can confirm that. Then make the smallest fix possible.
 </div>
 
 A clean context plus "explain the cause first" beats a fourth blind attempt almost every time.
+
+## Related Reading and Official Resources
+
+When you're ready for more control, [7 context engineering habits](/context-engineering-habits-developers/) goes deeper on what to put in front of the AI, and [5 Claude Code features](/claude-code-hidden-features/) covers plan mode and hooks. If you plan to send AI-written code to someone else's repository, read [how maintainers handle AI-generated pull requests](/ai-slop-pull-requests-open-source/) first. For the tooling behind these habits: the [Git documentation](https://git-scm.com/doc), GitHub's [secret scanning guide](https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning), [The Twelve-Factor App on config](https://12factor.net/config), and the [Claude Code best practices](https://code.claude.com/docs/en/best-practices).
 
 ## The Short Version
 

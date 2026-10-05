@@ -3,6 +3,8 @@ title: "Claude Fable 5.1 Explained: Benchmarks, Pricing, and What's New"
 description: "Anthropic's Claude Fable 5.1 lands with a near-perfect SWE-bench score and a cheaper price tag. Here's what changed, what Mythos 5.1 is, and what it costs."
 category: "Chatbots"
 date: 2026-09-07
+updated: 2026-10-05
+related: ["gpt-6-astra", "grok-api-pricing", "claude-code-hidden-features"]
 readingTime: "7 min"
 image: "./images/claude-fable-5-1.webp"
 imageAlt: "Close-up editorial photo of a developer's laptop screen showing a blurred AI chatbot benchmark comparison chart, with an open notebook full of handwritten pricing notes and a warm mug of coffee on a wooden desk, soft daylight"
@@ -108,6 +110,10 @@ $10 per million input tokens and $50 per million output tokens, with cached inpu
 ### What's Claude Fable 5.1's context window?
 
 1 million tokens, with a maximum output of 128,000 tokens per response.
+
+## Related Reading and Official Resources
+
+To compare directly, see [GPT-6 Astra explained](/gpt-6-astra/) and [Grok's API pricing](/grok-api-pricing/). To put the model to work in a coding agent, read [5 Claude Code features most developers never turn on](/claude-code-hidden-features/). Check current numbers on [Anthropic's pricing page](https://www.anthropic.com/pricing) and in the [models overview](https://docs.claude.com/en/docs/about-claude/models/overview) in the docs.
 
 ## The Bottom Line
 

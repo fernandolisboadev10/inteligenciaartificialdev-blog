@@ -3,6 +3,8 @@ title: "Prompt Engineering Isn't Dead: 7 Context Habits Developers Need in 2026"
 description: "Better prompts still matter, but with AI coding agents the bigger lever is what the model sees. Seven context engineering habits, with copy-paste examples, for developers using Claude Code, Cursor, and similar tools."
 category: "Prompt Engineering"
 date: 2026-10-03
+updated: 2026-10-05
+related: ["claude-code-hidden-features", "vibe-coding-habits", "ai-coding-tools-case-studies"]
 readingTime: "8 min"
 image: "./images/context-engineering-habits-developers.webp"
 imageAlt: "Editorial photo of a developer's desk with a laptop showing a blurred terminal session, a handwritten checklist beside it, and a coffee mug in warm evening light"
@@ -167,6 +169,10 @@ A rough way to think about it:
 | Examples | Specific, scoped wording | CLAUDE.md, `/clear`, subagents, specs |
 
 Both are cheap to improve. Start with habit one, since adding a way to verify the work pays off immediately, then prune your rules file this week.
+
+## Related Reading and Official Resources
+
+If you're newer to AI-assisted coding, [6 vibe coding habits](/vibe-coding-habits/) is the beginner-friendly companion to this list. For the open source angle, see [how maintainers are handling AI-generated pull requests](/ai-slop-pull-requests-open-source/), and for a reality check on vendor claims, [what the case studies actually prove](/ai-coding-tools-case-studies/). The conventions mentioned here are documented at [AGENTS.md](https://agents.md/) and the [Model Context Protocol](https://modelcontextprotocol.io/).
 
 ## FAQ
 
