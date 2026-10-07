@@ -1,5 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import NewsletterForm from './NewsletterForm.astro';
+
+const articles = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
 
 const categories = [
   { label: 'Home', href: '/' },
@@ -56,6 +61,15 @@ const quickLinks = [
     </div>
   </div>
 
+  <div class="container latest">
+    <p class="col-title">Latest Articles</p>
+    <ul class="latest-list">
+      {articles.map((post) => (
+        <li><a href={`/${post.id}/`}>{post.data.title}</a></li>
+      ))}
+    </ul>
+  </div>
+
   <div class="bottom">
     <div class="container bottom-inner">
       <p>© {new Date().getFullYear()} AI DEV. All rights reserved.</p>
@@ -70,6 +84,25 @@ const quickLinks = [
 </footer>
 
 <style>
+  .latest {
+    padding-bottom: 40px;
+  }
+
+  .latest-list {
+    columns: 2;
+    column-gap: 40px;
+  }
+
+  .latest-list li {
+    break-inside: avoid;
+  }
+
+  @media (max-width: 720px) {
+    .latest-list {
+      columns: 1;
+    }
+  }
+
   .site-footer {
     margin-top: 80px;
   }
