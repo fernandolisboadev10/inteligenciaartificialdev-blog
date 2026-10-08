@@ -122,7 +122,7 @@ It's the first OpenAI model to hit the Critical tier under OpenAI's Preparedness
 
 ## Related Reading and Official Resources
 
-For the model lineup Astra sits on top of, read [ChatGPT's Sol, Terra, and Luna models](/chatgpt-sol-terra-luna-models/). To compare against rivals, see [Claude Fable 5.1](/claude-fable-5-1/) and [Grok's API pricing](/grok-api-pricing/). Current rates are on [OpenAI's API pricing page](https://openai.com/api/pricing/), and model details are in the [OpenAI models docs](https://platform.openai.com/docs/models).
+For the model lineup Astra sits on top of, read [ChatGPT's Sol, Terra, and Luna models](/chatgpt-sol-terra-luna-models/). To compare against rivals, see [Claude Fable 5.1](/claude-fable-5-1/) and [Grok's API pricing](/grok-api-pricing/). Current rates are on [OpenAI's API pricing page](https://openai.com/api/pricing/), and model details are in the [OpenAI models docs](https://platform.openai.com/docs/models). For the policy side of the same vocabulary, see [what Trump's "Super Intelligence" executive order means for developers](/trump-super-intelligence-order-developers/).
 
 ## The Bottom Line
 

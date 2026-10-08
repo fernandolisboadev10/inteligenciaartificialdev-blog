@@ -143,7 +143,7 @@ For simple questions, no. For messy, multi-file coding tasks or problems that be
 
 ## Related Reading and Official Resources
 
-Model names change quickly. For OpenAI's next step up, read [GPT-6 Astra explained](/gpt-6-astra/). For the competition, see [Claude Fable 5.1's benchmarks and pricing](/claude-fable-5-1/) and [how Grok's API prices compare](/grok-api-pricing/). To check plans and limits yourself, use [ChatGPT pricing](https://chatgpt.com/pricing) and [OpenAI API pricing](https://openai.com/api/pricing/).
+Model names change quickly. For OpenAI's next step up, read [GPT-6 Astra explained](/gpt-6-astra/). For the competition, see [Claude Fable 5.1's benchmarks and pricing](/claude-fable-5-1/) and [how Grok's API prices compare](/grok-api-pricing/). To check plans and limits yourself, use [ChatGPT pricing](https://chatgpt.com/pricing) and [OpenAI API pricing](https://openai.com/api/pricing/). If you are wondering why the government now says "Super Intelligence", read [our explainer on the executive order](/trump-super-intelligence-order-developers/).
 
 ## The Bottom Line
 
