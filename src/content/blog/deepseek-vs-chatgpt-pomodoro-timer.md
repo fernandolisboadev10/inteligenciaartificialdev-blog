@@ -101,7 +101,7 @@ DeepSeek's UI showed a visible "thought for 17 seconds" indicator before returni
 
 ## Related Reading and Official Resources
 
-You can repeat this test yourself: both tools are free at [chatgpt.com](https://chatgpt.com/) and [chat.deepseek.com](https://chat.deepseek.com/). To know which model ChatGPT's free tier actually uses, read [ChatGPT's Sol, Terra, and Luna models](/chatgpt-sol-terra-luna-models/). Prompts shape the result as much as the model does, so see [12 custom ChatGPT commands for studying](/chatgpt-study-commands/) and [6 vibe coding habits](/vibe-coding-habits/) for building small apps with AI.
+You can repeat this test yourself: both tools are free at [chatgpt.com](https://chatgpt.com/) and [chat.deepseek.com](https://chat.deepseek.com/). To know which model ChatGPT's free tier actually uses, read [ChatGPT's Sol, Terra, and Luna models](/chatgpt-sol-terra-luna-models/). Prompts shape the result as much as the model does, so see [12 custom ChatGPT commands for studying](/chatgpt-study-commands/) and [6 vibe coding habits](/vibe-coding-habits/) for building small apps with AI. Another free option for students is [Google's year of Gemini Pro](/gemini-student/), and before you hand in anything AI-assisted, read [why AI detectors flag real students](/chatgpt-detector-false-positives/).
 
 ## The Bottom Line
 

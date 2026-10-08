@@ -9,6 +9,7 @@ interface Props {
   description?: string;
   image?: string;
   type?: 'website' | 'article';
+  noindex?: boolean;
 }
 
 const {
@@ -16,6 +17,7 @@ const {
   description = 'Tested AI prompts and workflows for developers.',
   image = '/images/robot-logo.png',
   type = 'website',
+  noindex = false,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -43,6 +45,7 @@ const organizationSchema = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <meta name="google-site-verification" content="tc0GFdgefr6gTC43KdT1T9NKUEN0WiQgXQkGia164-Q" />
     <meta name="msvalidate.01" content="7F1E88061119512AF9AED1A7622C0E92" />
     <link rel="canonical" href={canonicalURL} />

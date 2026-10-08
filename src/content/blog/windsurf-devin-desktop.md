@@ -71,7 +71,7 @@ Yes. ACP (Agent Client Protocol) support lets you run Claude Agent, Codex, or Op
 
 ## Related Reading and Official Resources
 
-Windsurf's rename is part of a wider shake-up in agent IDEs. Compare it with [Google Antigravity](/google-antigravity/) and [Claude Code](/claude-code-hidden-features/), and see what vendors can and cannot prove in [our case-study check](/ai-coding-tools-case-studies/).
+Windsurf's rename is part of a wider shake-up in agent IDEs. Compare it with [Google Antigravity](/google-antigravity/) and [Claude Code](/claude-code-hidden-features/), and see what vendors can and cannot prove in [our case-study check](/ai-coding-tools-case-studies/). If you are choosing models for these tools, compare [GPT-6 Astra](/gpt-6-astra/) and [Claude Fable 5.1](/claude-fable-5-1/).
 
 ## The Bottom Line
 
