@@ -20,6 +20,9 @@ for (const file of readdirSync(blogDir)) {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://inteligenciaartificialdev.com',
+  redirects: {
+    '/trump-super-intelligence-order-developers': '/trump-super-intelligence-order',
+  },
   integrations: [
     sitemap({
       filter: (page) => !page.endsWith('/free-prompts/'),

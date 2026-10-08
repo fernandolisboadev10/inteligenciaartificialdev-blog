@@ -5,7 +5,7 @@ category: "Tutorials"
 date: 2026-10-08
 related: ["gpt-6-astra", "claude-fable-5-1", "ai-slop-pull-requests-open-source"]
 readingTime: "8 min"
-image: "./images/trump-super-intelligence-order-developers.webp"
+image: "./images/trump-super-intelligence-order.webp"
 imageAlt: "Editorial photo of a signed official document and a fountain pen on a polished wooden desk in a government-style office, with an American flag and a laptop showing a blurred code editor in the background"
 draft: false
 ---
@@ -22,7 +22,7 @@ Based on the [White House fact sheet](https://www.whitehouse.gov/fact-sheets/202
 - **A working definition (Section 3).** For the purposes of the order, "Super Intelligence" has the same meaning as "artificial intelligence" in [15 U.S.C. § 9401(3)](https://www.law.cornell.edu/uscode/text/15/9401), the existing federal definition.
 - **A deadline.** The president's science adviser must submit proposed legislative language for a federal definition of the new term by **November 28, 2026**, including whether it should modify, expand, or replace the current AI definition.
 
-![A hand holding a red pen striking through a word on a printed memo, with a laptop showing a blurred terminal on the desk](./images/trump-super-intelligence-order-developers-rename.webp)
+![A hand holding a red pen striking through a word on a printed memo, with a laptop showing a blurred terminal on the desk](./images/trump-super-intelligence-order-rename.webp)
 
 Two details matter for developers. The order does not require agencies to rewrite existing regulations, contracts, or grants. And because "SI" currently means the same thing as "AI" in law, no new legal category of software exists today.
 
@@ -56,7 +56,7 @@ The same day, the White House hosted a summit with technology executives and ann
 
 According to Freshfields, the accord calls on frontier-model developers to adopt internal controls, monitoring and remediation, independent external assessments, and board-level oversight. It creates no enforcement mechanism and does not require signatories to adopt the new terminology.
 
-![A boardroom table with tablets and laptops with blurred screens and a hand signing a document](./images/trump-super-intelligence-order-developers-accord.webp)
+![A boardroom table with tablets and laptops with blurred screens and a hand signing a document](./images/trump-super-intelligence-order-accord.webp)
 
 For developers, "internal controls" and "layers of review" are the part to watch, because they describe the same problems you already face with coding agents. How do you keep an agent from doing something irreversible? [Claude Code's hooks, plan mode, and subagents](/claude-code-hidden-features/) are one answer. How do you keep AI-written code from overwhelming the people who review it? We covered that from the maintainer side in [Open Source Maintainers Are Closing the Door on AI-Generated Pull Requests](/ai-slop-pull-requests-open-source/), and from the budget side in [What AI Code Review Really Costs](/ai-code-review-tools-pricing/).
 
@@ -82,7 +82,7 @@ None of this requires a rewrite. It's a short list:
 
 ## What to Watch Next
 
-![A paper wall calendar with one date circled in red marker beside a laptop and a coffee mug](./images/trump-super-intelligence-order-developers-deadline.webp)
+![A paper wall calendar with one date circled in red marker beside a laptop and a coffee mug](./images/trump-super-intelligence-order-deadline.webp)
 
 *Illustrative image: the circled date is not the actual deadline.*
 

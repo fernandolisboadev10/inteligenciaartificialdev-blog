@@ -113,7 +113,7 @@ $10 per million input tokens and $50 per million output tokens, with cached inpu
 
 ## Related Reading and Official Resources
 
-To compare directly, see [GPT-6 Astra explained](/gpt-6-astra/) and [Grok's API pricing](/grok-api-pricing/). To put the model to work in a coding agent, read [5 Claude Code features most developers never turn on](/claude-code-hidden-features/). Check current numbers on [Anthropic's pricing page](https://www.anthropic.com/pricing) and in the [models overview](https://docs.claude.com/en/docs/about-claude/models/overview) in the docs. Washington is also changing how it talks about these models: [Trump's "Super Intelligence" order, explained for developers](/trump-super-intelligence-order-developers/).
+To compare directly, see [GPT-6 Astra explained](/gpt-6-astra/) and [Grok's API pricing](/grok-api-pricing/). To put the model to work in a coding agent, read [5 Claude Code features most developers never turn on](/claude-code-hidden-features/). Check current numbers on [Anthropic's pricing page](https://www.anthropic.com/pricing) and in the [models overview](https://docs.claude.com/en/docs/about-claude/models/overview) in the docs. Washington is also changing how it talks about these models: [Trump's "Super Intelligence" order, explained for developers](/trump-super-intelligence-order/).
 
 ## The Bottom Line
 
