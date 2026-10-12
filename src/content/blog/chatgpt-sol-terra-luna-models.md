@@ -5,7 +5,7 @@ category: "Chatbots"
 date: 2026-09-03
 translation: "chatgpt-modelos-sol-terra-lua"
 updated: 2026-10-05
-related: ["gpt-6-astra", "claude-fable-5-1", "grok-api-pricing"]
+related: ["claude-fable-5-1", "grok-api-pricing"]
 readingTime: "7 min"
 image: "./images/chatgpt-sol-terra-luna-models-explained.webp"
 imageAlt: "Close-up editorial photo of a laptop screen showing three blurred chat conversation windows open side by side for comparison, with a small notebook on the desk showing handwritten model names, warm indoor office lighting"
@@ -144,7 +144,7 @@ For simple questions, no. For messy, multi-file coding tasks or problems that be
 
 ## Related Reading and Official Resources
 
-Model names change quickly. For OpenAI's next step up, read [GPT-6 Astra explained](/gpt-6-astra/). For the competition, see [Claude Fable 5.1's benchmarks and pricing](/claude-fable-5-1/) and [how Grok's API prices compare](/grok-api-pricing/). To check plans and limits yourself, use [ChatGPT pricing](https://chatgpt.com/pricing) and [OpenAI API pricing](https://openai.com/api/pricing/). If you are wondering why the government now says "Super Intelligence", read [our explainer on the executive order](/trump-super-intelligence-order/).
+Model names change quickly. For OpenAI's next step up, read [GPT-6 Astra explained](https://techonplay.com/gpt-6-astra-release/). For the competition, see [Claude Fable 5.1's benchmarks and pricing](/claude-fable-5-1/) and [how Grok's API prices compare](/grok-api-pricing/). To check plans and limits yourself, use [ChatGPT pricing](https://chatgpt.com/pricing) and [OpenAI API pricing](https://openai.com/api/pricing/). If you are wondering why the government now says "Super Intelligence", read [our explainer on the executive order](/trump-super-intelligence-order/).
 
 ## The Bottom Line
 

@@ -5,7 +5,7 @@ category: "AI Tools"
 date: 2026-09-08
 translation: "grok-api-preco"
 updated: 2026-10-05
-related: ["gpt-6-astra", "claude-fable-5-1", "google-antigravity"]
+related: ["claude-fable-5-1", "google-antigravity"]
 readingTime: "7 min"
 image: "./images/grok-api-pricing.webp"
 imageAlt: "Close-up editorial photo of a laptop screen showing a blurred code editor and a token cost comparison chart, with US dollar bills and coins softly out of focus on the desk in the foreground"
@@ -241,7 +241,7 @@ Grok Build 0.1 is xAI's coding-specific model at $1/$2 per million tokens, cheap
 
 ## Related Reading and Official Resources
 
-For the models Grok is compared against, read [GPT-6 Astra explained](/gpt-6-astra/) and [Claude Fable 5.1 explained](/claude-fable-5-1/). If you are picking tooling rather than a raw API, [Google Antigravity](/google-antigravity/) is another option. Verify rates before you commit: [OpenAI API pricing](https://openai.com/api/pricing/) and [Anthropic pricing](https://www.anthropic.com/pricing).
+For the models Grok is compared against, read GPT-6 Astra explained and [Claude Fable 5.1 explained](/claude-fable-5-1/). If you are picking tooling rather than a raw API, [Google Antigravity](/google-antigravity/) is another option. Verify rates before you commit: [OpenAI API pricing](https://openai.com/api/pricing/) and [Anthropic pricing](https://www.anthropic.com/pricing).
 
 ## The Bottom Line
 

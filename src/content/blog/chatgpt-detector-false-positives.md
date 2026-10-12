@@ -5,7 +5,7 @@ category: "Tutorials"
 date: 2026-09-08
 translation: "chatgpt-detector-falsos-positivos"
 updated: 2026-10-05
-related: ["chatgpt-study-commands", "gemini-student", "deepseek-vs-chatgpt-pomodoro-timer"]
+related: ["chatgpt-study-commands", "deepseek-vs-chatgpt-pomodoro-timer"]
 readingTime: "9 min"
 image: "./images/chatgpt-detector-false-positives.webp"
 imageAlt: "Close-up editorial photo of a printed essay with sentences highlighted in red and a red pen on top, next to a laptop showing a blurred AI detection score"
@@ -112,7 +112,7 @@ Gather independent evidence: document version history, research notes, browser h
 
 ## Related Reading and Official Resources
 
-If you use AI for school, treat it as a tutor rather than a ghostwriter. [12 custom ChatGPT commands that turn it into a study tool](/chatgpt-study-commands/) shows how. For free options, see [Google's free Gemini Pro year for students](/gemini-student/) and [how DeepSeek and free ChatGPT compare on the same prompt](/deepseek-vs-chatgpt-pomodoro-timer/). For background on why detection is hard, read OpenAI's own note on its discontinued [AI text classifier](https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/).
+If you use AI for school, treat it as a tutor rather than a ghostwriter. [12 custom ChatGPT commands that turn it into a study tool](/chatgpt-study-commands/) shows how. For free options, see [Google's free Gemini Pro year for students](https://techonplay.com/google-ai-plus-for-students/) and [how DeepSeek and free ChatGPT compare on the same prompt](/deepseek-vs-chatgpt-pomodoro-timer/). For background on why detection is hard, read OpenAI's own note on its discontinued [AI text classifier](https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/).
 
 ## The Bottom Line
 

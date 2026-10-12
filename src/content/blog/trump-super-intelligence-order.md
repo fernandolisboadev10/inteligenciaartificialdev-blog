@@ -4,7 +4,7 @@ description: "A September 29, 2026 executive order tells federal agencies to say
 category: "Tutorials"
 date: 2026-10-08
 translation: "trump-super-inteligencia-ordem"
-related: ["gpt-6-astra", "claude-fable-5-1", "ai-slop-pull-requests-open-source"]
+related: ["claude-fable-5-1", "ai-slop-pull-requests-open-source"]
 readingTime: "8 min"
 image: "./images/trump-super-intelligence-order.webp"
 imageAlt: "Editorial photo of a signed official document and a fountain pen on a polished wooden desk in a government-style office, with an American flag and a laptop showing a blurred code editor in the background"
@@ -35,7 +35,7 @@ This is a naming order, not a regulation. Per the legal analyses above, it:
 - does not change API terms, export rules, or safety obligations for any model you can call today;
 - does not require private companies to adopt the new name.
 
-Nothing about how you call a model, bill for it, or ship a product built on it changes because of the rename. The models we've covered here are the same models they were last week: [GPT-6 Astra](/gpt-6-astra/), [Claude Fable 5.1](/claude-fable-5-1/), [ChatGPT's Sol, Terra, and Luna lineup](/chatgpt-sol-terra-luna-models/), and [Grok's API](/grok-api-pricing/).
+Nothing about how you call a model, bill for it, or ship a product built on it changes because of the rename. The models we've covered here are the same models they were last week: GPT-6 Astra, [Claude Fable 5.1](/claude-fable-5-1/), [ChatGPT's Sol, Terra, and Luna lineup](/chatgpt-sol-terra-luna-models/), and [Grok's API](/grok-api-pricing/).
 
 ## "Super Intelligence" Already Meant Something Else
 
@@ -49,7 +49,7 @@ Here is where the order gets awkward. In the industry, superintelligence is not 
 
 PolitiFact reports that Google DeepMind's 2023 framework rated ChatGPT at Level 1 and called the top level, artificial superintelligence, "not yet achieved." It also notes that when asked on October 2 whether AI had reached superintelligence, an OpenAI executive called the question "subjective."
 
-That gap matters when you read vendor claims. When OpenAI's leadership talked about AGI in connection with Astra, we put that in context in [our GPT-6 Astra breakdown](/gpt-6-astra/). Renaming a category in government documents doesn't make a benchmark score mean something new. If you want to know how far these tools actually go, the more useful exercise is the one in [We Checked the Case Studies Behind Claude Code, Codex, Copilot, and Antigravity](/ai-coding-tools-case-studies/).
+That gap matters when you read vendor claims. When OpenAI's leadership talked about AGI in connection with Astra, we put that in context in our GPT-6 Astra breakdown. Renaming a category in government documents doesn't make a benchmark score mean something new. If you want to know how far these tools actually go, the more useful exercise is the one in [We Checked the Case Studies Behind Claude Code, Codex, Copilot, and Antigravity](/ai-coding-tools-case-studies/).
 
 ## The Industry Accord: Voluntary, Not Binding
 
@@ -78,7 +78,7 @@ None of this requires a rewrite. It's a short list:
 3. **Bookmark the November 28 deadline.** The proposed definition is the first thing that could change real obligations. Watch the [Federal Register](https://www.federalregister.gov/) and the White House site.
 4. **Tighten your own controls anyway.** The accord's themes (review, monitoring, external checks) are good engineering hygiene. Start with the habits in [6 Vibe Coding Habits That Keep AI-Generated Projects From Falling Apart](/vibe-coding-habits/) and [7 Context Habits Developers Need in 2026](/context-engineering-habits-developers/).
 5. **Pick tools on evidence, not labels.** The names will keep changing. When [Windsurf became Devin Desktop](/windsurf-devin-desktop/) and [Gemini's CLI turned into Antigravity](/google-antigravity/), the products' capabilities mattered more than the branding.
-6. **Students: keep using AI as a tutor, not a ghostwriter.** [12 custom ChatGPT commands for studying](/chatgpt-study-commands/) and [Google's free Gemini Pro year for students](/gemini-student/) are good starting points. Before you submit anything AI-assisted, read [why AI detectors flag real students](/chatgpt-detector-false-positives/).
+6. **Students: keep using AI as a tutor, not a ghostwriter.** [12 custom ChatGPT commands for studying](/chatgpt-study-commands/) and Google's free Gemini Pro year for students are good starting points. Before you submit anything AI-assisted, read [why AI detectors flag real students](/chatgpt-detector-false-positives/).
 7. **Test it yourself.** [Our free-tier ChatGPT vs DeepSeek experiment](/deepseek-vs-chatgpt-pomodoro-timer/) takes ten minutes and tells you more about what a model can do than any press release.
 
 ## What to Watch Next

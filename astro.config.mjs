@@ -22,6 +22,8 @@ export default defineConfig({
   site: 'https://inteligenciaartificialdev.com',
   redirects: {
     '/trump-super-intelligence-order-developers': '/trump-super-intelligence-order',
+    '/gemini-student': 'https://techonplay.com/google-ai-plus-for-students/',
+    '/gpt-6-astra': 'https://techonplay.com/gpt-6-astra-release/',
   },
   integrations: [
     sitemap({

@@ -5,7 +5,7 @@ category: "AI Tools"
 date: 2026-09-07
 translation: "google-antigravity"
 updated: 2026-10-05
-related: ["windsurf-devin-desktop", "gemini-student", "ai-coding-tools-case-studies"]
+related: ["windsurf-devin-desktop", "ai-coding-tools-case-studies"]
 readingTime: "7 min"
 image: "./images/google-antigravity.webp"
 imageAlt: "Wide shot of a curved ultrawide monitor at a dark modern developer desk at night, showing a code editor with several colorful AI agent chat panels open side by side, suggesting multiple agents working in parallel, with a blurred silhouette of hands typing on a mechanical keyboard in the foreground"
@@ -127,7 +127,7 @@ No. Gemini Code Assist is an AI extension that plugs into an IDE you already use
 
 ## Related Reading and Official Resources
 
-Antigravity is not the only agent IDE that changed shape this year: see [Windsurf is now Devin Desktop](/windsurf-devin-desktop/). Students can get higher limits through [Google's free Gemini Pro offer](/gemini-student/). For how Google's claims compare with the other vendors', read [our case-study check](/ai-coding-tools-case-studies/). The product itself lives at [antigravity.google](https://antigravity.google/).
+Antigravity is not the only agent IDE that changed shape this year: see [Windsurf is now Devin Desktop](/windsurf-devin-desktop/). Students can get higher limits through [Google's free Gemini Pro offer](https://techonplay.com/google-ai-plus-for-students/). For how Google's claims compare with the other vendors', read [our case-study check](/ai-coding-tools-case-studies/). The product itself lives at [antigravity.google](https://antigravity.google/).
 
 ## The Bottom Line
 
