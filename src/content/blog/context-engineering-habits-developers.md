@@ -1,7 +1,7 @@
 ---
 title: "Prompt Engineering Isn't Dead: 7 Context Habits Developers Need in 2026"
 description: "Better prompts still matter, but with AI coding agents the bigger lever is what the model sees. Seven context engineering habits, with copy-paste examples, for developers using Claude Code, Cursor, and similar tools."
-category: "Prompt Engineering"
+category: "Prompts"
 date: 2026-10-03
 updated: 2026-10-05
 related: ["claude-code-hidden-features", "vibe-coding-habits", "ai-coding-tools-case-studies"]

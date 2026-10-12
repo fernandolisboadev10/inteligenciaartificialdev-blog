@@ -1,7 +1,7 @@
 ---
 title: "Google Antigravity Explained: Gemini's Agent-First Coding Tool"
 description: "Google Antigravity replaced Gemini CLI in 2026. Here's what it actually does, what it costs, and how it compares to Gemini Code Assist and Jules."
-category: "AI Coding Tools"
+category: "AI Tools"
 date: 2026-09-07
 translation: "google-antigravity"
 updated: 2026-10-05

@@ -1,7 +1,7 @@
 ---
 title: "CodeRabbit vs GitHub Copilot vs Greptile: What AI Code Review Really Costs"
 description: "Three AI code reviewers, three very different billing models. Here's how CodeRabbit, GitHub Copilot, and Greptile price their reviews, and which one fits a solo dev, a startup, or a team."
-category: "Reviews"
+category: "AI Tools"
 date: 2026-10-03
 updated: 2026-10-05
 related: ["ai-slop-pull-requests-open-source", "ai-coding-tools-case-studies", "claude-code-hidden-features"]

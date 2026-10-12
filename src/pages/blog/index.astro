@@ -8,12 +8,12 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 );
 
 const categories = [
-  'Prompt Engineering',
-  'AI Coding Tools',
+  'Chatbots',
+  'Prompts',
+  'AI Tools',
   'Tutorials',
   'Case Studies',
-  'Chatbots',
-  'Reviews',
+  'Career',
 ];
 ---
 <BaseLayout title="Blog" description="Articles on prompt engineering, AI tools, and workflows for developers.">

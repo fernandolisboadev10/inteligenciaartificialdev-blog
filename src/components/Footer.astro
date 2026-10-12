@@ -9,11 +9,11 @@ const articles = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 const categories = [
   { label: 'Home', href: '/' },
   { label: 'Chatbots', href: '/blog?category=Chatbots' },
-  { label: 'Prompts', href: '/blog?category=Prompt+Engineering' },
-  { label: 'AI Tools', href: '/blog?category=AI+Coding+Tools' },
-  { label: 'Reviews', href: '/blog?category=Reviews' },
+  { label: 'Prompts', href: '/blog?category=Prompts' },
+  { label: 'AI Tools', href: '/blog?category=AI+Tools' },
   { label: 'Tutorials', href: '/blog?category=Tutorials' },
   { label: 'Case Studies', href: '/blog?category=Case+Studies' },
+  { label: 'Career', href: '/blog?category=Career' },
 ];
 
 const quickLinks = [

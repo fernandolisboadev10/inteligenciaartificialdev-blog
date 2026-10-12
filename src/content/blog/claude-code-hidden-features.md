@@ -1,7 +1,7 @@
 ---
 title: "5 Claude Code Features Most Developers Never Turn On"
 description: "Plan mode, auto memory, subagents, skills, and hooks turn Claude Code from a chat window into a real dev workflow. Here's how each one actually works, with real config."
-category: "Reviews"
+category: "AI Tools"
 date: 2026-09-12
 translation: "claude-code-recursos-ocultos"
 updated: 2026-10-05

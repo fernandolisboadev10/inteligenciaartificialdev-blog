@@ -1,7 +1,7 @@
 ---
 title: "Windsurf Is Now Devin Desktop: What Actually Changed"
 description: "Windsurf renamed itself to Devin Desktop on June 2, 2026. Here's what changed, what didn't, and what to do if you still have the old app open."
-category: "AI Coding Tools"
+category: "AI Tools"
 date: 2026-09-18
 updated: 2026-10-05
 related: ["google-antigravity", "claude-code-hidden-features", "ai-coding-tools-case-studies"]

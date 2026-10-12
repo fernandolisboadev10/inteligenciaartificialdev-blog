@@ -1,7 +1,7 @@
 ---
 title: "Open Source Maintainers Are Closing the Door on AI-Generated Pull Requests. Here's How to Contribute Without Getting Banned."
 description: "cURL ended its bug bounty, Ghostty restricted AI code, and tldraw auto-closes outside PRs. What 'AI slop' means for maintainers, and a 7-step checklist for using AI on open source the right way."
-category: "AI Coding Tools"
+category: "AI Tools"
 date: 2026-10-02
 translation: "slop-de-ia-pull-requests-open-source"
 updated: 2026-10-05

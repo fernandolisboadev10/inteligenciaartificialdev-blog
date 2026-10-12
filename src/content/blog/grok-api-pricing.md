@@ -1,7 +1,7 @@
 ---
 title: "xAI's Grok API Is Cheaper Than GPT-6 Astra and Claude Opus 5. We Ran the Numbers."
 description: "Grok's flagship model costs a fraction of GPT-6 Astra and undercuts Claude Opus 5. Here's the real per-token math, a working code example, and where the cheap price stops being a deal."
-category: "AI Coding Tools"
+category: "AI Tools"
 date: 2026-09-08
 translation: "grok-api-preco"
 updated: 2026-10-05
