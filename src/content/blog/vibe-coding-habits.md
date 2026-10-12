@@ -3,6 +3,7 @@ title: "Vibe Coding Without the Mess: 6 Habits That Keep AI-Generated Projects F
 description: "Vibe coding gets you 80% of the way fast, then something breaks and nobody knows why. Six habits, with copy-paste prompts, that keep an AI-built project fixable."
 category: "Tutorials"
 date: 2026-09-21
+translation: "vibe-coding-6-habitos-sem-bagunca"
 updated: 2026-10-05
 related: ["context-engineering-habits-developers", "claude-code-hidden-features", "ai-slop-pull-requests-open-source"]
 readingTime: "6 min"

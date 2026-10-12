@@ -3,6 +3,7 @@ title: "Google Will Give You Gemini Pro Free for a Year If You're a Student. Her
 description: "Google's student offer gives US college students a free year of Google AI Pro. Here's what's actually included, who really qualifies, and the catches buried in the terms."
 category: "Tutorials"
 date: 2026-09-08
+translation: "gemini-estudante"
 updated: 2026-10-05
 related: ["google-antigravity", "chatgpt-study-commands", "chatgpt-detector-false-positives"]
 readingTime: "8 min"

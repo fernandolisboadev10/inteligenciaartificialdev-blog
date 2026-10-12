@@ -3,6 +3,7 @@ title: "Trump Just Renamed AI to 'Super Intelligence'. Here's What Changes for D
 description: "A September 29, 2026 executive order tells federal agencies to say 'Super Intelligence' instead of 'artificial intelligence'. What the order actually does, what it doesn't, and a checklist for developers."
 category: "Tutorials"
 date: 2026-10-08
+translation: "trump-super-inteligencia-ordem"
 related: ["gpt-6-astra", "claude-fable-5-1", "ai-slop-pull-requests-open-source"]
 readingTime: "8 min"
 image: "./images/trump-super-intelligence-order.webp"

@@ -3,6 +3,7 @@ title: "Claude Fable 5.1 Explained: Benchmarks, Pricing, and What's New"
 description: "Anthropic's Claude Fable 5.1 lands with a near-perfect SWE-bench score and a cheaper price tag. Here's what changed, what Mythos 5.1 is, and what it costs."
 category: "Chatbots"
 date: 2026-09-07
+translation: "claude-fable-5-1"
 updated: 2026-10-05
 related: ["gpt-6-astra", "grok-api-pricing", "claude-code-hidden-features"]
 readingTime: "7 min"

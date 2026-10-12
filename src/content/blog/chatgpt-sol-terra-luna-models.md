@@ -3,6 +3,7 @@ title: "ChatGPT's Sol, Terra, and Luna Models: What You're Actually Talking To"
 description: "Discover what ChatGPT's Sol, Terra, and Luna models actually do, and find out which one your subscription gives you access to."
 category: "Chatbots"
 date: 2026-09-03
+translation: "chatgpt-modelos-sol-terra-lua"
 updated: 2026-10-05
 related: ["gpt-6-astra", "claude-fable-5-1", "grok-api-pricing"]
 readingTime: "7 min"

@@ -3,6 +3,7 @@ title: "We Checked the Case Studies Behind Claude Code, Codex, Copilot, and Anti
 description: "Anthropic, OpenAI, Microsoft, and Google all publish glowing case studies for their AI coding tools. We looked at what's actually being measured, who published it, and whether independent research backs it up."
 category: "Case Studies"
 date: 2026-09-27
+translation: "estudos-de-caso-ferramentas-ia-codigo"
 updated: 2026-10-05
 related: ["claude-code-hidden-features", "google-antigravity", "ai-code-review-tools-pricing"]
 readingTime: "9 min"

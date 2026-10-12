@@ -3,6 +3,7 @@ title: "GPT-6 Astra Explained: OpenAI's New Flagship, Benchmarks, and Price"
 description: "OpenAI's GPT-6 Astra launched September 2026 with computer-use skills and an AGI claim from Greg Brockman. Here's what it does, what it costs, and the safety trade-off."
 category: "Chatbots"
 date: 2026-09-07
+translation: "gpt-6-astra"
 updated: 2026-10-05
 related: ["chatgpt-sol-terra-luna-models", "claude-fable-5-1", "grok-api-pricing"]
 readingTime: "8 min"

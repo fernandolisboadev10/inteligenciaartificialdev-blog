@@ -3,6 +3,7 @@ title: "12 Custom ChatGPT Commands That Turn It Into a Study Tool"
 description: "Set up 12 slash-style commands once, and ChatGPT stops giving generic answers and starts building mind maps, flashcards, and memory palaces on demand. Copy-paste ready."
 category: "Prompt Engineering"
 date: 2026-09-07
+translation: "chatgpt-comandos-para-estudar"
 updated: 2026-10-05
 related: ["chatgpt-detector-false-positives", "gemini-student", "chatgpt-sol-terra-luna-models"]
 readingTime: "5 min"

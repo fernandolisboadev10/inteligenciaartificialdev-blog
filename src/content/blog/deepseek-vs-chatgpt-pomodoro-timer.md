@@ -3,6 +3,7 @@ title: "We Gave DeepSeek and ChatGPT (Free) the Same Pomodoro Prompt. Here's Wha
 description: "Same exact prompt, both free tiers, zero follow-up edits. We tested both Pomodoro timers by hand — pause, resume, tab-switch — and found real differences in time drift handling, accessibility, and scope."
 category: "Case Studies"
 date: 2026-09-14
+translation: "deepseek-vs-chatgpt-timer-pomodoro"
 updated: 2026-10-05
 related: ["chatgpt-sol-terra-luna-models", "chatgpt-study-commands", "vibe-coding-habits"]
 readingTime: "6 min"

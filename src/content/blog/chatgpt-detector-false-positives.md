@@ -3,6 +3,7 @@ title: "We Fed AI Detectors Human-Written Essays. They Flagged Real Students as 
 description: "AI detectors flagged an 1841 essay and a 2012 Wikipedia article as 'fake' in our own test. Here's the real data on false positives, and how to protect yourself."
 category: "Tutorials"
 date: 2026-09-08
+translation: "chatgpt-detector-falsos-positivos"
 updated: 2026-10-05
 related: ["chatgpt-study-commands", "gemini-student", "deepseek-vs-chatgpt-pomodoro-timer"]
 readingTime: "9 min"
