@@ -24,7 +24,7 @@ const alternate = translation
   ? { lang: 'pt-BR', href: `https://inteligenciartificial.dev.br/${translation}/` }
   : undefined;
 
-const formattedDate = date.toLocaleDateString('en-US', {
+const formattedDate = date.toLocaleDateString('es-ES', {
   day: '2-digit',
   month: 'long',
   year: 'numeric',
@@ -62,11 +62,11 @@ const articleSchema = {
   <article class="container post">
     <p class="category">{category}</p>
     <h1>{title}</h1>
-    <p class="meta">By <span class="author">Fernando Lisboa</span> <span class="sep">|</span> {formattedDate}{readingTime && ` · ${readingTime}`}</p>
+    <p class="meta">Por <span class="author">Fernando Lisboa</span> <span class="sep">|</span> {formattedDate}{readingTime && ` · ${readingTime}`}</p>
     {alternate && (
-      <p class="translation"><a href={alternate.href} hreflang="pt-BR" lang="pt-BR">Ler em português</a></p>
+      <p class="translation"><a href={alternate.href} hreflang="pt-BR" lang="pt-BR">Ler em português (Brasil)</a></p>
     )}
-    <ShareButtons title={title} label="Share:" copyLabel="Copy link" copiedLabel="Link copied!" shareOn="Share on" />
+    <ShareButtons title={title} label="Comparte:" copyLabel="Copiar enlace" copiedLabel="¡Enlace copiado!" shareOn="Compartir en" />
 
     {image && (
       <div class="hero-image">
@@ -125,15 +125,15 @@ const articleSchema = {
 
     if (navigator.clipboard?.writeText) {
       navigator.clipboard.writeText(text).then(
-        () => showFeedback('Copied!', false),
+        () => showFeedback('¡Copiado!', false),
         () => {
           const ok = legacyCopy(text);
-          showFeedback(ok ? 'Copied!' : 'Press Ctrl+C', !ok);
+          showFeedback(ok ? '¡Copiado!' : 'Pulsa Ctrl+C', !ok);
         },
       );
     } else {
       const ok = legacyCopy(text);
-      showFeedback(ok ? 'Copied!' : 'Press Ctrl+C', !ok);
+      showFeedback(ok ? '¡Copiado!' : 'Pulsa Ctrl+C', !ok);
     }
   });
 </script>

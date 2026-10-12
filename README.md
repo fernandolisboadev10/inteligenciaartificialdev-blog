@@ -1,4 +1,4 @@
-# inteligenciaartificialdev.com — projeto Astro
+# inteligenciaartificialdev.com — proyecto Astro (blog de IA en español)
 
 ## Rodar localmente
 

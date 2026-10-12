@@ -8,7 +8,7 @@ export async function GET(context) {
 
   return rss({
     title: 'AI DEV',
-    description: 'Tested AI prompts and workflows for developers.',
+    description: 'Prompts y flujos de trabajo de IA probados para desarrolladores.',
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,

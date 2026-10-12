@@ -4,30 +4,30 @@ import NewsletterForm from '../components/NewsletterForm.astro';
 
 const samplePrompts = [
   {
-    task: 'Explain an error',
-    prompt: 'Explain this error like I have 5 minutes before a meeting: [paste the error]. Give the likely cause and the most direct fix.',
+    task: 'Explicar un error',
+    prompt: 'Explícame este error como si tuviera 5 minutos antes de una reunión: [pega el error]. Dame la causa probable y la solución más directa.',
   },
   {
-    task: 'Review a function',
-    prompt: 'Review this function for bugs, unhandled edge cases, and opportunities to simplify, without changing its public signature: [paste the code]',
+    task: 'Revisar una función',
+    prompt: 'Revisa esta función en busca de errores, casos límite sin manejar y oportunidades de simplificación, sin cambiar su firma pública: [pega el código]',
   },
   {
-    task: 'Write tests',
-    prompt: 'Generate unit tests for this function covering the happy path, an expected error, and one non-obvious edge case: [paste the code]',
+    task: 'Escribir pruebas',
+    prompt: 'Genera pruebas unitarias para esta función que cubran el caso feliz, un error esperado y un caso límite poco evidente: [pega el código]',
   },
   {
-    task: 'Document an API',
-    prompt: 'Write documentation for this API route in OpenAPI format, including a sample request and response: [paste the route code]',
+    task: 'Documentar una API',
+    prompt: 'Escribe la documentación de esta ruta de API en formato OpenAPI, con un ejemplo de solicitud y respuesta: [pega el código de la ruta]',
   },
 ];
 ---
-<BaseLayout title="Free Prompts" description="A free sample of tested AI prompts for developers." noindex>
+<BaseLayout title="Prompts gratis" description="Una muestra gratuita de prompts de IA probados para desarrolladores." noindex>
   <section class="container intro">
-    <h1>Free prompts for developers</h1>
+    <h1>Prompts gratis para desarrolladores</h1>
     <p>
-      A sample of 4 prompts from our library. Leave your email to get the
-      other 16 straight to your inbox — and hear about it when new prompts
-      drop.
+      Una muestra de 4 prompts de nuestra biblioteca. Deja tu correo para
+      recibir los otros 16 directamente en tu bandeja de entrada y enterarte
+      cuando salgan prompts nuevos.
     </p>
     <NewsletterForm />
   </section>
@@ -42,10 +42,10 @@ const samplePrompts = [
   </section>
 
   <section class="container locked">
-    <p class="locked-label">+ 16 prompts (email required)</p>
+    <p class="locked-label">+ 16 prompts (requiere correo)</p>
     <p class="locked-copy">
-      Advanced debugging, safe refactoring, integration test generation,
-      PR review prompts, and more.
+      Depuración avanzada, refactorización segura, generación de pruebas de
+      integración, prompts para revisar PR y más.
     </p>
   </section>
 </BaseLayout>

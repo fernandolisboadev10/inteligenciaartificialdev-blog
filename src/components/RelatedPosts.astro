@@ -11,7 +11,7 @@ const entries = (await Promise.all(slugs.map((slug) => getEntry('blog', slug))))
 ---
 {entries.length > 0 && (
   <nav class="related" aria-labelledby="related-heading">
-    <h2 id="related-heading">Keep reading</h2>
+    <h2 id="related-heading">Sigue leyendo</h2>
     <ul>
       {entries.map((entry) => (
         <li>

@@ -1,59 +1,58 @@
 ---
-title: "Claude Fable 5.1 Explained: Benchmarks, Pricing, and What's New"
-description: "Anthropic's Claude Fable 5.1 lands with a near-perfect SWE-bench score and a cheaper price tag. Here's what changed, what Mythos 5.1 is, and what it costs."
+title: "Claude Fable 5.1 explicado: benchmarks, precios y novedades"
+description: "Claude Fable 5.1 de Anthropic llega con una puntuación casi perfecta en SWE-bench y un precio más bajo. Qué cambió, qué es Mythos 5.1 y cuánto cuesta."
 category: "Chatbots"
 date: 2026-09-07
+updated: 2026-10-12
 translation: "claude-fable-5-1"
-updated: 2026-10-05
-related: ["grok-api-pricing", "claude-code-hidden-features"]
 readingTime: "7 min"
 image: "./images/claude-fable-5-1.webp"
-imageAlt: "Close-up editorial photo of a developer's laptop screen showing a blurred AI chatbot benchmark comparison chart, with an open notebook full of handwritten pricing notes and a warm mug of coffee on a wooden desk, soft daylight"
+imageAlt: "Foto editorial en primer plano de la pantalla del portátil de un desarrollador mostrando un gráfico desenfocado de comparación de benchmarks de chatbots de IA, con un cuaderno abierto lleno de anotaciones de precios a mano y una taza de café caliente sobre una mesa de madera, con luz de día suave"
 ---
 
-Anthropic released Claude Fable 5.1 on September 1, 2026, and the headline number is hard to ignore: 95.0% on SWE-bench Verified, one of the highest scores any model has posted on that benchmark. It's generally available now across the Claude API, AWS, Google Cloud, and Microsoft Azure, callable as `claude-fable-5-1`.
+Anthropic lanzó Claude Fable 5.1 el 1 de septiembre de 2026, y la cifra destacada es difícil de ignorar: 95,0% en SWE-bench Verified, una de las puntuaciones más altas que cualquier modelo haya registrado en ese benchmark. Ya está disponible de forma general en la API de Claude, AWS, Google Cloud y Microsoft Azure, accesible como `claude-fable-5-1`.
 
-If you're still on Fable 5, or you've just seen the name "Mythos 5.1" floating around and weren't sure how it relates, here's the plain-English rundown.
+Si todavía estás en Fable 5, o solo viste circular el nombre "Mythos 5.1" y no sabías bien cómo se relaciona, aquí va el resumen en lenguaje claro.
 
-## What Claude Fable 5.1 Actually Is
+## Qué es realmente Claude Fable 5.1
 
-Fable 5.1 is Anthropic's new flagship, built to push further on coding, knowledge work, and long-running problem-solving. Anthropic says it matches or beats Fable 5 at low and medium reasoning effort, and pulls noticeably ahead at higher effort tiers, the setting you'd reach for on a genuinely hard task rather than a quick question.
+Fable 5.1 es el nuevo buque insignia de Anthropic, construido para avanzar aún más en código, trabajo de conocimiento y resolución de problemas de larga duración. Anthropic dice que iguala o supera a Fable 5 con un esfuerzo de razonamiento bajo y medio, y abre una ventaja clara en los niveles de esfuerzo más altos, el ajuste que usarías en una tarea genuinamente difícil, no en una pregunta rápida.
 
-It ships with a 1 million token context window and can output up to 128,000 tokens per response, enough to hold a large codebase or a long research document in a single conversation.
+Viene con una ventana de contexto de 1 millón de tokens y puede generar hasta 128.000 tokens por respuesta, espacio suficiente para mantener una base de código grande o un documento de investigación largo en una sola conversación.
 
-## Fable 5.1 vs. Mythos 5.1: What's the Difference?
+## Fable 5.1 vs. Mythos 5.1: ¿cuál es la diferencia?
 
-Here's the part that trips people up: Fable 5.1 and Mythos 5.1 are the same underlying model wearing two different outfits.
+Esta es la parte que confunde a la gente: Fable 5.1 y Mythos 5.1 son el mismo modelo por debajo, con dos ropajes distintos.
 
-**Fable 5.1** is the version everyone gets, with Anthropic's production safety guardrails fully in place. **Mythos 5.1** is the same model with looser cyber and biology safeguards, and it's invite-only, restricted to vetted cybersecurity and life-sciences organizations that have a legitimate need for capabilities the standard safeguards would otherwise constrain.
+**Fable 5.1** es la versión que recibe todo el mundo, con las barreras de seguridad de producción de Anthropic totalmente activas. **Mythos 5.1** es el mismo modelo con protecciones cibernéticas y biológicas más laxas, y es solo por invitación, restringido a organizaciones verificadas de ciberseguridad y ciencias de la vida que tienen una necesidad legítima de capacidades que las protecciones estándar, de otro modo, restringirían.
 
-That gap isn't just theoretical. On Terminal-Bench 4.0, Mythos 5.1 scores 60.9% against Fable 5.1's 55.8%, a real performance cost that comes from keeping the public model safer by default.
+Esa diferencia no es solo teórica. En Terminal-Bench 4.0, Mythos 5.1 puntúa 60,9% frente al 55,8% de Fable 5.1, un costo de rendimiento real que viene de mantener el modelo público más seguro por defecto.
 
-## The Benchmark Jump From Fable 5
+## El salto de benchmark respecto a Fable 5
 
-The numbers move a lot in this release, not just around the edges:
+Los números avanzan bastante en este lanzamiento, no solo en los bordes:
 
-- **Terminal-Bench-Science**: 24.7% → 52.6%, more than double Fable 5's score
-- **Terminal-Bench 4.0** (coding): 42.0% → 55.8%
-- **SWE-bench Verified**: 95.0%
-- **SWE-bench Pro**: 81.2, a slim lead over both Fable 5 and Opus 5
-- **ProofBench v1.1** (formal math proofs): a perfect 100%
+- **Terminal-Bench-Science**: 24,7% → 52,6%, más del doble de la puntuación de Fable 5
+- **Terminal-Bench 4.0** (código): 42,0% → 55,8%
+- **SWE-bench Verified**: 95,0%
+- **SWE-bench Pro**: 81,2, una ventaja discreta sobre Fable 5 y Opus 5
+- **ProofBench v1.1** (demostraciones matemáticas formales): 100% perfecto
 
-The science and coding jumps stand out the most. Doubling a benchmark score in one release is unusual, and it signals Anthropic tuned this generation specifically for long, multi-step technical work rather than general chat polish.
+Los saltos en ciencia y código son los que más llaman la atención. Duplicar una puntuación de benchmark en un solo lanzamiento es inusual, y señala que Anthropic ajustó esta generación específicamente para trabajo técnico largo y de múltiples pasos, en lugar de solo pulir la conversación general.
 
-## Pricing: Cheaper Despite Being Smarter
+## Precio: más barato aunque más inteligente
 
-Fable 5.1 costs $10 per million input tokens and $50 per million output tokens, roughly 25% cheaper than Fable 5 overall, and up to 45% cheaper on heavily agentic workloads where the model is calling tools and iterating repeatedly.
+Fable 5.1 cuesta $10 por millón de tokens de entrada y $50 por millón de tokens de salida, cerca de un 25% más barato que Fable 5 en general, y hasta un 45% más barato en cargas de trabajo fuertemente agénticas, en las que el modelo se la pasa llamando herramientas e iterando repetidamente.
 
-The bigger change is cache pricing. Cached input tokens now cost $0.25 per million, down from $1.00 on Fable 5, a 75% cut. For anything that reuses a long system prompt or codebase context across many requests, that difference adds up fast.
+El cambio mayor está en el precio de la caché. Los tokens de entrada en caché ahora cuestan $0,25 por millón, una caída desde los $1,00 de Fable 5, un recorte del 75%. Para cualquier cosa que reutilice un prompt de sistema largo o contexto de una base de código en varias solicitudes, esa diferencia suma rápido.
 
-## Fable 5.1 at a Glance
+## Fable 5.1 de un vistazo
 
 <div style="max-width:900px;margin:24px auto;overflow-x:auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
   <table style="width:100%;border-collapse:collapse;background:#ffffff;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:8px;overflow:hidden;">
     <thead>
       <tr style="background:var(--ink-deep);color:#ffffff;">
-        <th style="padding:14px 16px;text-align:left;font-size:14px;">Metric</th>
+        <th style="padding:14px 16px;text-align:left;font-size:14px;">Métrica</th>
         <th style="padding:14px 16px;text-align:left;font-size:14px;">Fable 5</th>
         <th style="padding:14px 16px;text-align:left;font-size:14px;">Fable 5.1</th>
         <th style="padding:14px 16px;text-align:left;font-size:14px;">Mythos 5.1</th>
@@ -62,64 +61,67 @@ The bigger change is cache pricing. Cached input tokens now cost $0.25 per milli
     <tbody>
       <tr style="border-bottom:1px solid #eee;">
         <td style="padding:12px 16px;font-weight:600;">🧪 Terminal-Bench-Science</td>
-        <td style="padding:12px 16px;">24.7%</td>
-        <td style="padding:12px 16px;">52.6%</td>
+        <td style="padding:12px 16px;">24,7%</td>
+        <td style="padding:12px 16px;">52,6%</td>
         <td style="padding:12px 16px;">—</td>
       </tr>
       <tr style="border-bottom:1px solid #eee;background:#fafafa;">
         <td style="padding:12px 16px;font-weight:600;">💻 Terminal-Bench 4.0</td>
-        <td style="padding:12px 16px;">42.0%</td>
-        <td style="padding:12px 16px;">55.8%</td>
-        <td style="padding:12px 16px;">60.9%</td>
+        <td style="padding:12px 16px;">42,0%</td>
+        <td style="padding:12px 16px;">55,8%</td>
+        <td style="padding:12px 16px;">60,9%</td>
       </tr>
       <tr style="border-bottom:1px solid #eee;">
         <td style="padding:12px 16px;font-weight:600;">✅ SWE-bench Verified</td>
         <td style="padding:12px 16px;">—</td>
-        <td style="padding:12px 16px;">95.0%</td>
+        <td style="padding:12px 16px;">95,0%</td>
         <td style="padding:12px 16px;">—</td>
       </tr>
       <tr style="border-bottom:1px solid #eee;background:#fafafa;">
-        <td style="padding:12px 16px;font-weight:600;">📤 Cache-read price</td>
-        <td style="padding:12px 16px;">$1.00/M</td>
-        <td style="padding:12px 16px;">$0.25/M</td>
-        <td style="padding:12px 16px;">$0.25/M</td>
+        <td style="padding:12px 16px;font-weight:600;">📤 Precio de lectura de caché</td>
+        <td style="padding:12px 16px;">$1,00/M</td>
+        <td style="padding:12px 16px;">$0,25/M</td>
+        <td style="padding:12px 16px;">$0,25/M</td>
       </tr>
       <tr>
-        <td style="padding:12px 16px;font-weight:600;">🔐 Access</td>
+        <td style="padding:12px 16px;font-weight:600;">🔐 Acceso</td>
         <td style="padding:12px 16px;">General</td>
         <td style="padding:12px 16px;">General</td>
-        <td style="padding:12px 16px;">Invite-only</td>
+        <td style="padding:12px 16px;">Solo por invitación</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-## Frequently Asked Questions
+## Preguntas frecuentes
 
-### What is Claude Fable 5.1?
+### ¿Qué es Claude Fable 5.1?
 
-It's Anthropic's newest flagship model, released September 1, 2026, focused on coding, knowledge work, and long-running problem-solving. It's available through the Claude API, AWS, Google Cloud, and Microsoft Azure.
+Es el modelo insignia más reciente de Anthropic, lanzado el 1 de septiembre de 2026, centrado en código, trabajo de conocimiento y resolución de problemas de larga duración. Está disponible por la API de Claude, AWS, Google Cloud y Microsoft Azure.
 
-### Is Claude Fable 5.1 the same as Mythos 5.1?
+### ¿Claude Fable 5.1 es lo mismo que Mythos 5.1?
 
-They're the same underlying model. Fable 5.1 runs with Anthropic's full production safeguards. Mythos 5.1 has looser cyber and biology restrictions and is invite-only, limited to vetted cybersecurity and life-sciences organizations.
+Son el mismo modelo por debajo. Fable 5.1 funciona con todas las protecciones de producción de Anthropic. Mythos 5.1 tiene restricciones cibernéticas y biológicas más laxas y es solo por invitación, limitado a organizaciones verificadas de ciberseguridad y ciencias de la vida.
 
-### How much does Claude Fable 5.1 cost?
+### ¿Cuánto cuesta Claude Fable 5.1?
 
-$10 per million input tokens and $50 per million output tokens, with cached input at $0.25 per million. That's about 25% cheaper than Fable 5 overall, and up to 45% cheaper on agentic workloads.
+$10 por millón de tokens de entrada y $50 por millón de tokens de salida, con la entrada en caché a $0,25 por millón. Eso es cerca de un 25% más barato que Fable 5 en general, y hasta un 45% más barato en cargas de trabajo agénticas.
 
-### What's Claude Fable 5.1's context window?
+### ¿Cuál es la ventana de contexto de Claude Fable 5.1?
 
-1 million tokens, with a maximum output of 128,000 tokens per response.
+1 millón de tokens, con una salida máxima de 128.000 tokens por respuesta.
 
-## Related Reading and Official Resources
+## Conclusión
 
-To compare directly, see [GPT-6 Astra explained](https://techonplay.com/gpt-6-astra-release/) and [Grok's API pricing](/grok-api-pricing/). To put the model to work in a coding agent, read [5 Claude Code features most developers never turn on](/claude-code-hidden-features/). Check current numbers on [Anthropic's pricing page](https://www.anthropic.com/pricing) and in the [models overview](https://docs.claude.com/en/docs/about-claude/models/overview) in the docs. Washington is also changing how it talks about these models: [Trump's "Super Intelligence" order, explained for developers](/trump-super-intelligence-order/).
+Fable 5.1 no es un lanzamiento de punto menor. Duplicar un benchmark de ciencia, empujar las puntuaciones de código más allá del 95% en SWE-bench Verified y recortar los precios de caché en un 75%, todo en el mismo lanzamiento, es mucho para que ocurra de una vez. Si construyes agentes de código o investigación pesada sobre Claude, vale la pena migrar; la ganancia de rendimiento y el recorte de precio apuntan en la misma dirección.
 
-## The Bottom Line
+## Sigue leyendo
 
-Fable 5.1 isn't a minor point release. Doubling a science benchmark, pushing coding scores past 95% on SWE-bench Verified, and cutting cache prices by 75% all in the same launch is a lot to land at once. If you're building on Claude for coding or research-heavy agents, this is worth switching to; the performance gain and the price cut both point the same direction.
+- [OpenAI DevDay 2026 para quienes programan: GPT-6.1 Sol, Codex Cloud y Dots](/openai-devday-2026/)
+- [GPT-6 Astra explicado: benchmarks y precio](/gpt-6-astra/)
+- [API de Grok vs GPT-6 Astra y Claude Opus 5: las cuentas](/grok-api-precio/)
+- [Reseña de Claude Code en 2026: ¿vale el precio?](/claude-code-review-vale-el-precio/)
 
 ---
 
-*Sources: [Anthropic — Introducing Claude Fable 5.1 and Claude Mythos 5.1](https://www.anthropic.com/claude-fable-and-mythos-5-1), [VentureBeat — Claude Fable 5.1 and Mythos 5.1 arrive with a 75% cost reduction](https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads), [Vellum — Claude Fable 5.1 & Mythos 5.1 Benchmarks Explained](https://www.vellum.ai/blog/claude-fable-5-1-mythos-5-1-benchmarks-explained), [llm-stats.com — Claude Fable 5.1](https://llm-stats.com/models/claude-fable-5-1).*
+*Fuentes: [Anthropic — Introducing Claude Fable 5.1 and Claude Mythos 5.1](https://www.anthropic.com/claude-fable-and-mythos-5-1), [VentureBeat — Claude Fable 5.1 and Mythos 5.1 arrive with a 75% cost reduction](https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads), [Vellum — Claude Fable 5.1 & Mythos 5.1 Benchmarks Explained](https://www.vellum.ai/blog/claude-fable-5-1-mythos-5-1-benchmarks-explained), [llm-stats.com — Claude Fable 5.1](https://llm-stats.com/models/claude-fable-5-1).*

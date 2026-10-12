@@ -21,10 +21,23 @@ for (const file of readdirSync(blogDir)) {
 export default defineConfig({
   site: 'https://inteligenciaartificialdev.com',
   redirects: {
-    '/trump-super-intelligence-order-developers': '/trump-super-intelligence-order',
-    '/gemini-student': 'https://techonplay.com/google-ai-plus-for-students/',
-    '/gpt-6-astra': 'https://techonplay.com/gpt-6-astra-release/',
+    // Blog migrado a español (2026-10-12): slugs en inglés -> equivalente en español
+    "/ai-900-ai-901-worth-it": "/ai-900-ai-901-vale-la-pena",
+    "/chatgpt-study-commands": "/chatgpt-comandos-para-estudiar",
+    "/chatgpt-detector-false-positives": "/chatgpt-detector-falsos-positivos",
+    "/chatgpt-sol-terra-luna-models": "/chatgpt-modelos-sol-terra-luna",
+    "/claude-code-hidden-features": "/claude-code-funciones-ocultas",
+    "/deepseek-vs-chatgpt-pomodoro-timer": "/deepseek-vs-chatgpt-temporizador-pomodoro",
+    "/ai-coding-tools-case-studies": "/estudios-de-caso-herramientas-ia-codigo",
+    "/grok-api-pricing": "/grok-api-precio",
+    "/trump-super-intelligence-order": "/trump-superinteligencia-orden",
+    "/trump-super-intelligence-order-developers": "/trump-superinteligencia-orden",
+    "/vibe-coding-habits": "/vibe-coding-6-habitos-sin-desorden",
+    "/ai-slop-pull-requests-open-source": "/slop-de-ia-pull-requests-open-source",
+    // consolidado en techonplay.com (canibalizacao)
+    "/gemini-student": "https://techonplay.com/google-ai-plus-for-students/",
   },
+
   integrations: [
     sitemap({
       filter: (page) => !page.endsWith('/free-prompts/'),

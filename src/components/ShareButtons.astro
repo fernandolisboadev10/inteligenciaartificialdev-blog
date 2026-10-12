@@ -8,10 +8,10 @@ interface Props {
 }
 const {
   title,
-  label = 'Compartilhe:',
-  copyLabel = 'Copiar link',
-  copiedLabel = 'Link copiado!',
-  shareOn = 'Compartilhar no',
+  label = 'Comparte:',
+  copyLabel = 'Copiar enlace',
+  copiedLabel = '¡Enlace copiado!',
+  shareOn = 'Compartir en',
 } = Astro.props;
 
 const url = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();

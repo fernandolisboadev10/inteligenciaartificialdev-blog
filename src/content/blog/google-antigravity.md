@@ -1,66 +1,65 @@
 ---
-title: "Google Antigravity Explained: Gemini's Agent-First Coding Tool"
-description: "Google Antigravity replaced Gemini CLI in 2026. Here's what it actually does, what it costs, and how it compares to Gemini Code Assist and Jules."
-category: "AI Tools"
+title: "Google Antigravity explicado: la herramienta de código de Gemini centrada en agentes"
+description: "Google Antigravity reemplazó a Gemini CLI en 2026. Qué hace realmente, cuánto cuesta y cómo se compara con Gemini Code Assist y Jules."
+category: "Herramientas de IA"
 date: 2026-09-07
+updated: 2026-10-12
 translation: "google-antigravity"
-updated: 2026-10-05
-related: ["windsurf-devin-desktop", "ai-coding-tools-case-studies"]
 readingTime: "7 min"
 image: "./images/google-antigravity.webp"
-imageAlt: "Wide shot of a curved ultrawide monitor at a dark modern developer desk at night, showing a code editor with several colorful AI agent chat panels open side by side, suggesting multiple agents working in parallel, with a blurred silhouette of hands typing on a mechanical keyboard in the foreground"
+imageAlt: "Foto gran angular de un monitor ultrawide curvo sobre un escritorio oscuro de desarrollador por la noche, mostrando un editor de código con varios paneles de color de chat de agentes de IA lado a lado, lo que sugiere varios agentes trabajando en paralelo, con la silueta desenfocada de unas manos escribiendo en un teclado mecánico en primer plano"
 ---
 
-If you've searched "Gemini coding tool" recently and landed on a name you didn't expect, that's not a mistake. Google Antigravity is now the center of its developer AI lineup, and it quietly absorbed a tool a lot of people were still using: Gemini CLI.
+Si buscaste "herramienta de código de Gemini" hace poco y terminaste en un nombre que no esperabas, no fue un error. Google Antigravity es ahora el centro de la línea de IA para desarrolladores de Google, y absorbió discretamente una herramienta que mucha gente todavía usaba: Gemini CLI.
 
-Antigravity isn't a chatbot bolted onto an editor. It's a full rethink of what an IDE is for, built around the idea that you shouldn't be typing every line yourself anymore. Here's what it is, how it got here, and whether it's worth your time.
+Antigravity no es un chatbot pegado a un editor. Es un replanteamiento completo de para qué sirve un IDE, construido alrededor de la idea de que ya no deberías escribir cada línea tú solo. Esto es lo que es, cómo llegó hasta aquí y si vale tu tiempo.
 
-## From Gemini CLI to Antigravity: A Fast Timeline
+## De Gemini CLI a Antigravity: una línea de tiempo rápida
 
-Google announced Antigravity on November 18, 2025, alongside the Gemini 3 launch. At first it sat next to Gemini CLI as a separate, more ambitious product: an agent-first IDE rather than a terminal tool.
+Google anunció Antigravity el 18 de noviembre de 2025, junto con el lanzamiento de Gemini 3. Al principio convivía con Gemini CLI como un producto aparte y más ambicioso: un IDE centrado en agentes, en lugar de una herramienta de terminal.
 
-That didn't last long. At Google I/O on May 19, 2026, Google announced it was folding Gemini CLI into a new Antigravity CLI, giving developers a 30-day migration window. Gemini CLI officially stopped working for Google AI Pro, Ultra, and free-tier users on June 18, 2026. If your org uses Gemini Code Assist Standard or Enterprise, or Code Assist for GitHub through Google Cloud, you were unaffected and kept your existing access.
+Eso no duró mucho. En Google I/O, el 19 de mayo de 2026, Google anunció que incorporaba Gemini CLI a un nuevo Antigravity CLI, dando a los desarrolladores una ventana de migración de 30 días. Gemini CLI dejó de funcionar oficialmente para los usuarios de Google AI Pro, Ultra y del nivel gratuito el 18 de junio de 2026. Si tu organización usa Gemini Code Assist Standard o Enterprise, o Code Assist for GitHub a través de Google Cloud, no te afectó y mantuviste el acceso que ya tenías.
 
-The message was clear: Antigravity, not a standalone CLI, is where Google wants developers working now.
+El mensaje era claro: Antigravity, y no un CLI independiente, es donde Google quiere que los desarrolladores trabajen ahora.
 
-## What Antigravity Actually Is
+## Qué es realmente Antigravity
 
-Antigravity is an agent-first IDE, built as a modified fork of VS Code, that shifts your job from writing code line by line to directing autonomous agents that plan, execute, and verify their own work.
+Antigravity es un IDE centrado en agentes, construido como un fork modificado de VS Code, que cambia tu trabajo de escribir código línea por línea a dirigir agentes autónomos que planifican, ejecutan y verifican su propio trabajo.
 
-The centerpiece is the **Agent Manager**, a view for orchestrating multiple agents running in parallel across different workspaces. Instead of babysitting one Copilot-style suggestion at a time, you hand off a task, an agent breaks it into steps, and you check back on progress like you would with a real teammate's pull request.
+La pieza central es el **Agent Manager**, una vista para orquestar varios agentes que se ejecutan en paralelo en distintos espacios de trabajo. En lugar de vigilar una sola sugerencia al estilo Copilot cada vez, delegas una tarea, un agente la divide en pasos y tú revisas el progreso después, como harías con el pull request de un compañero de verdad.
 
-The other standout feature is built-in browser control. An Antigravity agent can spin up a real Chromium instance, navigate to your local dev server, click through the user flow it just built, and capture screenshots as proof the feature actually works, not just that the code compiles.
+La otra función destacada es el control de navegador integrado. Un agente de Antigravity puede abrir una instancia real de Chromium, navegar hasta tu servidor de desarrollo local, recorrer el flujo de usuario que acabas de construir y capturar pantallas como prueba de que la función realmente funciona, no solo de que el código compila.
 
-By mid-2026, Antigravity had grown into four surfaces:
+A mediados de 2026, Antigravity había crecido hasta cuatro superficies:
 
-- **Antigravity IDE** — the VS Code fork, for hands-on editing alongside agents
-- **Antigravity 2.0** — a standalone desktop app
-- **Antigravity CLI** — a Go-based terminal tool (Gemini CLI's replacement) that runs agents in the background without locking up your session
-- **Antigravity SDK** — a Python SDK for building your own agent workflows on top of the platform
+- **Antigravity IDE** — el fork de VS Code, para edición práctica junto a los agentes
+- **Antigravity 2.0** — una aplicación de escritorio independiente
+- **Antigravity CLI** — una herramienta de terminal basada en Go (sustituta de Gemini CLI) que ejecuta agentes en segundo plano sin trabar tu sesión
+- **Antigravity SDK** — un SDK en Python para construir tus propios flujos de agentes sobre la plataforma
 
-Antigravity CLI kept the features developers relied on in Gemini CLI, including Agent Skills, Hooks, Subagents, and Extensions, just repackaged as Antigravity plugins.
+Antigravity CLI mantuvo las funciones con las que contaban los desarrolladores en Gemini CLI, incluidas Agent Skills, Hooks, Subagentes y Extensiones, solo reempaquetadas como plugins de Antigravity.
 
-## Which Models Power It
+## Qué modelos lo impulsan
 
-Antigravity isn't locked to Google's own models. It supports Gemini 3 Pro, Gemini 3 Deep Think, and Gemini 3 Flash, plus third-party options including Claude Sonnet 4.6, Claude Opus 4.6, and GPT-OSS 120B. You pick the model per agent, so a quick refactor can run on Flash while a gnarly multi-file bug goes to Gemini 3 Pro or Claude Opus.
+Antigravity no está atado solo a los modelos propios de Google. Soporta Gemini 3 Pro, Gemini 3 Deep Think y Gemini 3 Flash, además de opciones de terceros como Claude Sonnet 4.6, Claude Opus 4.6 y GPT-OSS 120B. Eliges el modelo por agente, así que una refactorización rápida puede ejecutarse en Flash mientras un bug complicado con varios archivos va a Gemini 3 Pro o a Claude Opus.
 
-On SWE-bench Verified, a standard benchmark for real-world coding tasks pulled from actual GitHub issues, Antigravity has been reported scoring around 76.2%, competitive with the other top agentic coding tools on the market in 2026.
+En SWE-bench Verified, un benchmark estándar para tareas de código del mundo real, tomado de issues reales de GitHub, se reportó que Antigravity puntúa en torno al 76,2%, competitivo con las otras principales herramientas de código agéntico del mercado en 2026.
 
-## What It Costs
+## Cuánto cuesta
 
-- 🆓 **Individual / Free** ($0/month): Basic weekly rate limits, unlimited tab completions, unlimited command requests, and access to the listed Google, Anthropic, and OpenAI models.
-- 💰 **Google AI Pro** ($20/month): Higher usage limits across Antigravity's surfaces, bundled with the rest of the Google AI Pro subscription.
-- 🚀 **Google AI Ultra** ($100/month): Introduced for Antigravity on May 19, 2026, with the highest limits for developers running agents constantly throughout the day.
+- 🆓 **Individual / Gratis** ($0/mes): límites semanales básicos, autocompletados de pestaña ilimitados, solicitudes de comando ilimitadas y acceso a los modelos listados de Google, Anthropic y OpenAI.
+- 💰 **Google AI Pro** ($20/mes): límites de uso más altos en las superficies de Antigravity, incluido en el resto de la suscripción Google AI Pro.
+- 🚀 **Google AI Ultra** ($100/mes): introducido para Antigravity el 19 de mayo de 2026, con los límites más altos para desarrolladores que ejecutan agentes constantemente a lo largo del día.
 
 ## Antigravity vs. Gemini Code Assist vs. Jules
 
-Google's developer AI lineup isn't just one product. If you're a Google AI Pro or Ultra subscriber, you actually have three different coding tools available, and they're built for different habits.
+La línea de IA para desarrolladores de Google no es un solo producto. Si eres suscriptor de Google AI Pro o Ultra, en realidad tienes tres herramientas de código distintas disponibles, y están pensadas para hábitos distintos.
 
 <div style="max-width:900px;margin:24px auto;overflow-x:auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
   <table style="width:100%;border-collapse:collapse;background:#ffffff;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-radius:8px;overflow:hidden;">
     <thead>
       <tr style="background:var(--ink-deep);color:#ffffff;">
-        <th style="padding:14px 16px;text-align:left;font-size:14px;">Feature</th>
+        <th style="padding:14px 16px;text-align:left;font-size:14px;">Característica</th>
         <th style="padding:14px 16px;text-align:left;font-size:14px;">🧠 Antigravity</th>
         <th style="padding:14px 16px;text-align:left;font-size:14px;">🧩 Gemini Code Assist</th>
         <th style="padding:14px 16px;text-align:left;font-size:14px;">📨 Jules</th>
@@ -68,73 +67,74 @@ Google's developer AI lineup isn't just one product. If you're a Google AI Pro o
     </thead>
     <tbody>
       <tr style="border-bottom:1px solid #eee;">
-        <td style="padding:12px 16px;font-weight:600;">💡 What it is</td>
-        <td style="padding:12px 16px;">Agent-first IDE, CLI, and SDK</td>
-        <td style="padding:12px 16px;">AI extension for your existing editor</td>
-        <td style="padding:12px 16px;">Async background coding agent</td>
+        <td style="padding:12px 16px;font-weight:600;">💡 Qué es</td>
+        <td style="padding:12px 16px;">IDE, CLI y SDK centrados en agentes</td>
+        <td style="padding:12px 16px;">Extensión de IA para tu editor actual</td>
+        <td style="padding:12px 16px;">Agente de código asíncrono en segundo plano</td>
       </tr>
       <tr style="border-bottom:1px solid #eee;background:#fafafa;">
-        <td style="padding:12px 16px;font-weight:600;">🖥️ Where it runs</td>
-        <td style="padding:12px 16px;">Standalone editor, desktop app, or terminal</td>
-        <td style="padding:12px 16px;">Plugin inside VS Code or JetBrains</td>
-        <td style="padding:12px 16px;">Runs in the background, opens a PR when done</td>
+        <td style="padding:12px 16px;font-weight:600;">🖥️ Dónde se ejecuta</td>
+        <td style="padding:12px 16px;">Editor independiente, app de escritorio o terminal</td>
+        <td style="padding:12px 16px;">Plugin dentro de VS Code o JetBrains</td>
+        <td style="padding:12px 16px;">Se ejecuta en segundo plano, abre un PR al terminar</td>
       </tr>
       <tr style="border-bottom:1px solid #eee;">
-        <td style="padding:12px 16px;font-weight:600;">🤖 Multi-agent orchestration</td>
-        <td style="padding:12px 16px;">✅ Agent Manager runs several in parallel</td>
-        <td style="padding:12px 16px;">❌ One inline assistant</td>
-        <td style="padding:12px 16px;">Each task is its own async agent</td>
+        <td style="padding:12px 16px;font-weight:600;">🤖 Orquestación multiagente</td>
+        <td style="padding:12px 16px;">✅ Agent Manager ejecuta varios en paralelo</td>
+        <td style="padding:12px 16px;">❌ Un solo asistente en línea</td>
+        <td style="padding:12px 16px;">Cada tarea es su propio agente asíncrono</td>
       </tr>
       <tr style="border-bottom:1px solid #eee;background:#fafafa;">
-        <td style="padding:12px 16px;font-weight:600;">🌐 Browser verification</td>
-        <td style="padding:12px 16px;">✅ Built in</td>
+        <td style="padding:12px 16px;font-weight:600;">🌐 Verificación en navegador</td>
+        <td style="padding:12px 16px;">✅ Integrada</td>
         <td style="padding:12px 16px;">❌</td>
         <td style="padding:12px 16px;">❌</td>
       </tr>
       <tr style="border-bottom:1px solid #eee;">
-        <td style="padding:12px 16px;font-weight:600;">🏢 Best fit</td>
-        <td style="padding:12px 16px;">Developers ready to hand off whole features</td>
-        <td style="padding:12px 16px;">Teams keeping their current IDE and workflow</td>
-        <td style="padding:12px 16px;">Fire-and-forget tasks alongside other work</td>
+        <td style="padding:12px 16px;font-weight:600;">🏢 Mejor encaje</td>
+        <td style="padding:12px 16px;">Desarrolladores listos para delegar funciones completas</td>
+        <td style="padding:12px 16px;">Equipos que quieren mantener su IDE y flujo actuales</td>
+        <td style="padding:12px 16px;">Tareas de "delegar y olvidar" junto con otro trabajo</td>
       </tr>
       <tr>
-        <td style="padding:12px 16px;font-weight:600;">💳 Pricing</td>
-        <td style="padding:12px 16px;">Free, $20/mo Pro, $100/mo Ultra</td>
-        <td style="padding:12px 16px;">Free individual; Standard/Enterprise for orgs</td>
-        <td style="padding:12px 16px;">Included in Google AI Pro/Ultra</td>
+        <td style="padding:12px 16px;font-weight:600;">💳 Precio</td>
+        <td style="padding:12px 16px;">Gratis, $20/mes Pro, $100/mes Ultra</td>
+        <td style="padding:12px 16px;">Individual gratis; Standard/Enterprise para organizaciones</td>
+        <td style="padding:12px 16px;">Incluido en Google AI Pro/Ultra</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-## Frequently Asked Questions
+## Preguntas frecuentes
 
-### Is Google Antigravity free?
+### ¿Google Antigravity es gratis?
 
-Yes, there's a $0 Individual plan with weekly rate limits, unlimited tab completions, and access to Google, Anthropic, and OpenAI models. Paid tiers ($20/month Pro, $100/month Ultra) raise the usage limits for heavier, all-day agent use.
+Sí, existe un plan Individual de $0 con límites semanales de uso, autocompletados de pestaña ilimitados y acceso a modelos de Google, Anthropic y OpenAI. Los niveles de pago ($20/mes Pro, $100/mes Ultra) aumentan los límites de uso para un uso más pesado y de todo el día con agentes.
 
-### What happened to Gemini CLI?
+### ¿Qué pasó con Gemini CLI?
 
-It was retired. Google announced the shift to Antigravity CLI on May 19, 2026, and Gemini CLI stopped working for Pro, Ultra, and free-tier users on June 18, 2026. Antigravity CLI is a Go-based successor that keeps most of Gemini CLI's features as plugins.
+Fue descontinuado. Google anunció el cambio a Antigravity CLI el 19 de mayo de 2026, y Gemini CLI dejó de funcionar para los usuarios Pro, Ultra y del nivel gratuito el 18 de junio de 2026. Antigravity CLI es un sucesor basado en Go que mantiene la mayoría de las funciones de Gemini CLI como plugins.
 
-### Does Antigravity only work with Gemini models?
+### ¿Antigravity solo funciona con modelos Gemini?
 
-No. Alongside Gemini 3 Pro, Deep Think, and Flash, it also supports Claude Sonnet 4.6, Claude Opus 4.6, and GPT-OSS 120B, so you can pick a model per agent based on the task.
+No. Además de Gemini 3 Pro, Deep Think y Flash, también soporta Claude Sonnet 4.6, Claude Opus 4.6 y GPT-OSS 120B, así que puedes elegir un modelo por agente según la tarea.
 
-### Is Antigravity the same as Gemini Code Assist?
+### ¿Antigravity es lo mismo que Gemini Code Assist?
 
-No. Gemini Code Assist is an AI extension that plugs into an IDE you already use. Antigravity is a separate, standalone agent-first platform with its own editor, CLI, and SDK.
+No. Gemini Code Assist es una extensión de IA que se conecta a un IDE que ya usas. Antigravity es una plataforma separada e independiente centrada en agentes, con su propio editor, CLI y SDK.
 
-## Related Reading and Official Resources
+## Conclusión
 
-Antigravity is not the only agent IDE that changed shape this year: see [Windsurf is now Devin Desktop](/windsurf-devin-desktop/). Students can get higher limits through [Google's free Gemini Pro offer](https://techonplay.com/google-ai-plus-for-students/). For how Google's claims compare with the other vendors', read [our case-study check](/ai-coding-tools-case-studies/). The product itself lives at [antigravity.google](https://antigravity.google/).
+Antigravity es la apuesta de Google de que el futuro de las herramientas de código se parece menos al autocompletado y más a la gestión: describes el resultado, un agente planifica y ejecuta, y tú verificas el resultado en lugar de escribir cada línea tú solo. La jubilación de Gemini CLI en favor de Antigravity CLI no fue un simple cambio de nombre, fue Google consolidando toda su estrategia de IA para desarrolladores en torno a esa única plataforma.
 
-## The Bottom Line
+Si todavía tienes la memoria muscular de Gemini CLI, el nivel gratuito es la forma más fácil de ver qué cambió. Si estás eligiendo entre las tres herramientas de código de Google, la respuesta honesta es: Antigravity para todo lo que quieras resuelto de punta a punta, Gemini Code Assist si no quieres salir de tu IDE actual y Jules para las tareas que te alegra encolar y olvidar.
 
-Antigravity is Google betting that the future of coding tools looks less like autocomplete and more like management: you describe the outcome, an agent plans and executes it, and you verify the result instead of writing every line yourself. The retirement of Gemini CLI in favor of Antigravity CLI wasn't a rename, it was Google consolidating its entire developer AI strategy around this one platform.
+## Sigue leyendo
 
-If you're still on Gemini CLI muscle memory, the free tier is the easiest way to see what changed. If you're choosing between Google's three coding tools, the honest answer is: Antigravity for anything you want handled end-to-end, Gemini Code Assist if you don't want to leave your current IDE, and Jules for tasks you're happy to queue up and forget about.
+- [Claude Code, Antigravity o Copilot: cuál elegir](/claude-code-vs-antigravity-vs-copilot/)
+- [MCP en Claude Code, Cursor y Copilot: 7 cuidados de seguridad](/mcp-seguridad-agentes-de-codigo/)
 
 ---
 
-*Sources: [Google Developers Blog — Transitioning Gemini CLI to Antigravity CLI](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/), [Google Cloud — Gemini Code Assist overview](https://docs.cloud.google.com/gemini/docs/codeassist/overview), [AI Wiki — Antigravity](https://aiwiki.ai/wiki/antigravity), [Thinkpeak — Google Antigravity Pricing & Access 2026](https://thinkpeak.ai/google-antigravity-pricing-access-2026/).*
+*Fuentes: [Google Developers Blog — Transitioning Gemini CLI to Antigravity CLI](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/), [Google Cloud — Gemini Code Assist overview](https://docs.cloud.google.com/gemini/docs/codeassist/overview), [AI Wiki — Antigravity](https://aiwiki.ai/wiki/antigravity), [Thinkpeak — Google Antigravity Pricing & Access 2026](https://thinkpeak.ai/google-antigravity-pricing-access-2026/).*

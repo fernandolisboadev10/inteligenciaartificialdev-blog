@@ -7,14 +7,14 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 6);
 ---
-<BaseLayout title="AI Prompts for Developers">
+<BaseLayout title="Prompts de IA para desarrolladores">
   <section class="hero container">
     <div class="hero-text">
       <p class="eyebrow">inteligenciaartificialdev.com<span class="eyebrow-cursor">_</span></p>
-      <h1>Tested AI prompts<br />for people who write code.</h1>
+      <h1>Prompts de IA probados<br />para quienes escriben código.</h1>
       <p class="sub">
-        Articles, tutorials, and practical comparisons on prompt engineering
-        and AI tools — for developers, by developers.
+        Artículos, tutoriales y comparativas prácticas sobre ingeniería de
+        prompts y herramientas de IA: de desarrolladores, para desarrolladores.
       </p>
     </div>
     <div class="hero-terminal" aria-hidden="true">
@@ -22,15 +22,15 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         <span></span><span></span><span></span>
         <p class="terminal-filename">prompt.sh</p>
       </div>
-      <pre><code id="hero-code"># Welcome to the world of AI-assisted programming.
+      <pre><code id="hero-code"># Bienvenido a la programación asistida por IA.
 
-$ prompt --task "review function" \
+$ prompt --task "revisar función" \
     --language python \
-    --style "safe, no regressions"
+    --style "seguro, sin regresiones"
 
-&gt; Analyzing the function... ok
-&gt; 3 suggestions found
-&gt; No breaking changes
+&gt; Analizando la función... ok
+&gt; 3 sugerencias encontradas
+&gt; Sin cambios incompatibles
 $ <span class="cursor">_</span></code></pre>
     </div>
   </section>
@@ -38,10 +38,10 @@ $ <span class="cursor">_</span></code></pre>
   <section class="container recent">
     <div class="recent-header">
       <div>
-        <h2>Recent articles</h2>
+        <h2>Artículos recientes</h2>
         <span class="underline"></span>
       </div>
-      <a href="/blog">See all →</a>
+      <a href="/blog">Ver todos →</a>
     </div>
     <div class="grid">
       {posts.map((post) => (
@@ -223,15 +223,15 @@ $ <span class="cursor">_</span></code></pre>
 
   if (codeEl && !reducedMotion && !alreadyPlayed) {
     const lines = [
-      '# Welcome to the world of AI-assisted programming.',
+      '# Bienvenido a la programación asistida por IA.',
       '',
-      '$ prompt --task "review function" \\',
+      '$ prompt --task "revisar función" \\',
       '    --language python \\',
-      '    --style "safe, no regressions"',
+      '    --style "seguro, sin regresiones"',
       '',
-      '> Analyzing the function... ok',
-      '> 3 suggestions found',
-      '> No breaking changes',
+      '> Analizando la función... ok',
+      '> 3 sugerencias encontradas',
+      '> Sin cambios incompatibles',
       '$ ',
     ];
     const fullText = lines.join('\n');
