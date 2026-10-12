@@ -10,15 +10,15 @@ image: "./images/ai-900-ai-901-worth-it.webp"
 imageAlt: "Editorial photo of a study desk with an open laptop showing a blurred cloud dashboard, a handwritten notebook and a coffee mug, natural window light"
 ---
 
-**Short answer:** you can't take the **AI-900** anymore. Microsoft retired it on **June 30, 2026** and replaced it with the **AI-901**. The credential itself kept its name, *Microsoft Certified: Azure AI Fundamentals*, so what changed is the exam you sit. It's worth it if you're early in your AI career and want a structured path through Microsoft's AI stack. It's not worth it if you expect a certificate alone to land a job, or if you already ship AI apps for a living.
+**Short answer:** you can't take the **AI-900** anymore. Microsoft retired it on **June 30, 2026** and replaced it with the [**AI-901**](https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-901/). The credential itself kept its name, [*Microsoft Certified: Azure AI Fundamentals*](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/), so what changed is the exam you sit. It's worth it if you're early in your AI career and want a structured path through Microsoft's AI stack. It's not worth it if you expect a certificate alone to land a job, or if you already ship AI apps for a living.
 
 If you've searched "AI-900" lately, you've probably hit a pile of outdated courses, practice tests, and videos that treat the old exam as current. This guide pulls together what Microsoft actually publishes about the current exam, what changed, and who it makes sense for.
 
-**A note on method:** this is based on Microsoft's own pages (certification, exam, study guide, and exam policies), not on a first-person exam report. We left out the exam price on purpose: it varies by country and region, and Microsoft shows the figure at scheduling.
+**A note on method:** this is based on Microsoft's own pages ([certification](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/), [exam](https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-901/), [study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901), and [exam policies](https://learn.microsoft.com/en-us/credentials/certifications/frequently-asked-questions)), not on a first-person exam report. We left out the exam price on purpose: it varies by country and region, and Microsoft shows the figure at scheduling.
 
 ## What happened to the AI-900
 
-Microsoft's **Azure AI Fundamentals** certification page now lists one required exam: the **AI-901**. The AI-900 is gone, and Microsoft's retirement note says that after the retirement date you should follow the related certification's requirements.
+Microsoft's [**Azure AI Fundamentals** certification page](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/) now lists one required exam: the **AI-901**. The AI-900 is gone, and Microsoft's retirement note says that after the retirement date you should follow the related certification's requirements.
 
 In practice:
 
@@ -28,12 +28,14 @@ In practice:
 
 ## What the AI-901 covers
 
-Per the official study guide, the exam splits into two blocks:
+Per the [official study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901), the exam splits into two blocks:
 
 | Block | Weight | What's in it |
 |---|---|---|
 | **Identify AI concepts and capabilities** | 40–45% | Responsible AI (fairness, reliability and safety, privacy and security, inclusiveness, transparency, accountability), how generative models work, picking a model and its configuration, workloads like text, speech, vision, and information extraction |
 | **Implement AI solutions by using Microsoft Foundry** | 55–60% | Writing system and user prompts, deploying a model, building a chat client with the Foundry SDK, creating and testing a single agent, apps for text, speech, vision, and information extraction |
+
+Responsible AI is a real section, not filler. If fairness problems feel abstract, [why AI detectors flag real students as cheaters](/chatgpt-detector-false-positives/) is a concrete example. And writing good system and user prompts is a skill of its own: see [Prompt Engineering Isn't Dead](/context-engineering-habits-developers/).
 
 That second block is the story: **more than half the exam is implementation.** The guide asks you to build a lightweight chat client with the Foundry SDK, create and test an agent, and extract information from documents with Content Understanding. Microsoft also says candidates should know **Python syntax** and be **familiar with Azure resources**.
 
@@ -48,20 +50,20 @@ Microsoft doesn't publish a pass rate, so any number you see is unofficial. Here
 - **If you already write Python and call AI APIs,** the practical block is mostly familiar territory. Your work is learning the Azure names and workflow.
 - **If you've never coded,** the jump is bigger than "Fundamentals" suggests.
 
-The most honest first step is Microsoft's free **Practice Assessment** on AI Skills Navigator. It shows you the question style and where your gaps are. You'll need to sign in.
+The most honest first step is Microsoft's free **Practice Assessment** on [AI Skills Navigator](https://aiskillsnavigator.microsoft.com/credentials/cert-83587e0a0754cfee561ade3e27d9fa1cdaf15ae03be52d2413b2b858d1b4eda4). It shows you the question style and where your gaps are. You'll need to sign in.
 
 ## What to weigh on cost (no price here)
 
 - **Price depends on where you take the exam,** and you see it on the exam page when you schedule. Microsoft notes it can change without notice and excludes taxes.
-- **Students may get academic pricing** in eligible countries, with verification that lasts 12 months. Get verified *before* you pay: there are no refunds afterward.
-- **A fail means paying again.** After a first fail you wait 24 hours; between later attempts it's 14 days, with a maximum of five attempts in 12 months. Each retake is paid.
+- **Students may get [academic pricing](https://learn.microsoft.com/en-us/credentials/certifications/student-discounts)** in eligible countries, with verification that lasts 12 months. Get verified *before* you pay: there are no refunds afterward.
+- **A fail means paying again.** Under the [retake policy](https://learn.microsoft.com/en-us/credentials/support/retake-policy), after a first fail you wait 24 hours; between later attempts it's 14 days, with a maximum of five attempts in 12 months. Each retake is paid.
 - **No refunds** for a failed exam or a missed appointment.
 - **Study time** is likely the bigger cost, but hands-on Foundry practice uses Azure resources, so check what your account covers first.
 
 ## Who it's worth it for
 
 - **Students and career changers** who want a clear study plan in applied AI, with a finish line.
-- **Developers moving toward AI work** who want to organize what they know about APIs and prompting into a vocabulary the cloud job market recognizes.
+- **Developers moving toward AI work** who want to organize what they know about APIs and prompting into a vocabulary the cloud job market recognizes. If that's you, [six habits that keep AI-generated projects from falling apart](/vibe-coding-habits/) pair well with the study.
 - **People working in Microsoft/Azure shops** (employers, consultancies, or teams already on the platform), where the credential speaks the client's language.
 - **Adjacent roles** (data, product, technical support) who need to talk to AI teams more precisely.
 
@@ -69,7 +71,7 @@ The most honest first step is Microsoft's free **Practice Assessment** on AI Ski
 
 - **Anyone expecting the certificate alone to get them hired.** It's an entry-level credential. It shows you studied in a structured way; it doesn't replace projects, a portfolio, or experience.
 - **Anyone who wants depth in machine learning.** The focus is consuming and deploying services and models, not training models from scratch.
-- **Engineers already building AI apps in production.** You likely have the skills. The badge may satisfy an employer or vendor requirement, but it won't teach you much.
+- **Engineers already building AI apps in production,** especially those weighing tools like the ones in [our case-study check of Claude Code, Codex, Copilot, and Antigravity](/ai-coding-tools-case-studies/). You likely have the skills. The badge may satisfy an employer or vendor requirement, but it won't teach you much.
 - **People working only in other clouds** with no plan to touch Azure. The content is specific to Microsoft's ecosystem.
 
 ## How to start without wasting time
@@ -105,12 +107,6 @@ Yes. The Practice Assessment on AI Skills Navigator is free, and Microsoft Learn
 ## Bottom line
 
 The AI-900 is gone, but the certification lives on with a more hands-on exam. It's worth your time if you want a structured path from "I use ChatGPT" to "I build with models and agents" on Azure, and you're willing to write some code. It's not a career shortcut: it's a decent step, not the whole staircase. If you're on the fence, take the free practice assessment first. If it feels too easy, the badge won't add much. If it feels like a good stretch, you've got a study plan.
-
-## Related Reading
-
-- [Vibe Coding Without the Mess: 6 Habits](/vibe-coding-habits/)
-- [Prompt Engineering Isn't Dead: 7 Context Habits Developers Need in 2026](/context-engineering-habits-developers/)
-- [We Checked the Case Studies Behind Claude Code, Codex, Copilot, and Antigravity](/ai-coding-tools-case-studies/)
 
 ---
 
