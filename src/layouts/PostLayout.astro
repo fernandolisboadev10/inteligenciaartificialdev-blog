@@ -78,6 +78,8 @@ const articleSchema = {
       <slot />
     </div>
 
+    <ShareButtons title={title} variant="end" label="Comparte:" copyLabel="Copiar enlace" copiedLabel="¡Enlace copiado!" shareOn="Compartir en" />
+
     <RelatedPosts slugs={related} />
 
     <AuthorBio />
