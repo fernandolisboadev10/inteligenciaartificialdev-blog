@@ -3,14 +3,19 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import FeaturedGrid from '../components/FeaturedGrid.astro';
+import Pagination from '../components/Pagination.astro';
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 9);
-const featured = posts.slice(0, 3);
-const rest = posts.slice(3);
+const PER_PAGE = 9;
+const page = Number(Astro.props.page ?? 1);
+const all = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const featured = page === 1 ? all.slice(0, 3) : [];
+const gridAll = all.slice(3);
+const totalPages = Math.max(1, Math.ceil(gridAll.length / PER_PAGE));
+const rest = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 ---
-<BaseLayout title="Prompts de IA para desarrolladores">
+<BaseLayout title={page > 1 ? `Prompts de IA para desarrolladores - Página ${page}` : "Prompts de IA para desarrolladores"}>
+  {page === 1 && (
   <section class="hero container">
     <div class="hero-text">
       <p class="eyebrow">inteligenciaartificialdev.com<span class="eyebrow-cursor">_</span></p>
@@ -37,7 +42,9 @@ $ prompt --task "revisar función" \
 $ <span class="cursor">_</span></code></pre>
     </div>
   </section>
+  )}
 
+  {page === 1 && (
   <section class="container featured-wrap">
     <div class="recent-header">
       <div>
@@ -47,6 +54,7 @@ $ <span class="cursor">_</span></code></pre>
     </div>
     <FeaturedGrid posts={featured} />
   </section>
+  )}
 
   <section class="container recent">
     <div class="recent-header">
@@ -70,6 +78,7 @@ $ <span class="cursor">_</span></code></pre>
         />
       ))}
     </div>
+    <Pagination current={page} total={totalPages} />
   </section>
 </BaseLayout>
 
