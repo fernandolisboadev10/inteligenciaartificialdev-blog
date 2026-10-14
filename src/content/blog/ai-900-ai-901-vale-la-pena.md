@@ -113,6 +113,8 @@ El AI-900 salió de escena, pero la certificación continúa, ahora con un exame
 
 ## Sigue leyendo
 
+- [Profesiones de IA en Latinoamérica y España: qué perfiles existen y cómo entrar](/profesiones-de-ia-en-latinoamerica-y-espana/)
+- [Salarios de IA en Latinoamérica y España: cuánto gana cada perfil](/salarios-de-ia-en-latinoamerica-y-espana/)
 - [Vibe coding sin desorden: 6 hábitos](/vibe-coding-6-habitos-sin-desorden/)
 - [Claude Code, Antigravity o Copilot: cuál elegir](/claude-code-vs-antigravity-vs-copilot/)
 - [Estudios de caso de herramientas de IA para código: cuáles se sostienen](/estudios-de-caso-herramientas-ia-codigo/)
