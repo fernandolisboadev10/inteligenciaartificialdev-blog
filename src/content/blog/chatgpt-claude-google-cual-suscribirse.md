@@ -13,7 +13,7 @@ draft: false
 
 Suscribirse a una IA de pago parece una decisión sencilla, porque los tres nombres más conocidos cobran casi lo mismo: unos US$ 20 al mes. Pero ese "casi lo mismo" esconde diferencias que pesan en la factura según dónde vivas. Uno cobra en dólares y tu banco puede sumar comisión por compra internacional. Otro cobra en moneda local en algunos países. Y los planes más baratos, que mucha gente ni mira, pueden resolver lo que de verdad haces.
 
-Esta guía reúne lo que cada empresa publica en sus páginas oficiales y lo que la prensa especializada levantó sobre precios locales. **Conviene aclarar:** no es un análisis de uso a largo plazo. No usamos los tres planes durante meses, así que lo que sigue es una comparación de planes, precios y límites, no un veredicto sobre la calidad de las respuestas. Donde el dato es aproximado, lo decimos.
+Esta guía reúne lo que cada empresa publica en sus páginas oficiales y lo que la prensa especializada levantó sobre precios locales. No es un análisis de uso a largo plazo. No usamos los tres planes durante meses, así que lo que sigue es una comparación de planes, precios y límites, no un veredicto sobre la calidad de las respuestas. Donde el dato es aproximado, lo decimos.
 
 ## Qué cambia según tu país: dólar, impuestos y moneda local
 
