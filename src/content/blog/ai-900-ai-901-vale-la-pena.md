@@ -9,11 +9,11 @@ image: "./images/ai-900-ai-901-vale-a-pena.webp"
 imageAlt: "Foto editorial de un escritorio de estudio con un portátil abierto que muestra un panel de nube desenfocado, un cuaderno con apuntes a mano y una taza de café, con luz natural de ventana"
 ---
 
-**Respuesta rápida:** el **AI-900 ya no se puede rendir**. Fue retirado el **30 de junio de 2026** y reemplazado por el [**AI-901**](https://learn.microsoft.com/es-es/credentials/certifications/exams/ai-901/). La certificación conserva el mismo nombre ([*Microsoft Certified: Azure AI Fundamentals*](https://learn.microsoft.com/es-es/credentials/certifications/azure-ai-fundamentals/)); lo que cambió es el examen. Vale la pena si estás empezando en IA aplicada y quieres una base estructurada con la nube de Microsoft. No vale la pena si esperas un título que "abra puertas por sí solo" o si ya construyes aplicaciones de IA en tu día a día.
+**En resumen:** el **AI-900 ya no se puede rendir**. Fue retirado el **30 de junio de 2026** y reemplazado por el [**AI-901**](https://learn.microsoft.com/es-es/credentials/certifications/exams/ai-901/). La certificación conserva el mismo nombre ([*Microsoft Certified: Azure AI Fundamentals*](https://learn.microsoft.com/es-es/credentials/certifications/azure-ai-fundamentals/)); lo que cambió es el examen. Vale la pena si estás empezando en IA aplicada y quieres una base estructurada con la nube de Microsoft. No vale la pena si esperas un título que "abra puertas por sí solo" o si ya construyes aplicaciones de IA en tu día a día.
 
 Si buscaste "AI-900" en los últimos meses, te habrás topado con mucho material desactualizado. Buena parte de los cursos, simulacros y videos todavía habla del examen antiguo como si existiera. Esta guía reúne lo que Microsoft publica sobre el examen actual, qué cambió y para quién tiene sentido.
 
-**Una aclaración de método:** esto es un análisis de las páginas oficiales de Microsoft ([certificación](https://learn.microsoft.com/es-es/credentials/certifications/azure-ai-fundamentals/), [examen](https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-901/), [guía de estudio](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901) y [políticas](https://learn.microsoft.com/en-us/credentials/certifications/frequently-asked-questions)), no el relato de alguien que lo rindió. No citamos el precio a propósito: varía según el país y Microsoft pide que lo consultes al agendar.
+**Sobre las fuentes:** esto es un análisis de las páginas oficiales de Microsoft ([certificación](https://learn.microsoft.com/es-es/credentials/certifications/azure-ai-fundamentals/), [examen](https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-901/), [guía de estudio](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901) y [políticas](https://learn.microsoft.com/en-us/credentials/certifications/frequently-asked-questions)), no el relato de alguien que lo rindió. No citamos el precio a propósito: varía según el país y Microsoft pide que lo consultes al agendar.
 
 ## Qué pasó con el AI-900
 
@@ -38,7 +38,7 @@ La parte de IA responsable pesa en el examen y toca riesgos reales de seguridad;
 
 Lo que cambia la conversación: **más de la mitad del examen es implementación**. La guía pide, entre otras cosas, crear un cliente de chat ligero con el SDK de Foundry, crear y probar un agente y extraer información de documentos con Content Understanding. Microsoft también dice que el candidato debe conocer la **sintaxis de Python** y estar **familiarizado con los recursos de Azure**.
 
-En resumen: el AI-900 antiguo era sobre todo conceptual. El AI-901 pide que, como mínimo, hayas trabajado con una aplicación.
+En la práctica: el AI-900 antiguo era sobre todo conceptual. El AI-901 pide que, como mínimo, hayas trabajado con una aplicación.
 
 ## Qué tan difícil es
 
