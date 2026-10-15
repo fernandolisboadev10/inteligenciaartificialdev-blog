@@ -5,7 +5,7 @@ category: "Carrera"
 date: 2026-10-14
 readingTime: "9 min"
 image: "./images/salarios-de-ia-en-latinoamerica-y-espana.webp"
-imageAlt: "Profesional latinoamericana pensativa frente a un portátil con hojas de cálculo y gráficos de sueldos, con un cuaderno y una calculadora sobre el escritorio de una oficina moderna"
+imageAlt: "Profesional latinoamericana pensativa frente a un portátil, con un cuaderno, una calculadora y un vaso de agua sobre el escritorio de una oficina moderna"
 ---
 
 No existe una cifra única y fiable de "cuánto gana quien trabaja en IA" en el mundo hispanohablante. Las fuentes públicas divergen mucho entre sí, y con frecuencia la misma ocupación aparece con el doble de sueldo según quién la mida. Lo que sí se sostiene: en España los rangos para un científico de datos van, según la fuente, de unos 39.000 a 54.000 € brutos anuales de mediana; en México, los avisos de empleo reales apuntan a unos 19.000 a 21.000 MXN mensuales de promedio para científico de datos, muy por debajo de lo que publican las escuelas de formación. Y en todos los países, el sueldo cambia más por **seniority, ciudad y tipo de empleador** que por el título.
