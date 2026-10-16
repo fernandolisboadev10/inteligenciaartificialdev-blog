@@ -79,21 +79,26 @@ const fmt = (d: Date) => d.toLocaleDateString('es-ES', { day: '2-digit', month: 
   .shade {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(16, 10, 30, 0) 30%, rgba(16, 10, 30, 0.92) 100%);
+    background: linear-gradient(180deg, rgba(16, 10, 30, 0) 0%, rgba(16, 10, 30, 0.55) 38%, rgba(16, 10, 30, 0.94) 72%, rgba(16, 10, 30, 0.97) 100%);
   }
 
   .main-body {
     position: relative;
-    padding: 32px;
-    max-width: 44rem;
+    padding: 28px 32px 28px;
+    max-width: 40rem;
   }
 
   .main h3 {
     margin: 14px 0 10px;
     font-family: var(--font-display);
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
-    line-height: 1.12;
+    font-size: clamp(1.25rem, 2.1vw, 1.75rem);
+    line-height: 1.2;
     color: #fff;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .desc {
