@@ -15,18 +15,7 @@ const totalPages = Math.max(1, Math.ceil(gridAll.length / PER_PAGE));
 const rest = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 ---
 <BaseLayout title={page > 1 ? `Prompts de IA para desarrolladores - Página ${page}` : "Prompts de IA para desarrolladores"}>
-  {page === 1 && (
-  <section class="hero container">
-    <div class="hero-text">
-      <p class="eyebrow">inteligenciaartificialdev.com<span class="eyebrow-cursor">_</span></p>
-      <h1>Prompts de IA probados<br />para quienes escriben código.</h1>
-      <p class="sub">
-        Artículos, tutoriales y comparativas prácticas sobre ingeniería de
-        prompts y herramientas de IA: de desarrolladores, para desarrolladores.
-      </p>
-    </div>
-  </section>
-  )}
+  {page === 1 && <h1 class="sr-only">Prompts de IA probados para quienes escriben código.</h1>}
 
   {page === 1 && (
   <section class="container featured-wrap">
@@ -67,47 +56,13 @@ const rest = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 </BaseLayout>
 
 <style>
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding-block: 64px 40px;
-  }
-
-  .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    margin: 0 0 16px;
-    background: linear-gradient(135deg, var(--violet), var(--rose));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .eyebrow-cursor {
-    display: inline-block;
-    margin-left: 2px;
-    color: var(--rose);
-    animation: blink 1.1s steps(1) infinite;
-  }
-
-  h1 {
-    font-size: clamp(2rem, 4.5vw, 3.1rem);
-    letter-spacing: -0.01em;
-  }
-
-  .sub {
-    color: var(--ink-soft);
-    font-size: 1.05rem;
-    max-width: 44ch;
-    margin-top: 20px;
-  }
-
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 
   .featured-wrap {
@@ -159,9 +114,4 @@ const rest = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
     }
   }
 
-  @media (max-width: 860px) {
-    .hero {
-      padding-block: 40px 24px;
-    }
-  }
 </style>
