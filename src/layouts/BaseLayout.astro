@@ -48,7 +48,6 @@ const organizationSchema = {
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, follow" />}
-    <meta name="google-site-verification" content="tc0GFdgefr6gTC43KdT1T9NKUEN0WiQgXQkGia164-Q" />
     <meta name="msvalidate.01" content="7F1E88061119512AF9AED1A7622C0E92" />
     <link rel="canonical" href={canonicalURL} />
     {alternate && <link rel="alternate" hreflang="es" href={canonicalURL} />}
@@ -90,36 +89,16 @@ const organizationSchema = {
       />
     </noscript>
 
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-80X56DDDL3"></script>
     <script is:inline>
-      // Consent: EU/UK-style timezones start denied (opt-in); everywhere else starts granted (opt-out).
-      // The visitor's choice is stored in localStorage under "cookie-consent".
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      // Consent choice (localStorage "cookie-consent"); no analytics or ad tags are loaded here.
       (function () {
-        var tz = '';
-        try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
-        var strict = tz.indexOf('Europe/') === 0 ||
-          ['Atlantic/Canary','Atlantic/Madeira','Atlantic/Azores','Atlantic/Faroe','Atlantic/Reykjavik','Asia/Nicosia','Asia/Famagusta'].indexOf(tz) !== -1;
         var stored = null;
         try { stored = localStorage.getItem('cookie-consent'); } catch (e) {}
-        var state = (stored === 'granted' || stored === 'denied') ? stored : (strict ? 'denied' : 'granted');
-
-        gtag('consent', 'default', {
-          ad_storage: state, analytics_storage: state, ad_user_data: state, ad_personalization: state
-        });
-        gtag('js', new Date());
-        gtag('config', 'G-80X56DDDL3');
-
         window.siteConsent = {
           hasChoice: function () { return stored === 'granted' || stored === 'denied'; },
           set: function (value) {
             stored = value;
             try { localStorage.setItem('cookie-consent', value); } catch (e) {}
-            gtag('consent', 'update', {
-              ad_storage: value, analytics_storage: value, ad_user_data: value, ad_personalization: value
-            });
           }
         };
       })();
