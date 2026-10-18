@@ -1,5 +1,7 @@
 ---
 import { getEntry } from 'astro:content';
+import PostCard from './PostCard.astro';
+import { site } from '../data/site';
 
 interface Props {
   slugs?: string[];
@@ -10,63 +12,45 @@ const entries = (await Promise.all(slugs.map((slug) => getEntry('blog', slug))))
 );
 ---
 {entries.length > 0 && (
-  <nav class="related" aria-labelledby="related-heading">
-    <h2 id="related-heading">Sigue leyendo</h2>
-    <ul>
+  <section class="container related" aria-labelledby="related-heading">
+    <div class="sec-h"><h2 id="related-heading"><span>//</span>{site.t.related}</h2></div>
+    <div class="grid">
       {entries.map((entry) => (
-        <li>
-          <span class="cat">{entry!.data.category}</span>
-          <a href={`/${entry!.id}/`}>{entry!.data.title}</a>
-          <p>{entry!.data.description}</p>
-        </li>
+        <PostCard
+          slug={entry!.id}
+          title={entry!.data.title}
+          description={entry!.data.description}
+          category={entry!.data.category}
+          date={entry!.data.date}
+          readingTime={entry!.data.readingTime}
+          image={entry!.data.image}
+          imageAlt={entry!.data.imageAlt}
+        />
       ))}
-    </ul>
-  </nav>
+    </div>
+  </section>
 )}
 
 <style>
   .related {
-    margin-top: 56px;
-    padding-top: 28px;
-    border-top: 1px solid var(--line);
+    padding-block: 48px 0;
   }
 
-  .related h2 {
-    font-size: 1.35rem;
-    margin: 0 0 16px;
-  }
-
-  .related ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .grid {
     display: grid;
-    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
-  .cat {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--violet);
+  @media (max-width: 860px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  .related a {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--ink-strong);
-    text-decoration: none;
-  }
-
-  .related a:hover {
-    color: var(--violet);
-    text-decoration: underline;
-  }
-
-  .related p {
-    margin: 4px 0 0;
-    font-size: 0.95rem;
-    color: var(--ink-soft);
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

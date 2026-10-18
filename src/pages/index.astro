@@ -3,42 +3,57 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import FeaturedGrid from '../components/FeaturedGrid.astro';
+import TrendBar from '../components/TrendBar.astro';
 import Pagination from '../components/Pagination.astro';
+import { site } from '../data/site';
 
-const PER_PAGE = 9;
 const page = Number(Astro.props.page ?? 1);
 const all = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const featured = page === 1 ? all.slice(0, 3) : [];
-const gridAll = all.slice(3);
-const totalPages = Math.max(1, Math.ceil(gridAll.length / PER_PAGE));
-const rest = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+const featured = page === 1 ? all.slice(0, site.featuredCount) : [];
+const gridAll = all.slice(site.featuredCount);
+const totalPages = Math.max(1, Math.ceil(gridAll.length / site.perPage));
+const rest = gridAll.slice((page - 1) * site.perPage, page * site.perPage);
+
+const counts = site.categories.map((c) => ({
+  name: c,
+  n: all.filter((p) => p.data.category === c).length,
+}));
 ---
 <BaseLayout title={page > 1 ? `Prompts de IA para desarrolladores - Página ${page}` : "Prompts de IA para desarrolladores"}>
   {page === 1 && <h1 class="sr-only">Prompts de IA probados para quienes escriben código.</h1>}
 
+  {page === 1 && <TrendBar posts={all.slice(0, 6)} />}
+
   {page === 1 && (
   <section class="container featured-wrap">
-    <div class="recent-header">
-      <div>
-        <h2>Para leer hoy</h2>
-        <span class="underline"></span>
-      </div>
-    </div>
     <FeaturedGrid posts={featured} />
   </section>
   )}
 
+  {page === 1 && (
+  <section class="container cats-wrap">
+    <div class="sec-h"><h2><span>01</span>{site.t.byCategory}</h2></div>
+    <div class="cats">
+      {counts.map((c, i) => (
+        <a href={`/blog?category=${encodeURIComponent(c.name)}`} class="cat">
+          <span class="idx">{String(i + 1).padStart(2, '0')}</span>
+          <strong>{c.name}</strong>
+          <span class="n">{c.n} {site.t.articles}</span>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+      ))}
+    </div>
+  </section>
+  )}
+
   <section class="container recent">
-    <div class="recent-header">
-      <div>
-        <h2>Lo más reciente</h2>
-        <span class="underline"></span>
-      </div>
-      <a href="/blog">Ver todos →</a>
+    <div class="sec-h">
+      <h2><span>{page === 1 ? '02' : '//'}</span>{site.t.recent}</h2>
+      <a href="/blog">{site.t.viewAll}</a>
     </div>
     <div class="grid">
-      {rest.map((post) => (
+      {rest.map((post, i) => (
         <PostCard
           slug={post.id}
           title={post.data.title}
@@ -48,6 +63,7 @@ const rest = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
           readingTime={post.data.readingTime}
           image={post.data.image}
           imageAlt={post.data.imageAlt}
+          priority={i === 0 && page > 1}
         />
       ))}
     </div>
@@ -56,50 +72,99 @@ const rest = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 </BaseLayout>
 
 <style>
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
+  .featured-wrap {
+    padding-block: 28px 8px;
   }
 
-  .featured-wrap {
-    padding-block: 32px 8px;
+  .cats-wrap {
+    padding-block: 40px 0;
+  }
+
+  .cats {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .cat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 16px 18px;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+
+  .cat + .cat {
+    border-left: 1px solid var(--line);
+  }
+
+  .cat:hover {
+    background: color-mix(in srgb, var(--violet) 8%, var(--surface));
+  }
+
+  .idx {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    color: var(--link-text);
+  }
+
+  .cat strong {
+    font-family: var(--font-display);
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--ink-strong);
+    line-height: 1.2;
+  }
+
+  .n {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .go {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    color: var(--ink-soft);
+    transition: transform 0.15s ease, color 0.15s ease;
+  }
+
+  .cat:hover .go {
+    color: var(--link-text);
+    transform: translateX(3px);
   }
 
   .recent {
-    padding-block: 40px;
-  }
-
-  .recent-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 28px;
-  }
-
-  .underline {
-    display: block;
-    width: 48px;
-    height: 4px;
-    margin-top: 10px;
-    border-radius: 2px;
-    background: linear-gradient(135deg, var(--violet), var(--rose));
-  }
-
-  .recent-header a {
-    text-decoration: none;
-    color: var(--teal);
-    font-size: 0.9rem;
-    white-space: nowrap;
+    padding-block: 48px 40px;
   }
 
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 20px;
+  }
+
+  @media (max-width: 960px) {
+    .cats {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cat:nth-child(n + 4) {
+      border-top: 1px solid var(--line);
+    }
+
+    .cat:nth-child(4) {
+      border-left: 0;
+    }
   }
 
   @media (max-width: 860px) {
@@ -112,6 +177,21 @@ const rest = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
     .grid {
       grid-template-columns: 1fr;
     }
-  }
 
+    .cats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cat:nth-child(n + 3) {
+      border-top: 1px solid var(--line);
+    }
+
+    .cat:nth-child(odd) {
+      border-left: 0;
+    }
+
+    .cat:nth-child(4) {
+      border-left: 1px solid var(--line);
+    }
+  }
 </style>

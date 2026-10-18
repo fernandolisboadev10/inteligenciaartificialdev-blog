@@ -1,10 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import DocLayout from '../layouts/DocLayout.astro';
 ---
 <BaseLayout title="Sobre nosotros" description="Sobre inteligenciaartificialdev.com: prompts de IA prácticos y comparativas de herramientas para desarrolladores.">
-  <section class="container about">
-    <h1>Sobre AI DEV</h1>
-    <div class="prose">
+  <DocLayout title="Sobre AI DEV">
       <p>
         Este sitio nació de un problema práctico: escribir una y otra vez el
         mismo tipo de prompt mientras desarrollaba software, y perder tiempo
@@ -50,17 +49,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         deberíamos cubrir? Escríbenos desde la
         <a href="/contact">página de contacto</a>.
       </p>
-    </div>
-  </section>
+  </DocLayout>
 </BaseLayout>
-
-<style>
-  .about {
-    padding-block: 56px 80px;
-    max-width: 68ch;
-  }
-
-  .about h1 {
-    margin-bottom: 32px;
-  }
-</style>

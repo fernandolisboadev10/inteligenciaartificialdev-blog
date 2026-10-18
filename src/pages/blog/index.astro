@@ -2,44 +2,47 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
+import { site } from '../../data/site';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
-
-const categories = [
-  'Chatbots',
-  'Prompts',
-  'Herramientas de IA',
-  'Tutoriales',
-  'Estudios de caso',
-  'Carrera',
-];
+const { t } = site;
 ---
-<BaseLayout title="Blog" description="Artículos sobre ingeniería de prompts, herramientas de IA y flujos de trabajo para desarrolladores.">
+<BaseLayout title={t.blog} description={t.blogDesc}>
+  <header class="page-hero grid-bg">
+    <div class="container hero-in">
+      <div class="hero-text">
+        <p class="crumb"><a href="/">{t.home}</a><span>/</span><span class="here">{t.blog}</span></p>
+        <h1>{t.blog}</h1>
+        <p class="lede">{t.blogDesc}</p>
+      </div>
+      <p class="count"><b id="count">{posts.length}</b>{t.articles}</p>
+    </div>
+  </header>
+
   <div class="container">
-    <header class="page-header">
-      <h1>Blog</h1>
-      <p>Ingeniería de prompts, herramientas de IA y flujos de trabajo para desarrolladores.</p>
-    </header>
-
-    <input
-      type="search"
-      id="search-input"
-      class="search-input"
-      placeholder="Buscar artículos…"
-      aria-label="Buscar artículos"
-    />
-
-    <div class="filters" id="filters">
-      <button class="filter active" data-category="all">Todos</button>
-      {categories.map((c) => (
-        <button class="filter" data-category={c}>{c}</button>
-      ))}
+    <div class="tools">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+        <input
+          type="search"
+          id="search-input"
+          class="search-input"
+          placeholder={t.searchPlaceholder}
+          aria-label={t.searchLabel}
+        />
+      </div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="all">{t.all}</button>
+        {site.categories.map((c) => (
+          <button class="filter" data-category={c}>{c}</button>
+        ))}
+      </div>
     </div>
 
     <div class="posts" id="posts">
-      {posts.map((post) => (
+      {posts.map((post, i) => (
         <div
           class="post-item"
           data-category={post.data.category}
@@ -54,72 +57,158 @@ const categories = [
             readingTime={post.data.readingTime}
             image={post.data.image}
             imageAlt={post.data.imageAlt}
+            priority={i < 3}
           />
         </div>
       ))}
     </div>
 
-    <p class="no-results" id="no-results" hidden>Ningún artículo coincide con tu búsqueda.</p>
+    <p class="no-results" id="no-results" hidden>{t.noResults}</p>
   </div>
 </BaseLayout>
 
 <style>
-  .page-header {
-    padding-block: 48px 24px;
-    max-width: 60ch;
+  .page-hero {
+    border-bottom: 1px solid var(--line);
   }
 
-  .page-header p {
+  .hero-in {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    padding-block: 44px 36px;
+  }
+
+  .crumb {
+    display: flex;
+    gap: 8px;
+    margin: 0 0 18px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--ink-soft);
-    margin-top: 8px;
+  }
+
+  .crumb a {
+    text-decoration: none;
+  }
+
+  .crumb a:hover {
+    color: var(--link-text);
+  }
+
+  .crumb .here {
+    color: var(--ink-strong);
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    letter-spacing: -0.045em;
+    line-height: 1;
+  }
+
+  .lede {
+    margin: 14px 0 0;
+    max-width: 52ch;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+  }
+
+  .count {
+    margin: 0;
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-align: right;
+  }
+
+  .count b {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--ink-strong);
+    margin-bottom: 4px;
+  }
+
+  .tools {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-block: 28px 28px;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 380px;
+    height: 42px;
+    padding: 0 14px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--surface);
+    color: var(--ink-soft);
+  }
+
+  .search-box:focus-within {
+    border-color: var(--violet);
   }
 
   .search-input {
-    display: block;
-    width: 100%;
-    max-width: 360px;
-    padding: 10px 16px;
-    margin-bottom: 16px;
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    background: var(--surface);
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
     color: var(--ink);
-  }
-
-  .search-input:focus {
-    border-color: var(--violet);
   }
 
   .filters {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 16px;
   }
 
   .filter {
-    font-family: var(--font-body);
-    font-size: 0.85rem;
-    padding: 8px 14px;
-    border-radius: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-radius: 4px;
     border: 1px solid var(--line);
     background: transparent;
     color: var(--ink-soft);
     cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .filter:hover {
+    border-color: var(--violet);
+    color: var(--ink-strong);
   }
 
   .filter.active {
     background: var(--violet);
-    color: #ffffff;
     border-color: var(--violet);
+    color: var(--on-violet);
+    font-weight: 600;
   }
 
   .posts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 20px;
     padding-bottom: 16px;
   }
 
@@ -132,6 +221,15 @@ const categories = [
   @media (max-width: 600px) {
     .posts {
       grid-template-columns: 1fr;
+    }
+
+    .hero-in {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .count {
+      text-align: left;
     }
   }
 
@@ -146,6 +244,7 @@ const categories = [
   const items = document.querySelectorAll<HTMLElement>('.post-item');
   const searchInput = document.querySelector<HTMLInputElement>('#search-input');
   const noResults = document.querySelector<HTMLElement>('#no-results');
+  const countEl = document.querySelector<HTMLElement>('#count');
 
   let activeCategory = 'all';
 
@@ -162,6 +261,7 @@ const categories = [
     });
 
     if (noResults) noResults.hidden = visibleCount > 0;
+    if (countEl) countEl.textContent = String(visibleCount);
     filters.forEach((f) => f.classList.toggle('active', f.dataset.category === activeCategory));
   }
 

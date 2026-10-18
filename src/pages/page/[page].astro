@@ -1,13 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
 
+import { site } from "../../data/site";
 import Home from '../index.astro';
 
 export async function getStaticPaths() {
-  const PER_PAGE = 9;
+  const PER_PAGE = site.perPage;
+  const FEATURED = site.featuredCount;
   const all = (await getCollection('blog', ({ data }) => !data.draft))
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-  const total = Math.ceil((all.length - 3) / PER_PAGE);
+  const total = Math.ceil((all.length - FEATURED) / PER_PAGE);
   return Array.from({ length: Math.max(0, total - 1) }, (_, i) => ({
     params: { page: String(i + 2) },
     props: { page: i + 2 },

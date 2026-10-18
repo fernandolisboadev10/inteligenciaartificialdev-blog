@@ -1,42 +1,35 @@
 ---
+import { site } from '../data/site';
+
 interface Props {
   title: string;
-  label?: string;
-  copyLabel?: string;
-  copiedLabel?: string;
-  shareOn?: string;
   variant?: 'top' | 'end';
 }
-const {
-  title,
-  label = 'Comparte:',
-  copyLabel = 'Copiar enlace',
-  copiedLabel = '¡Enlace copiado!',
-  variant = 'top',
-  shareOn = 'Compartir en',
-} = Astro.props;
+const { title, variant = 'top' } = Astro.props;
+const { t } = site;
 
 const url = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
 const u = encodeURIComponent(url);
-const t = encodeURIComponent(title);
+const tt = encodeURIComponent(title);
 
 const networks = [
-  { name: 'WhatsApp', cls: 'whatsapp', href: `https://wa.me/?text=${t}%20${u}`, path: 'M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z' },
+  { name: 'WhatsApp', cls: 'whatsapp', href: `https://wa.me/?text=${tt}%20${u}`, path: 'M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z' },
   { name: 'Facebook', cls: 'facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}`, path: 'M14 8h3V4h-3c-2.2 0-4 1.8-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z' },
-  { name: 'X', cls: 'x', href: `https://twitter.com/intent/tweet?text=${t}&url=${u}`, path: 'M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z' },
+  { name: 'X', cls: 'x', href: `https://twitter.com/intent/tweet?text=${tt}&url=${u}`, path: 'M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z' },
   { name: 'LinkedIn', cls: 'linkedin', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}`, path: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z' },
-  { name: 'Telegram', cls: 'telegram', href: `https://t.me/share/url?url=${u}&text=${t}`, path: 'M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z' },
+  { name: 'Telegram', cls: 'telegram', href: `https://t.me/share/url?url=${u}&text=${tt}`, path: 'M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z' },
 ];
+
 ---
-<div class={`share share-${variant}`} data-copied={copiedLabel}>
+<div class={`share share-${variant}`} data-copied={t.copiedLink}>
   {variant === 'end' ? (
     <div class="share-copy">
-      <p class="share-kicker">Comparte conocimiento</p>
-      <p class="share-title">¿Te resultó útil este contenido?</p>
-      <p class="share-sub">Envíaselo a alguien que también pueda aprovecharlo.</p>
+      <p class="share-kicker">{t.shareKicker}</p>
+      <p class="share-title">{t.shareTitle}</p>
+      <p class="share-sub">{t.shareSub}</p>
     </div>
   ) : (
-    <span class="share-label">{label}</span>
+    <span class="share-label">{t.shareLabel}</span>
   )}
   <div class="share-list">
     {networks.map((n) => (
@@ -45,14 +38,14 @@ const networks = [
         href={n.href}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`${shareOn} ${n.name}`}
+        aria-label={`${t.shareOn} ${n.name}`}
         title={n.name}
       >
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d={n.path} /></svg>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d={n.path} /></svg>
       </a>
     ))}
-    <button type="button" class="share-btn copy-link" aria-label={copyLabel} title={copyLabel} data-url={url}>
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg>
+    <button type="button" class="share-btn copy-link" aria-label={t.copyLink} title={t.copyLink} data-url={url}>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg>
     </button>
   </div>
 </div>
@@ -81,17 +74,19 @@ const networks = [
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
-    margin: 0 0 36px;
   }
 
   .share-label {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     color: var(--ink-soft);
-    font-size: 0.95rem;
   }
 
   .share-list {
     display: flex;
-    gap: 10px;
+    gap: 6px;
     flex-wrap: wrap;
   }
 
@@ -99,104 +94,76 @@ const networks = [
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 46px;
-    height: 46px;
-    border: 0;
-    border-radius: 50%;
-    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--ink-soft);
     cursor: pointer;
-    transition: transform 0.15s ease, filter 0.15s ease;
+    transition: border-color 0.15s ease, color 0.15s ease;
   }
 
   .share-btn:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.08);
+    border-color: var(--violet);
+    color: var(--link-text);
   }
 
-  .whatsapp { background: #25d366; }
-  .facebook { background: #3b5998; }
-  .x { background: #111111; }
-  .linkedin { background: #0a66c2; }
-  .telegram { background: #229ed9; }
-  .copy-link { background: #999999; }
-  .copy-link.copied { background: var(--teal); }
-
-  @media (max-width: 560px) {
-    .share {
-      gap: 8px;
-    }
-
-    .share-label {
-      width: 100%;
-    }
-
-    .share-list {
-      flex-wrap: nowrap;
-      gap: 8px;
-    }
-
-    .share-btn {
-      width: 40px;
-      height: 40px;
-    }
-
-    .share-btn svg {
-      width: 18px;
-      height: 18px;
-    }
+  .copy-link.copied {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #fff;
   }
 
   .share-end {
     justify-content: space-between;
     gap: 20px 24px;
     margin: 48px 0 32px;
-    padding: 28px 32px;
+    padding: 24px 26px;
     border: 1px solid var(--line);
-    border-radius: 16px;
-    background: linear-gradient(135deg, var(--surface), var(--violet-soft) 260%);
+    border-radius: 6px;
+    background:
+      linear-gradient(135deg, color-mix(in srgb, var(--violet) 9%, transparent), transparent 55%),
+      var(--surface);
   }
 
   .share-kicker {
-    margin: 0 0 6px;
+    margin: 0 0 8px;
     font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--ink-soft);
+    color: var(--link-text);
+  }
+
+  .share-kicker::before {
+    content: '// ';
   }
 
   .share-title {
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
+    letter-spacing: -0.025em;
     line-height: 1.2;
     color: var(--ink-strong);
   }
 
   .share-sub {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     color: var(--ink-soft);
   }
 
-  .share-end .share-list {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
   .share-end .share-btn {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
   }
-
 
   @media (max-width: 600px) {
     .share-end {
-      padding: 22px 20px;
+      padding: 20px;
     }
-
   }
 </style>

@@ -1,10 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import DocLayout from '../layouts/DocLayout.astro';
 ---
 <BaseLayout title="Publicidad" description="Oportunidades de patrocinio y publicidad en AI DEV.">
-  <section class="container advertise">
-    <h1>Anúnciate en AI DEV</h1>
-    <div class="prose">
+  <DocLayout title="Anúnciate en AI DEV">
       <p>
         AI DEV llega a desarrolladores que usan herramientas de IA en su flujo
         de trabajo diario: ingeniería de prompts, asistentes de código con IA
@@ -20,17 +19,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Escríbenos desde la <a href="/contact">página de contacto</a> con unas
         líneas sobre tu producto y lo que buscas, y te responderemos.
       </p>
-    </div>
-  </section>
+  </DocLayout>
 </BaseLayout>
-
-<style>
-  .advertise {
-    padding-block: 56px 80px;
-    max-width: 68ch;
-  }
-
-  .advertise h1 {
-    margin-bottom: 32px;
-  }
-</style>

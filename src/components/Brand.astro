@@ -1,0 +1,42 @@
+---
+// Logo e nome do blog (identidade atual, sem alterações).
+interface Props {
+  size?: number;
+}
+const { size = 30 } = Astro.props;
+---
+<a href="/" class="brand">
+  <img class="brand-icon" src="/images/robot-logo.png" alt="" width={size} height={size} />
+  <span class="brand-text">
+    <span class="brand-gradient">AI</span> DEV
+  </span>
+</a>
+
+<style>
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .brand-icon {
+    flex-shrink: 0;
+  }
+
+  .brand-text {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    color: var(--ink-strong);
+  }
+
+  .brand-gradient {
+    background: linear-gradient(135deg, var(--violet), var(--rose));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+</style>

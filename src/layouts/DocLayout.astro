@@ -1,0 +1,156 @@
+---
+// Páginas institucionais e legais: breadcrumb, título, índice lateral e texto.
+import { site } from '../data/site';
+
+interface Props {
+  title: string;
+  updated?: string;
+}
+const { title, updated } = Astro.props;
+const { t } = site;
+---
+<header class="doc-h grid-bg">
+  <div class="container">
+    <p class="crumb"><a href="/">{t.home}</a><span>/</span><span class="here">{title}</span></p>
+    <h1>{title}</h1>
+    {updated && <p class="meta">{updated}</p>}
+  </div>
+</header>
+
+<div class="container doc" id="doc">
+  <aside class="side" id="doc-side">
+    <p class="eyebrow">{t.onThisPage}</p>
+    <nav class="toc"></nav>
+  </aside>
+  <div class="prose" id="doc-prose">
+    <slot />
+  </div>
+</div>
+
+<script>
+  const prose = document.getElementById('doc-prose');
+  const heads = Array.from(prose?.querySelectorAll<HTMLElement>('h2') ?? []);
+  const nav = document.querySelector<HTMLElement>('#doc-side .toc');
+
+  if (heads.length >= 3 && nav) {
+    heads.forEach((h, i) => {
+      if (!h.id) h.id = `s${i + 1}`;
+    });
+    nav.innerHTML = heads.map((h) => `<a href="#${h.id}" data-id="${h.id}">${h.textContent}</a>`).join('');
+    const links = Array.from(nav.querySelectorAll<HTMLAnchorElement>('a'));
+    const io = new IntersectionObserver(
+      (entries) => {
+        const v = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (v) links.forEach((a) => a.classList.toggle('on', a.dataset.id === v.target.id));
+      },
+      { rootMargin: '-80px 0px -65% 0px' },
+    );
+    heads.forEach((h) => io.observe(h));
+  } else {
+    document.getElementById('doc-side')?.remove();
+    document.getElementById('doc')?.classList.add('no-toc');
+  }
+</script>
+
+<style>
+  .doc-h {
+    border-bottom: 1px solid var(--line);
+    padding-block: 36px 34px;
+  }
+
+  .crumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 20px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .crumb a {
+    text-decoration: none;
+  }
+
+  .crumb a:hover {
+    color: var(--link-text);
+  }
+
+  .crumb .here {
+    color: var(--ink-strong);
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: -0.045em;
+    line-height: 1.05;
+  }
+
+  .doc-h .meta {
+    margin-top: 16px;
+  }
+
+  .doc {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 720px);
+    justify-content: center;
+    gap: 64px;
+    padding-block: 44px 24px;
+  }
+
+  .doc.no-toc {
+    grid-template-columns: minmax(0, 720px);
+  }
+
+  .side {
+    position: sticky;
+    top: 88px;
+    align-self: start;
+  }
+
+  .side .eyebrow {
+    margin: 0 0 14px;
+  }
+
+  .toc {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--line);
+  }
+
+  .toc :global(a) {
+    margin-left: -1px;
+    padding: 6px 0 6px 14px;
+    border-left: 2px solid transparent;
+    font-size: 0.84rem;
+    line-height: 1.35;
+    text-decoration: none;
+    color: var(--ink-soft);
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .toc :global(a:hover) {
+    color: var(--ink-strong);
+  }
+
+  .toc :global(a.on) {
+    color: var(--ink-strong);
+    border-left-color: var(--violet);
+  }
+
+  .prose :global(> h2:first-child) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 960px) {
+    .doc {
+      grid-template-columns: minmax(0, 720px);
+    }
+
+    .side {
+      display: none;
+    }
+  }
+</style>
