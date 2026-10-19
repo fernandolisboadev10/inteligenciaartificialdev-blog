@@ -409,9 +409,12 @@ const articleSchema = {
     display: flex;
     flex-direction: column;
     border-left: 1px solid var(--line);
+    /* Verde-limão de marca-texto para a seção em que o leitor está. */
+    --toc-now: #c6ff00;
   }
 
   .toc :global(a) {
+    position: relative;
     margin-left: -1px;
     padding: 6px 0 6px 14px;
     border-left: 2px solid transparent;
@@ -434,6 +437,36 @@ const articleSchema = {
   .toc :global(a.on) {
     color: var(--ink-strong);
     border-left-color: var(--violet);
+  }
+
+  .toc :global(a::before) {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 11px;
+    width: 12px;
+    height: 12px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: transparent;
+    transform: scale(0.4);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .toc :global(a.on::before) {
+    border-color: color-mix(in srgb, var(--toc-now) 65%, #3d5200);
+    background: var(--toc-now);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--toc-now) 35%, transparent), 0 0 12px color-mix(in srgb, var(--toc-now) 65%, transparent);
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .toc :global(a::before) {
+      transition: none;
+    }
   }
 
   .toc-m {
