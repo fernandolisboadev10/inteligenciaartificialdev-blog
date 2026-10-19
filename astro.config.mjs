@@ -30,8 +30,6 @@ export default defineConfig({
     "/deepseek-vs-chatgpt-pomodoro-timer": "/deepseek-vs-chatgpt-temporizador-pomodoro",
     "/ai-coding-tools-case-studies": "/estudios-de-caso-herramientas-ia-codigo",
     "/grok-api-pricing": "/grok-api-precio",
-    "/trump-super-intelligence-order": "/trump-superinteligencia-orden",
-    "/trump-super-intelligence-order-developers": "/trump-superinteligencia-orden",
     "/vibe-coding-habits": "/vibe-coding-6-habitos-sin-desorden",
     "/ai-slop-pull-requests-open-source": "/slop-de-ia-pull-requests-open-source",
     // consolidado en techonplay.com (canibalizacao)
