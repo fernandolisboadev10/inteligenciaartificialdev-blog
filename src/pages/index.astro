@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import FeaturedGrid from '../components/FeaturedGrid.astro';
 import TrendBar from '../components/TrendBar.astro';
+import NeuralHero from '../components/NeuralHero.astro';
 import Pagination from '../components/Pagination.astro';
 import { site } from '../data/site';
 
@@ -21,7 +22,7 @@ const counts = site.categories.map((c) => ({
 }));
 ---
 <BaseLayout title={page > 1 ? `Prompts de IA para desarrolladores - Página ${page}` : "Prompts de IA para desarrolladores"}>
-  {page === 1 && <h1 class="sr-only">Prompts de IA probados para quienes escriben código.</h1>}
+  {page === 1 && <NeuralHero title={site.t.heroTitle} subtitle={site.t.blogDesc} />}
 
   {page === 1 && <TrendBar posts={all.slice(0, 6)} />}
 
