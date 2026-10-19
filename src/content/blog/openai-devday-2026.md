@@ -1,7 +1,7 @@
 ---
 title: "OpenAI DevDay 2026 para quienes programan: GPT-6.1 Sol, Codex Cloud y Dots frente a Claude Opus 5.5"
 description: "Qué anunció OpenAI en el DevDay del 29 de septiembre y qué cambia para quien usa IA para programar: GPT-6.1 Sol a US$ 2 por millón de tokens, Codex Cloud, agentes Dots y la comparación de precio con Claude Opus 5.5."
-category: "Herramientas de IA"
+category: "Chatbots"
 date: 2026-10-01
 translation: "openai-devday-2026"
 updated: 2026-10-12

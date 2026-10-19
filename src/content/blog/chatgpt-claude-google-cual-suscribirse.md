@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT Plus, Claude Pro o Google AI Pro: cuál suscribirte en 2026 (y qué plan barato te alcanza)"
 description: "Los tres cuestan alrededor de US$ 20 al mes, pero cada país añade impuestos, comisiones y precios locales distintos. Qué incluye cada plan y cuál tiene sentido para tu uso."
-category: "Herramientas de IA"
+category: "Chatbots"
 date: 2026-09-28
 updated: 2026-10-12
 translation: "chatgpt-claude-google-qual-assinar"

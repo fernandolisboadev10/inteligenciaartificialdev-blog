@@ -1,7 +1,7 @@
 ---
 title: "MCP en Claude Code, Cursor y Copilot: 7 cuidados de seguridad antes de instalar cualquier servidor"
 description: "MCP se volvió la forma estándar de conectar agentes de IA con herramientas, y también una de las mayores superficies de ataque del desarrollo en 2026. Tool poisoning, autoejecución y qué revisar antes de instalar un servidor MCP."
-category: "Herramientas de IA"
+category: "Tutoriales"
 date: 2026-10-01
 translation: "mcp-seguranca-agentes-de-codigo"
 updated: 2026-10-12
