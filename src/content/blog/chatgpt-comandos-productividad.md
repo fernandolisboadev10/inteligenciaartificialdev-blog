@@ -212,4 +212,3 @@ No necesitas usar los 12. La mayoría de las personas se queda con tres o cuatro
 
 - [12 comandos personalizados de ChatGPT para estudiar](/chatgpt-comandos-para-estudiar/)
 - [12 comandos personalizados para programadores](/chatgpt-comandos-para-programadores/)
-- [ChatGPT Plus, Claude Pro o Google AI Pro: cuál suscribirte](/chatgpt-claude-google-cual-suscribirse/)

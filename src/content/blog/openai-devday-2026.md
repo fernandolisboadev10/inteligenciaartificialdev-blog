@@ -95,7 +95,7 @@ Sobre el papel, Sol sale a la mitad del precio de Opus 5.5. Pero el precio por t
 
 **Si pagas por API:** revisa el modelo predeterminado de tus scripts y agentes. Ejecutar la misma tarea en Sol y en Opus 5.5 durante una semana y comparar costo y tasa de aciertos cuesta poco y puede recortar la factura de forma relevante.
 
-**Si usas suscripción:** lo que más cambia es el límite de uso y la velocidad. Antes de cambiar de plan, mira la [comparación de ChatGPT Plus, Claude Pro y Google AI Pro](/chatgpt-claude-google-cual-suscribirse/) y la [comparación entre Claude Code, Antigravity y Copilot](/claude-code-vs-antigravity-vs-copilot/).
+**Si usas suscripción:** lo que más cambia es el límite de uso y la velocidad. Antes de cambiar de plan, mira la [comparación entre Claude Code, Antigravity y Copilot](/claude-code-vs-antigravity-vs-copilot/).
 
 **Si todavía no usas agentes:** empieza por lo básico. Antes de encender un agente autónomo, conviene tener los hábitos del [vibe coding sin desorden](/vibe-coding-6-habitos-sin-desorden/) y conocer las [funciones de Claude Code que casi nadie activa](/claude-code-funciones-ocultas/).
 

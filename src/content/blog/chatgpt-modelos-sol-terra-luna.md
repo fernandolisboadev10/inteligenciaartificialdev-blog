@@ -152,7 +152,6 @@ La próxima vez que alguien te pregunte qué modelo de ChatGPT estás usando, va
 ## Sigue leyendo
 
 - [GPT-6 Astra explicado: benchmarks y precio](/gpt-6-astra/)
-- [ChatGPT Plus, Claude Pro o Google AI Pro: cuál suscribirte](/chatgpt-claude-google-cual-suscribirse/)
 - [El mismo prompt de landing page en cuatro modelos](/mismo-prompt-landing-page-ia/)
 
 ---
