@@ -25,6 +25,9 @@ interface Props {
 const { slug, title, description, category, date, updated, related, translation, readingTime, image, imageAlt } = Astro.props;
 const { t } = site;
 
+// "Actualizado" solo aparece cuando el artículo se editó un día después de la publicación.
+const showUpdated = !!updated && fmtDate(updated) !== fmtDate(date) && updated.getTime() > date.getTime();
+
 const alternate = translation ? site.alternate(translation) : undefined;
 
 const all = (await getCollection('blog', ({ data }) => !data.draft)).sort(
@@ -83,7 +86,7 @@ const articleSchema = {
           </div>
           <p class="meta">
             <span>{t.published} {fmtDate(date)}</span>
-            {updated && <><i>/</i><span>{t.updated} {fmtDate(updated)}</span></>}
+            {showUpdated && <><i>/</i><span>{t.updated} {fmtDate(updated!)}</span></>}
             {readingTime && <><i>/</i><span class="rt">{readingTime}</span></>}
           </p>
           <ShareButtons title={title} />
