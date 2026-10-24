@@ -32,6 +32,8 @@ export default defineConfig({
     "/grok-api-pricing": "/grok-api-precio",
     "/vibe-coding-habits": "/vibe-coding-6-habitos-sin-desorden",
     "/ai-slop-pull-requests-open-source": "/slop-de-ia-pull-requests-open-source",
+    // slug sin el año (2026-10-24)
+    "/herramientas-vibe-coding-crear-apps-ia-2026": "/herramientas-vibe-coding-crear-apps-ia",
     // consolidado en techonplay.com (canibalizacao)
     "/gemini-student": "https://techonplay.com/google-ai-plus-for-students/",
   },

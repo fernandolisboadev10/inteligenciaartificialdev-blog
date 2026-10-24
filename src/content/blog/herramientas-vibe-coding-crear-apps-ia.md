@@ -5,7 +5,7 @@ category: "Herramientas de IA"
 date: 2026-10-24T08:00:00-03:00
 translation: "ferramentas-vibe-coding-criar-apps-ia"
 readingTime: "7 min"
-image: "./images/ferramentas-vibe-coding-criar-apps-ia-2026.webp"
+image: "./images/herramientas-vibe-coding-crear-apps-ia.webp"
 imageAlt: "Desarrollador visto de espaldas frente a un portátil que muestra un chat con IA junto a la vista previa de una app de viajes en el celular, con paneles flotantes de código, herramientas y checklist alrededor, en un escritorio con plantas y vista a la ventana"
 draft: true
 ---
