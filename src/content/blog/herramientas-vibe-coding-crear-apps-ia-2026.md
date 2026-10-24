@@ -3,7 +3,7 @@ title: "Las mejores herramientas de vibe coding para crear apps con IA en 2026: 
 description: "Lovable, Claude Code, Codex, Cursor, Replit, Bolt, v0, Copilot, Devin Desktop (antes Windsurf) y Google AI Studio comparados: para quién sirve cada una, qué incluye el plan gratuito, cuánto cuesta el de pago y cómo elegir sin gastar de más."
 category: "Herramientas de IA"
 date: 2026-10-24T08:00:00-03:00
-translation: "ferramentas-vibe-coding-criar-apps-ia-2026"
+translation: "ferramentas-vibe-coding-criar-apps-ia"
 readingTime: "7 min"
 image: "./images/ferramentas-vibe-coding-criar-apps-ia-2026.webp"
 imageAlt: "Desarrollador visto de espaldas frente a un portátil que muestra un chat con IA junto a la vista previa de una app de viajes en el celular, con paneles flotantes de código, herramientas y checklist alrededor, en un escritorio con plantas y vista a la ventana"
