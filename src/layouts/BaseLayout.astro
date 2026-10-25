@@ -53,6 +53,7 @@ const organizationSchema = {
     <link rel="canonical" href={canonicalURL} />
     {alternate && <link rel="alternate" hreflang="es" href={canonicalURL} />}
     {alternate && <link rel="alternate" hreflang={alternate.lang} href={alternate.href} />}
+    {alternate && <link rel="alternate" hreflang="x-default" href={canonicalURL} />}
     <link rel="alternate" type="application/rss+xml" title={siteName} href={new URL('/rss.xml', Astro.site)} />
     <title>{title} · inteligenciaartificialdev.com</title>
 
