@@ -7,7 +7,7 @@ translation: "mesmo-prompt-landing-page-ia"
 updated: 2026-10-12
 readingTime: "8 min"
 image: "./images/mesmo-prompt-landing-page.webp"
-imageAlt: "Foto editorial de cuatro monitores lado a lado en un banco de trabajo, cada uno mostrando una página web desenfocada en tonos marrones y crema, con luz suave de fin de tarde"
+imageAlt: "Cuatro monitores lado a lado sobre una mesa de madera, cada uno mostrando una versión distinta de la misma landing page de cafetería en marrón y crema"
 draft: false
 ---
 
@@ -95,7 +95,7 @@ El costo fue lo que más destacó. GPT-6 Luna generó la página entera por medi
 
 ## El formulario: donde los cuatro se separan
 
-![Primer plano de una mano escribiendo en un formulario de reserva en un móvil, con el teclado en pantalla y la página desenfocada al fondo](./images/mesmo-prompt-landing-page-formulario.webp)
+![Mano sosteniendo un móvil con el formulario de reserva de la cafetería Grão Nobre, con un error de correo en rojo, y un portátil al fondo](./images/mesmo-prompt-landing-page-formulario.webp)
 
 Llenamos el formulario vacío, con un correo inválido, con una fecha en el pasado y, por último, con datos correctos.
 
