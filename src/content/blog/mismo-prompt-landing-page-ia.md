@@ -4,7 +4,7 @@ description: "El mismo prompt, palabra por palabra, cuatro modelos, cero edicion
 category: "Estudios de caso"
 date: 2026-09-28
 translation: "mesmo-prompt-landing-page-ia"
-updated: 2026-10-12
+updated: 2026-10-26T08:16:00-03:00
 readingTime: "8 min"
 image: "./images/mesmo-prompt-landing-page.webp"
 imageAlt: "Cuatro monitores lado a lado sobre una mesa de madera, cada uno mostrando una versión distinta de la misma landing page de cafetería en marrón y crema"
