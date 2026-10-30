@@ -38,6 +38,9 @@ const { title, subtitle } = Astro.props;
     let alphaBoost = 1;
     let raf = 0;
     let running = false;
+    let ready = false;
+    let small = false;
+    let lastDraw = 0;
     let last = 0;
     let nextPulse = 0;
     const pointer = { x: 0, y: 0, active: false };
@@ -59,9 +62,8 @@ const { title, subtitle } = Astro.props;
     };
 
     const seed = () => {
-      const small = w < 640;
-      linkDist = small ? 100 : 150;
-      const count = Math.max(14, Math.min(small ? 40 : 90, Math.round((w * h) / (small ? 6500 : 7000))));
+      linkDist = small ? 95 : 150;
+      const count = Math.max(12, Math.min(small ? 22 : 90, Math.round((w * h) / (small ? 8000 : 7000))));
       nodes = Array.from({ length: count }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
@@ -78,7 +80,8 @@ const { title, subtitle } = Astro.props;
       const rect = hero.getBoundingClientRect();
       w = Math.max(1, Math.round(rect.width));
       h = Math.max(1, Math.round(rect.height));
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      small = w < 640;
+      dpr = small ? 1 : Math.min(window.devicePixelRatio || 1, 2);
       canvas.width = Math.round(w * dpr);
       canvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -129,10 +132,14 @@ const { title, subtitle } = Astro.props;
           if (d2 > L2) continue;
           const f = 1 - Math.sqrt(d2) / linkDist;
           links.push([a, b]);
-          const g = ctx.createLinearGradient(a.x, a.y, b.x, b.y);
-          g.addColorStop(0, rgba(palette[a.c], f * 0.75 * alphaBoost));
-          g.addColorStop(1, rgba(palette[b.c], f * 0.75 * alphaBoost));
-          ctx.strokeStyle = g;
+          if (small) {
+            ctx.strokeStyle = rgba(palette[a.c], f * 0.75 * alphaBoost);
+          } else {
+            const g = ctx.createLinearGradient(a.x, a.y, b.x, b.y);
+            g.addColorStop(0, rgba(palette[a.c], f * 0.75 * alphaBoost));
+            g.addColorStop(1, rgba(palette[b.c], f * 0.75 * alphaBoost));
+            ctx.strokeStyle = g;
+          }
           ctx.lineWidth = 0.6 + f * 0.9;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
@@ -193,6 +200,11 @@ const { title, subtitle } = Astro.props;
     const frame = (now: number) => {
       raf = 0;
       if (!running) return;
+      if (small && now - lastDraw < 30) {
+        raf = requestAnimationFrame(frame);
+        return;
+      }
+      lastDraw = now;
       const dt = Math.min(now - (last || now), 50);
       last = now;
       step(dt);
@@ -218,7 +230,7 @@ const { title, subtitle } = Astro.props;
     };
 
     const start = () => {
-      if (running || reduceMotion.matches || document.hidden) return;
+      if (!ready || running || reduceMotion.matches || document.hidden) return;
       running = true;
       last = 0;
       raf = requestAnimationFrame(frame);
@@ -269,7 +281,18 @@ const { title, subtitle } = Astro.props;
     new MutationObserver(rethink).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
     if (reduceMotion.matches) draw();
-    else start();
+
+    // A animação só liga depois do load e com a thread ociosa, para não competir com o carregamento da página.
+    const begin = () => {
+      const go = () => {
+        ready = true;
+        if (onScreen) start();
+      };
+      if ('requestIdleCallback' in window) window.requestIdleCallback(go, { timeout: 2500 });
+      else setTimeout(go, 600);
+    };
+    if (document.readyState === 'complete') begin();
+    else window.addEventListener('load', begin, { once: true });
   }
 </script>
 
@@ -315,7 +338,6 @@ const { title, subtitle } = Astro.props;
     letter-spacing: -0.035em;
     line-height: 1.08;
     color: var(--ink-strong);
-    animation: hero-in 0.7s ease both;
   }
 
   p {
@@ -324,18 +346,6 @@ const { title, subtitle } = Astro.props;
     font-size: clamp(0.95rem, 1.6vw, 1.1rem);
     line-height: 1.55;
     color: var(--ink-soft);
-    animation: hero-in 0.7s ease 0.12s both;
-  }
-
-  @keyframes hero-in {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   @media (max-width: 640px) {
@@ -352,10 +362,4 @@ const { title, subtitle } = Astro.props;
     }
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    h1,
-    p {
-      animation: none;
-    }
-  }
 </style>
