@@ -1,7 +1,7 @@
 ---
 title: "AI-900 en 2026: ¿Vale la pena? El examen fue reemplazado por el AI-901 (qué cambió y para quién sirve)"
 description: "El AI-900 fue retirado el 30 de junio de 2026 y la certificación Azure AI Fundamentals ahora se obtiene con el AI-901. Qué cubre el examen, cuánto es práctica, qué esperar de la dificultad y para quién vale la pena."
-category: "Carrera"
+category: "Certificaciones"
 date: 2026-10-12
 translation: "ai-900-ai-901-vale-a-pena"
 readingTime: "8 min"
