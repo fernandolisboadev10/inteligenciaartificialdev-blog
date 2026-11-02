@@ -3,7 +3,7 @@ title: "Claude Fable 5.1 explicado: benchmarks, precios y novedades"
 description: "Claude Fable 5.1 de Anthropic llega con una puntuación casi perfecta en SWE-bench y un precio más bajo. Qué cambió, qué es Mythos 5.1 y cuánto cuesta."
 category: "Chatbots"
 date: 2026-09-07
-updated: 2026-10-12
+updated: 2026-11-01T21:18:00-03:00
 translation: "claude-fable-5-1"
 readingTime: "7 min"
 image: "./images/claude-fable-5-1.webp"
@@ -63,7 +63,7 @@ El cambio mayor está en el precio de la caché. Los tokens de entrada en caché
         <td style="padding:12px 16px;font-weight:600;">🧪 Terminal-Bench-Science</td>
         <td style="padding:12px 16px;">24,7%</td>
         <td style="padding:12px 16px;">52,6%</td>
-        <td style="padding:12px 16px;">—</td>
+        <td style="padding:12px 16px;">n/d</td>
       </tr>
       <tr style="border-bottom:1px solid #eee;background:#fafafa;">
         <td style="padding:12px 16px;font-weight:600;">💻 Terminal-Bench 4.0</td>
@@ -73,9 +73,9 @@ El cambio mayor está en el precio de la caché. Los tokens de entrada en caché
       </tr>
       <tr style="border-bottom:1px solid #eee;">
         <td style="padding:12px 16px;font-weight:600;">✅ SWE-bench Verified</td>
-        <td style="padding:12px 16px;">—</td>
+        <td style="padding:12px 16px;">n/d</td>
         <td style="padding:12px 16px;">95,0%</td>
-        <td style="padding:12px 16px;">—</td>
+        <td style="padding:12px 16px;">n/d</td>
       </tr>
       <tr style="border-bottom:1px solid #eee;background:#fafafa;">
         <td style="padding:12px 16px;font-weight:600;">📤 Precio de lectura de caché</td>

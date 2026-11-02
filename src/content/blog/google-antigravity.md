@@ -3,7 +3,7 @@ title: "Google Antigravity explicado: la herramienta de código de Gemini centra
 description: "Google Antigravity reemplazó a Gemini CLI en 2026. Qué hace realmente, cuánto cuesta y cómo se compara con Gemini Code Assist y Jules."
 category: "Herramientas de IA"
 date: 2026-09-07
-updated: 2026-10-12
+updated: 2026-11-01T21:18:00-03:00
 translation: "google-antigravity"
 readingTime: "7 min"
 image: "./images/google-antigravity.webp"
@@ -32,10 +32,10 @@ La otra función destacada es el control de navegador integrado. Un agente de An
 
 A mediados de 2026, Antigravity había crecido hasta cuatro superficies:
 
-- **Antigravity IDE** — el fork de VS Code, para edición práctica junto a los agentes
-- **Antigravity 2.0** — una aplicación de escritorio independiente
-- **Antigravity CLI** — una herramienta de terminal basada en Go (sustituta de Gemini CLI) que ejecuta agentes en segundo plano sin trabar tu sesión
-- **Antigravity SDK** — un SDK en Python para construir tus propios flujos de agentes sobre la plataforma
+- **Antigravity IDE**: el fork de VS Code, para edición práctica junto a los agentes
+- **Antigravity 2.0**: una aplicación de escritorio independiente
+- **Antigravity CLI**: una herramienta de terminal basada en Go (sustituta de Gemini CLI) que ejecuta agentes en segundo plano sin trabar tu sesión
+- **Antigravity SDK**: un SDK en Python para construir tus propios flujos de agentes sobre la plataforma
 
 Antigravity CLI mantuvo las funciones con las que contaban los desarrolladores en Gemini CLI, incluidas Agent Skills, Hooks, Subagentes y Extensiones, solo reempaquetadas como plugins de Antigravity.
 
