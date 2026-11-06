@@ -103,9 +103,9 @@ const articleSchema = {
           src={image}
           alt={imageAlt ?? title}
           width={1200}
-          height={540}
-          widths={[480, 800, 1200]}
-          sizes="(max-width: 1180px) 100vw, 1132px"
+          height={800}
+          widths={[600, 900, 1200]}
+          sizes="(max-width: 820px) 100vw, 760px"
           quality={72}
           priority
         />
@@ -113,14 +113,10 @@ const articleSchema = {
     )}
 
     <div class="container art-layout" id="art-layout">
-      <aside class="side" id="toc-side">
-        <p class="eyebrow">{t.inThisArticle}</p>
-        <nav class="toc" aria-label={t.inThisArticle}></nav>
-      </aside>
 
       <div class="art-main">
-        <details class="toc-m" id="toc-m">
-          <summary><span class="eyebrow">{t.inThisArticle}</span></summary>
+        <details class="toc-m" id="toc-m" open>
+          <summary><span class="eyebrow">{t.inThisArticle}</span><span class="toc-count" id="toc-count"></span></summary>
           <nav class="toc"></nav>
         </details>
 
@@ -171,9 +167,13 @@ const articleSchema = {
   const navs = document.querySelectorAll<HTMLElement>('.toc');
   if (heads.length >= 2 && heads.every((h) => h.id)) {
     const html = heads
-      .map((h) => `<a href="#${h.id}" data-id="${h.id}" >${h.textContent}</a>`)
+      .map((h, i) => `<a href="#${h.id}" data-id="${h.id}"><span class="toc-n">${String(i + 1).padStart(2, '0')}</span><span>${h.textContent}</span></a>`)
       .join('');
     navs.forEach((n) => (n.innerHTML = html));
+    const count = document.getElementById('toc-count');
+    if (count) count.textContent = String(heads.length);
+    // Aberto no desktop; no celular começa fechado para o texto aparecer logo.
+    if (window.matchMedia('(max-width: 719px)').matches) document.getElementById('toc-m')?.removeAttribute('open');
 
     const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.toc a'));
     const setActive = (id: string) =>
@@ -189,10 +189,11 @@ const articleSchema = {
     heads.forEach((h) => io.observe(h));
 
     document.getElementById('toc-m')?.querySelectorAll('a').forEach((a) =>
-      a.addEventListener('click', () => document.getElementById('toc-m')?.removeAttribute('open')),
+      a.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 719px)').matches) document.getElementById('toc-m')?.removeAttribute('open');
+      }),
     );
   } else {
-    document.getElementById('toc-side')?.remove();
     document.getElementById('toc-m')?.remove();
     document.getElementById('art-layout')?.classList.add('no-toc');
   }
@@ -373,115 +374,64 @@ const articleSchema = {
 
   .cover {
     margin: 32px auto 0;
+    max-width: 808px;
   }
 
   .cover :global(img) {
     width: 100%;
     height: auto;
-    aspect-ratio: 1200 / 540;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
     border: 1px solid var(--line);
     border-radius: 6px;
   }
 
   .art-layout {
-    display: grid;
-    grid-template-columns: 220px minmax(0, 720px);
-    justify-content: center;
-    gap: 64px;
-    padding-block: 44px 8px;
-  }
-
-  .art-layout.no-toc {
-    grid-template-columns: minmax(0, 720px);
-  }
-
-  .side {
-    position: sticky;
-    top: 88px;
-    align-self: start;
-    max-height: calc(100vh - 110px);
-    overflow-y: auto;
-  }
-
-  .side .eyebrow {
-    margin: 0 0 14px;
+    max-width: 808px;
+    padding-block: 28px 8px;
   }
 
   .toc {
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid var(--line);
-    /* Verde-limão de marca-texto para a seção em que o leitor está. */
-    --toc-now: #c6ff00;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 28px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
   }
 
   .toc :global(a) {
-    position: relative;
-    margin-left: -1px;
-    padding: 6px 0 6px 14px;
-    border-left: 2px solid transparent;
-    font-size: 0.84rem;
-    line-height: 1.35;
+    display: flex;
+    gap: 10px;
+    padding: 7px 0;
+    font-size: 0.92rem;
+    line-height: 1.4;
     text-decoration: none;
-    color: var(--ink-soft);
-    transition: color 0.15s ease, border-color 0.15s ease;
+    color: var(--ink);
   }
 
-  .toc :global(a.sub) {
-    padding-left: 28px;
-    font-size: 0.8rem;
+  .toc :global(.toc-n) {
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.75;
+    color: var(--link-text);
   }
 
   .toc :global(a:hover) {
     color: var(--ink-strong);
-  }
-
-  .toc :global(a.on) {
-    color: var(--ink-strong);
-    border-left-color: var(--violet);
-  }
-
-  .toc :global(a::before) {
-    content: '';
-    position: absolute;
-    left: -7px;
-    top: 11px;
-    width: 12px;
-    height: 12px;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    background: transparent;
-    transform: scale(0.4);
-    opacity: 0;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-
-  .toc :global(a.on::before) {
-    border-color: color-mix(in srgb, var(--toc-now) 65%, #3d5200);
-    background: var(--toc-now);
-    box-shadow: 0 0 0 4px color-mix(in srgb, var(--toc-now) 35%, transparent), 0 0 12px color-mix(in srgb, var(--toc-now) 65%, transparent);
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .toc :global(a::before) {
-      transition: none;
-    }
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .toc-m {
-    display: none;
-    margin-bottom: 28px;
+    margin-bottom: 40px;
     border: 1px solid var(--line);
-    border-radius: 6px;
+    border-radius: 12px;
     background: var(--surface);
   }
 
   .toc-m summary {
-    padding: 12px 16px;
+    padding: 16px 22px;
     cursor: pointer;
     list-style: none;
   }
@@ -502,7 +452,13 @@ const articleSchema = {
   }
 
   .toc-m .toc {
-    margin: 0 16px 14px;
+    margin: 0 22px 16px;
+  }
+
+  .toc-count {
+    margin-left: 10px;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
   }
 
   .pn {
@@ -551,18 +507,13 @@ const articleSchema = {
     overflow: hidden;
   }
 
-  @media (max-width: 960px) {
-    .art-layout {
-      grid-template-columns: minmax(0, 720px);
-      gap: 0;
-    }
-
-    .side {
-      display: none;
+  @media (max-width: 719px) {
+    .toc {
+      grid-template-columns: 1fr;
     }
 
     .toc-m {
-      display: block;
+      margin-bottom: 32px;
     }
   }
 
@@ -579,9 +530,6 @@ const articleSchema = {
       grid-template-columns: 1fr;
     }
 
-    .cover :global(img) {
-      aspect-ratio: 16 / 10;
-    }
   }
 
   /* Blocos de prompt (HTML dentro dos artigos) */

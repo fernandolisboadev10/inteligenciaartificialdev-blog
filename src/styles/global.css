@@ -29,6 +29,7 @@
   --font-display: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
+  --font-read: 'Lexend', 'Inter', sans-serif;
 
   --measure: 68ch;
 }
@@ -281,8 +282,8 @@ kbd {
 
 .prose {
   max-width: var(--measure);
-  font-size: 1.0625rem;
-  line-height: 1.75;
+  font-size: 1.15rem;
+  line-height: 1.8;
 }
 
 .prose a {
@@ -302,8 +303,10 @@ kbd {
 }
 
 .prose p, .prose ul, .prose ol {
+  font-family: var(--font-read);
   color: var(--ink);
   font-size: inherit;
+  font-weight: 300;
 }
 
 .prose li + li {
